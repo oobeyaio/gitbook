@@ -87,6 +87,7 @@
 ## AI Impact
 
 * [GitHub Copilot - AI Impact](ai-impact/github-copilot-ai-impact.md)
+* [AI Cost & Credits](ai-impact/ai-cost-and-credits.md)
 
 ## ALLOCATIONS
 
