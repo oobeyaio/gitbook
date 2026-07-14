@@ -180,6 +180,10 @@
   * [Updating an Agile Board Analysis](project-analytics/project-analytics/updating-an-agile-board-analysis.md)
 * [Best practices for integrating Oobeya with Azure DevOps Scrum Boards](project-analytics/best-practices-for-integrating-oobeya-with-azure-devops-scrum-boards.md)
 
+## Document Analytics
+
+* [Document Analytics (Confluence)](document-analytics/document-analytics-confluence.md)
+
 ## QUALITY ANALYTICS
 
 * [Total Code Quality Index (TCQI)](quality-analytics/total-code-quality-index-tcqi.md)
