@@ -14,15 +14,13 @@ description: Learn about New Relic & Oobeya Integration.
 
 ![](../../../.gitbook/assets/Picture2.png)
 
-3\. Click the **“Rest API Key”** to create an API token.
+3. Click the "Create a key" button.
 
-<figure><img src="../../../.gitbook/assets/3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (525).png" alt=""><figcaption></figcaption></figure>
 
-Click the **"Show Key"** button. Keep your **"API Key"** to add a data source in Oobeya later.
+4. Select the account and click the "Create a key" button to create the API key.
 
-<figure><img src="../../../.gitbook/assets/Picture4A.png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../../../.gitbook/assets/Picture4B.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (526).png" alt="" width="375"><figcaption></figcaption></figure>
 
 ## 2. Creating A Query Key on New Relic Insights
 
@@ -40,11 +38,9 @@ Click the **"Show Key"** button. Keep your **"API Key"** to add a data source in
 
 4. Click the add icon next to the **"Query Keys"** to add a query key.
 
-<figure><img src="../../../.gitbook/assets/10.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (528).png" alt=""><figcaption></figcaption></figure>
 
-5. You can use created query key as shown on below to add a data source in Oobeya.
-
-<figure><img src="../../../.gitbook/assets/11 (1).png" alt=""><figcaption></figcaption></figure>
+5. You can use the created query key as shown below to add a data source in Oobeya.
 
 ## 4. Install New Relic Addon on Oobeya :jigsaw:&#x20;
 
