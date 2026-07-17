@@ -21,11 +21,11 @@ icon: jira
 
 4\. Click the "**Create API token**" button at the top of the page.&#x20;
 
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FqZ6Picd6fsSSIkqAHn4w%2Ffile.png?alt=media)
+<figure><img src="../../../.gitbook/assets/image (532).png" alt=""><figcaption></figcaption></figure>
 
-5\. Fill out the Label area as you prefer. Make sure you copy your new API token for further use.
+5. Make sure you copy your new API token for further use.
 
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FEuLLcCx1qMA0ZqFq48S7%2Ffile.png?alt=media)
+<figure><img src="../../../.gitbook/assets/image (533).png" alt=""><figcaption></figcaption></figure>
 
 ## **2. Install Jira Addon on Oobeya** :jigsaw:&#x20;
 
