@@ -7,19 +7,17 @@ icon: plug
 
 ## 1. **Generate** TeamCity **API Token**
 
-1. Open TeamCity and click on the "User" button.
+1. Open TeamCity and click on the "Profile" button.
 
-<figure><img src="../../../.gitbook/assets/image (331).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (534).png" alt=""><figcaption></figcaption></figure>
 
-&#x20; 2\. Click on the "Access Tokens"  button on the left.
+&#x20; 2\. Click on the "Access Tokens"  button on the left and then the "Create access token" button.
 
-<figure><img src="../../../.gitbook/assets/image (400).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (535).png" alt=""><figcaption></figcaption></figure>
 
-&#x20; 3\. To create a new token, click on the "Create access token" button.
+&#x20; 3\. Give a name to your token and then store it securely.
 
-<figure><img src="../../../.gitbook/assets/image (340).png" alt=""><figcaption></figcaption></figure>
-
-&#x20; 4\. Give a name to your token and then store it securely.
+<figure><img src="../../../.gitbook/assets/image (536).png" alt=""><figcaption></figcaption></figure>
 
 ## **2. Install TeamCity Addon on Oobeya**
 
