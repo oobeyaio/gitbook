@@ -7,13 +7,13 @@ icon: jenkins
 
 ## 1. **Generate Jenkins API Token**
 
-1\. On Jenkins, open the user dropdown on the top bar and click the **"Configure"** option.&#x20;
+1\. On Jenkins, open the user dropdown at the top right and click the **"Security"** option.&#x20;
 
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FRpUUtJglGgD0w5drncf8%2Ffile.png?alt=media)
+<figure><img src="../../../.gitbook/assets/image (537).png" alt=""><figcaption></figcaption></figure>
 
-2\. Generate a new API Token.
+2\. Generate a new API Token by clicking "Add new token".
 
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FhgatmT8quxOjzTYTzNjX%2Ffile.png?alt=media)
+<figure><img src="../../../.gitbook/assets/image (538).png" alt=""><figcaption></figcaption></figure>
 
 3\. Copy and save the _API Token_ to use on the Oobeya data source connection.
 
