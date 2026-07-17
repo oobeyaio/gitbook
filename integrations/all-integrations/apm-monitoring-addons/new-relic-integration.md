@@ -53,11 +53,11 @@ description: Learn about New Relic & Oobeya Integration.
 
 1. Navigate to **Data Sources**, and select New Relic to add a new data source.&#x20;
 
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FQVr9tGImhOxrkux59Wv3%2Ffile.png?alt=media)
+<img src="https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FQVr9tGImhOxrkux59Wv3%2Ffile.png?alt=media" alt="" width="375">
 
 2\. Click the "**New Data Source**" button and fill in the form. _API Token_ from Step-1 and _Query Key_ from Step-2.&#x20;
 
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FgzLsech8ElxSEIciA7Tf%2Ffile.png?alt=media)
+<img src="https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FgzLsech8ElxSEIciA7Tf%2Ffile.png?alt=media" alt="" width="375">
 
 3\. Click the "**Test Connection**" button to verify the connection.&#x20;
 

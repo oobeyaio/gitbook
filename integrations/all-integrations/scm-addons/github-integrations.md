@@ -16,9 +16,11 @@ There are three options to integrate [Oobeya](https://oobeya.io) with [GitHub](h
 ## 1. G**enerate GitHub Personal Access Token**
 
 1. Navigate to GitHub **Settings** and click the **"Developer Settings"** tab.
-2. Select the _**"Personal access tokens"**_ tab and click the **"Generate new token"** button. Select _**read**_ permissions for the connection.
+2. Select the **"Personal access tokens"** tab, **"Tokens (classic)"**, **"Generate new token"** and **"Generate new token (classic)"** button. Select _**read**_ permissions for the connection.
 
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2F1IpCmnLe5nKuBJNfDZy2%2Ffile.png?alt=media)
+<figure><img src="../../../.gitbook/assets/image (530).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/image (531).png" alt=""><figcaption></figcaption></figure>
 
 &#x20; 3\. Copy and save the _**access token**_ to use it on the Oobeya data source connection.
 
