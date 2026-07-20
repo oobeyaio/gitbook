@@ -57,6 +57,7 @@
   * [Installing An Addon](integrations/adding-new-integration/installing-an-addon.md)
   * [Adding A New Data Source](integrations/adding-new-integration/adding-a-new-data-source.md)
   * [Updating and Deleting Data Sources](integrations/adding-new-integration/updating-and-deleting-data-sources.md)
+* [Network Access Requirements](integrations/network-access-requirements.md)
 
 ## USE CASES
 
