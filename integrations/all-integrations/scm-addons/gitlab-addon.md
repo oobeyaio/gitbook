@@ -39,5 +39,5 @@ Now Oobeya is connected with your own GitLab server to get the real-time statist
 
 ## **Next Steps** :dart:&#x20;
 
-* [Add a new Widget](https://qa-dashboard.user.com/knowledge-base/articles/13/update/13/%7B%%20kb_article_url%2019%20%%7D)
+* [Network Access Requirements ](../../network-access-requirements.md)
 * [Create a new Gitwiser Analysis](../../../gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics.md)

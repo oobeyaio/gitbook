@@ -32,4 +32,5 @@ Now Oobeya is connected with your own Jira Server account to get the real-time p
 
 ## **Next Steps** :dart:&#x20;
 
-* [Add a new Widget](../../../dashboards/adding-a-new-widget.md)
+* [Network Access Requirements ](../../network-access-requirements.md)
+* [Create a new Gitwiser Analysis](../../../gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics.md)

@@ -49,10 +49,5 @@ Following these steps, you can integrate the Oobeya seamlessly with your GitHub 
 
 ## **Next Steps** :dart:&#x20;
 
-{% content-ref url="../../../gitwiser-repo-analytics/git-analytics-metric-definitions/" %}
-[git-analytics-metric-definitions](../../../gitwiser-repo-analytics/git-analytics-metric-definitions/)
-{% endcontent-ref %}
-
-{% content-ref url="../../../deployment-analytics/how-to-calculate-dora-metrics-for-github.md" %}
-[how-to-calculate-dora-metrics-for-github.md](../../../deployment-analytics/how-to-calculate-dora-metrics-for-github.md)
-{% endcontent-ref %}
+* [Network Access Requirements ](../../network-access-requirements.md)
+* [Create a new Gitwiser Analysis](../../../gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics.md)

@@ -76,3 +76,8 @@ This data is normalized and displayed within the **Test Analytics** module.
 | ---------------------- | ---------------------------- | ------------------------------------------- |
 | Connection test fails  | Wrong URL or expired token   | Recheck credentials and API token validity. |
 | No test data retrieved | Insufficient API permissions | Ensure your Jira user has Xray API access.  |
+
+## **Next Steps** :dart:&#x20;
+
+* [Network Access Requirements ](../../network-access-requirements.md)
+* [Create a new Gitwiser Analysis](../../../gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics.md)

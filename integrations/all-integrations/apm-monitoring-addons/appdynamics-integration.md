@@ -44,5 +44,6 @@ Oobeya is now connected with your AppDynamics account to give you real-time perf
 
 ## **Next Steps** :dart:&#x20;
 
-* [Add a new Widget](../../../dashboards/adding-a-new-widget.md)
+* [Network Access Requirements ](../../network-access-requirements.md)
+* [Create a new Gitwiser Analysis](../../../gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics.md)
 

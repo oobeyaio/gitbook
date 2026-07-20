@@ -40,3 +40,7 @@ Enhance the software delivery process by seamlessly integrating [Octopus Deploy 
 
 Now Oobeya is connected to your own Octopus Deploy account/server to enable you to track accurate DORA metrics calculated by Oobeya Deployment Analytics.
 
+## **Next Steps** :dart:&#x20;
+
+* [Network Access Requirements ](../../network-access-requirements.md)
+* [Create a new Gitwiser Analysis](../../../gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics.md)

@@ -38,5 +38,5 @@ Now Oobeya is connected with your own Bitbucket Server to get the real-time stat
 
 ## **Next Steps** :dart:&#x20;
 
-* [Add a new Widget](../../../dashboards/adding-a-new-widget.md)
-* [Create a new Gitwiser Analysis](https://docs.oobeya.io/gitwiser-repo-analytics/initialize-development-analytics)
+* [Network Access Requirements ](../../network-access-requirements.md)
+* [Create a new Gitwiser Analysis](../../../gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics.md)

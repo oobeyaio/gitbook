@@ -7,6 +7,7 @@ layout:
   cover:
     visible: true
     size: hero
+    mask: none
   title:
     visible: true
   description:
@@ -110,10 +111,7 @@ By following these instructions, you will be able to effortlessly integrate the 
 
 If you are not using Oobeya, feel free to [contact us](https://oobeya.io/contact/) to learn more about Oobeya GitHub integration and explore Oobeya's powerful DORA Metrics tool.
 
-{% content-ref url="../../../deployment-analytics/dora-metrics-introduction/" %}
-[dora-metrics-introduction](../../../deployment-analytics/dora-metrics-introduction/)
-{% endcontent-ref %}
+## **Next Steps** :dart:&#x20;
 
-{% content-ref url="../../../deployment-analytics/how-to-calculate-dora-metrics-for-github.md" %}
-[how-to-calculate-dora-metrics-for-github.md](../../../deployment-analytics/how-to-calculate-dora-metrics-for-github.md)
-{% endcontent-ref %}
+* [Network Access Requirements ](../../network-access-requirements.md)
+* [Create a new Gitwiser Analysis](../../../gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics.md)

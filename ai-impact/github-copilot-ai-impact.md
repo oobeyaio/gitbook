@@ -137,3 +137,8 @@ Once configured, the AI Impact module provides analytics from the **Org level â†
 * **Low Engagement Metrics?**
   * Ensure developers have Copilot enabled in their IDEs.
   * Provide enablement sessions to improve adoption.
+
+## **Next Steps** :dart:&#x20;
+
+* [Network Access Requirements ](../integrations/network-access-requirements.md)
+* [Create a new Gitwiser Analysis](../gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics.md)

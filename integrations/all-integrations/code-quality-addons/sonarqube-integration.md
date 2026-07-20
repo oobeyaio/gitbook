@@ -110,3 +110,8 @@ Contact Oobeya Support or reach out to your Customer Success Manager.
 ### Summary: Connect in 5 Steps
 
 <table><thead><tr><th width="83.13421630859375">Step</th><th width="329.26531982421875">Action</th><th>Result</th></tr></thead><tbody><tr><td>1</td><td>Generate a User Token in SonarQube</td><td>Secure authentication</td></tr><tr><td>2</td><td>Install the SonarQube Server Add-on in Oobeya</td><td>Enable integration</td></tr><tr><td>3</td><td>Add a Data Source</td><td>Connect Oobeya to your SonarQube server</td></tr><tr><td>4</td><td>View Dashboards and Scorecards</td><td>Monitor real-time code quality</td></tr></tbody></table>
+
+## **Next Steps** :dart:&#x20;
+
+* [Network Access Requirements ](../../network-access-requirements.md)
+* [Create a new Gitwiser Analysis](../../../gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics.md)

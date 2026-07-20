@@ -44,3 +44,7 @@ icon: plug
 
 Now Oobeya is connected with your own TeamCity server to monitor the health status of your pipelines and track key metrics such as _time-to-fix, average deployment duration_...
 
+## **Next Steps** :dart:&#x20;
+
+* [Network Access Requirements ](../../network-access-requirements.md)
+* [Create a new Gitwiser Analysis](../../../gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics.md)

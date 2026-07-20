@@ -112,3 +112,8 @@ View them in:
 #### Summary: Connect in 4 Steps
 
 <table><thead><tr><th width="88.56866455078125">Step</th><th>Action</th><th>Result</th></tr></thead><tbody><tr><td>1</td><td>Generate a <strong>SonarQube Cloud</strong> token</td><td>Secure API access</td></tr><tr><td>2</td><td>Get your <strong>Organization Key</strong></td><td>Correct org scoping</td></tr><tr><td>3</td><td><strong>Install</strong> the <strong>SonarQube Cloud</strong> add-on</td><td>Enable integration</td></tr><tr><td>4</td><td><strong>Add Data Source</strong> &#x26; test</td><td>Start syncing insights</td></tr></tbody></table>
+
+## **Next Steps** :dart:&#x20;
+
+* [Network Access Requirements ](../../network-access-requirements.md)
+* [Create a new Gitwiser Analysis](../../../gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics.md)

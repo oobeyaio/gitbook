@@ -54,3 +54,8 @@ Now, connect your Gitea server to start fetching data.
 ### Ready to Connect 🚀
 
 **Congratulations!** Oobeya is now connected to your Gitea server. It will begin pulling real-time statistics from your repositories to track development velocity, code review cycles, and team performance.
+
+## **Next Steps** :dart:&#x20;
+
+* [Network Access Requirements ](../../network-access-requirements.md)
+* [Create a new Gitwiser Analysis](../../../gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics.md)

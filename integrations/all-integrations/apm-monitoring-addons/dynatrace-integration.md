@@ -38,4 +38,5 @@ Now Oobeya is connected to your **Dynatrace** account to diagnose, fix, and opti
 
 ## **Next Steps** :dart:&#x20;
 
-* [Add a new Widget](../../../dashboards/adding-a-new-widget.md)
+* [Network Access Requirements ](../../network-access-requirements.md)
+* [Create a new Gitwiser Analysis](../../../gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics.md)
