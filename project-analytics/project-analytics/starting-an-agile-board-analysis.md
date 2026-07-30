@@ -27,7 +27,7 @@ In this step, you define the main context of the analysis.
 **Required fields**
 
 * **Data Source**: Select one of the previously configured Agile data sources\
-  &#xNAN;_(e.g. Jira Cloud, Jira Data Center, Azure DevOps)_
+  _(e.g. Jira Cloud, Jira Data Center, Azure DevOps)_
 * **Board**: Select the Agile board to analyze
 * **Board Type**: Scrum or Kanban
 
@@ -52,11 +52,11 @@ Map workflow states to Oobeya’s standard flow categories. By default, Oobeya a
 **Required mappings**
 
 * **To Do**: States representing work that has not started\
-  &#xNAN;_(e.g. Backlog, To Do, Open, Analysis, Blocked)_
+  _(e.g. Backlog, To Do, Open, Analysis, Blocked)_
 * **In Progress**: States representing active work\
-  &#xNAN;_(e.g. Development, Code Review)_
+  _(e.g. Development, Code Review)_
 * **Done**: Final states\
-  &#xNAN;_(e.g. Done, Cancelled)_
+  _(e.g. Done, Cancelled)_
 
 **Additional settings**
 
@@ -78,7 +78,7 @@ Configure how effort and sprint planning behavior are interpreted.
 **Required**
 
 * **Effort Field**: Field used to calculate effort\
-  &#xNAN;_(commonly Story Points)_
+  _(commonly Story Points)_
 
 **Optional**
 

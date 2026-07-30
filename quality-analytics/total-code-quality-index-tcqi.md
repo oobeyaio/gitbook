@@ -106,7 +106,7 @@ TCQI = 5 × (1− (Total_Risk_Score / (Lines_of_Code + Total_Risk_Score)​)
 To tailor the TCQI model to your organization:
 
 Go to:\
-&#xNAN;**`Admin Settings > Code Quality > Code Quality Index`**
+**`Admin Settings > Code Quality > Code Quality Index`**
 
 There, you can:
 
