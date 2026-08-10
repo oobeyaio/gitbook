@@ -98,6 +98,98 @@ Register your own GitHub Application to integrate with Oobeya for more flexibili
 
 ***
 
+## **Option 3:** Using a GitHub App Installation Token
+
+Integrate Oobeya with GitHub by using an **Installation Token** generated from your own GitHub App. With this option, Oobeya authenticates as the GitHub App installation itself — using the **App ID**, the **Installation ID**, and the App's **private key (.pem)** — instead of an OAuth flow or a user-based Personal Access Token.
+
+This option is recommended when:
+
+* You do not want the integration to depend on a personal user account or a user's Personal Access Token.
+* You prefer server-to-server authentication with short-lived tokens that are refreshed automatically.
+* Your organization restricts OAuth callback URLs, or your Oobeya instance is not publicly reachable from GitHub.
+
+{% hint style="info" %}
+You can use an existing GitHub App or register a new one. If you have already registered your own GitHub App by following **Option 2**, you can reuse the same application here — you only need the App ID, the Installation ID, and a private key file.
+{% endhint %}
+
+See the step-by-step integration guide below:
+
+***
+
+#### Step 1: Create a New GitHub App (or use an existing one)
+
+1. Navigate to the **Settings** page on GitHub.
+   * To register an application for a **personal account**, click on the "Developer settings" tab.
+   * To register an application for an **Organization**, go to the "Organizations" tab from the left menu, then click on the "Settings" button next to the organization name.
+2. On the left menu, click on "Developer settings".
+3. On the left menu, click on "GitHub Apps".
+4. Click on the "New GitHub App" button.
+5. Fill in the required fields (GitHub App name, Homepage URL) with your information.
+   * A **Callback URL** is **not required** for the Installation Token integration. If the field is mandatory in your GitHub version, you can enter your Oobeya domain (e.g., `https://customer.oobeya.io`).
+   * Under the "Webhook" section, you can **uncheck "Active"**, since Oobeya collects data by using the GitHub API.
+6. Click the "Create GitHub App" button to save your changes.
+7. Open the "Permissions & events" tab from the left menu and select the following permissions as **"Read-only"** for the Actions, Administration, Code, Deployments, Issues, Members, Metadata, Organization Administration, Organization Events, Organization Projects, and Pull Requests.
+
+***
+
+#### Step 2: Get the Application ID
+
+1. Open your GitHub App settings page.
+   * Organization app example: `https://github.com/organizations/{ORGANIZATION}/settings/apps/{APP_NAME}`\
+     (e.g., [https://github.com/organizations/oobeyaio/settings/apps/oobeya-dora-metrics](https://github.com/organizations/oobeyaio/settings/apps/oobeya-dora-metrics)).
+   * Personal account app: **Settings > Developer settings > GitHub Apps >** click "Edit" next to your app.
+2. On the "General" tab, find the **"App ID"** value in the "About" section (e.g., `123456`).
+3. Copy this value; you will enter it into the **Application ID** field in Oobeya.
+
+{% hint style="warning" %}
+The **App ID** and the **Client ID** are different values. For the Installation Token integration, Oobeya requires the numeric **App ID**, not the Client ID (`Iv1.xxxxxxxx` / `Iv23xxxxxxxx`).
+{% endhint %}
+
+***
+
+#### Step 3: Generate a Private Key (.pem)
+
+1. On the GitHub App "General" tab, scroll down to the **"Private keys"** section.
+2. Click the "Generate a private key" button.
+3. GitHub will automatically download a `.pem` file to your computer (e.g., `oobeya-dora-metrics.2026-08-10.private-key.pem`). Store this file securely; you will upload it to Oobeya in Step 5.
+
+{% hint style="info" %}
+GitHub shows the private key only once, at the moment it is generated. If the `.pem` file is lost, you cannot download it again — generate a new private key instead. Each generated key is listed with its SHA256 fingerprint and remains valid until you delete it, so it is a good practice to delete the keys you no longer use.
+{% endhint %}
+
+***
+
+#### Step 4: Install the GitHub App and Get the Installation ID
+
+1. On your GitHub App settings page, click "Install App" from the left menu, then install the application on your organization or personal account.
+2. You will be prompted to choose which repositories to integrate with Oobeya. You can select all repositories or choose specific ones.
+3. Open the installation configuration page to read the **Installation ID**:
+   * For an **Organization**: **Organization Settings > GitHub Apps >** click "Configure" next to the app.
+   * For a **personal account**: **Settings > Applications > Installed GitHub Apps >** click "Configure" next to the app.
+4. Check the browser address bar. The last number in the URL is your **Installation ID**:\
+   `https://github.com/organizations/{ORGANIZATION}/settings/installations/98765432`\
+   In this example, the Installation ID is `98765432`.
+
+***
+
+#### Step 5: Create the Data Source in Oobeya
+
+1. Navigate to the Oobeya **Data Sources** page. Look for the GitHub integration and select it.
+2. When adding the data source for GitHub, select **"GitHub Installation Token"** as the "version".
+3. Fill in the following fields:
+   * **Data Source Name:** A descriptive name for the data source (e.g., `GitHub - Oobeya Org`).
+   * **Application ID:** The App ID you copied in Step 2 (e.g., `123456`).
+   * **Installation ID:** The Installation ID you copied in Step 4 (e.g., `98765432`).
+   * **Private Key (.pem):** Drag and drop the `.pem` file you downloaded in Step 3 into the upload area, or click the area to select the file.
+4. Click the "Test Connection" button to verify that the credentials are valid.
+5. Once the connection test is successful, click the "Add" button to save the data source.
+
+{% hint style="info" %}
+Oobeya uses the App ID and the private key to generate a short-lived installation access token for the given Installation ID, and refreshes it automatically. You do not need to renew any token manually.
+{% endhint %}
+
+***
+
 ## Troubleshooting
 
 * If you encounter issues with the integration, check the permissions granted during the installation process. Ensure Oobeya has access to the necessary data.

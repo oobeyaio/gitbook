@@ -5,11 +5,12 @@ icon: github
 
 # GitHub Integration
 
-There are three options to integrate [Oobeya](https://oobeya.io) with [GitHub](https://github.com). This integration guide only covers **Option 3**.
+There four options to integrate [Oobeya](https://oobeya.io) with [GitHub](https://github.com).&#x20;
 
-1. **Option 1:** Use the [official Oobeya GitHub App](https://github.com/marketplace/oobeya-dora-metrics) from the GitHub Marketplace. This option provides a straightforward integration process by installing the official Oobeya GitHub App and selecting it when creating a data source in Oobeya. See the [step-by-step integration guide here](step-by-step-integration-instructions-for-the-oobeya-github-application.md#option-1-use-the-official-oobeya-github-app-listed-on-the-github-marketplace).
-2. **Option 2:** Register your own GitHub application. This option offers more flexibility and customization by allowing you to create your own GitHub App, and configure settings. See the [step-by-step integration guide here](step-by-step-integration-instructions-for-the-oobeya-github-application.md#option-2-register-your-own-github-application-to-integrate-with-oobeya).
-3. **Option 3:** Use a Personal Access Token for the integration. See the step-by-step integration guide below.
+1. **Option 1:** [Use a Personal Access Token](github-integrations.md#id-1.-generate-github-personal-access-token)
+2. **Option 2:** [Use the official Oobeya GitHub App from the GitHub Marketplace. ](step-by-step-integration-instructions-for-the-oobeya-github-application.md#option-1-using-the-official-oobeya-github-app)
+3. **Option 3:** [Register your own GitHub application.](step-by-step-integration-instructions-for-the-oobeya-github-application.md#option-2-registering-your-own-github-application)
+4. **Option 4:** Use a GitHub App Installation Token
 
 ***
 
