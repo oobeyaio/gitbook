@@ -109,7 +109,7 @@ This option is recommended when:
 * Your organization restricts OAuth callback URLs, or your Oobeya instance is not publicly reachable from GitHub.
 
 {% hint style="info" %}
-You can use an existing GitHub App or register a new one. If you have already registered your own GitHub App by following **Option 2**, you can reuse the same application here — you only need the App ID, the Installation ID, and a private key file.
+You can use an existing GitHub App or register a new one. If you have already registered your own GitHub App by following [**Option 2**](step-by-step-integration-instructions-for-the-oobeya-github-application.md#option-2-registering-your-own-github-application), you can reuse the same application here — you only need the App ID, the Installation ID, and a private key file.
 {% endhint %}
 
 See the step-by-step integration guide below:
@@ -118,17 +118,7 @@ See the step-by-step integration guide below:
 
 #### Step 1: Create a New GitHub App (or use an existing one)
 
-1. Navigate to the **Settings** page on GitHub.
-   * To register an application for a **personal account**, click on the "Developer settings" tab.
-   * To register an application for an **Organization**, go to the "Organizations" tab from the left menu, then click on the "Settings" button next to the organization name.
-2. On the left menu, click on "Developer settings".
-3. On the left menu, click on "GitHub Apps".
-4. Click on the "New GitHub App" button.
-5. Fill in the required fields (GitHub App name, Homepage URL) with your information.
-   * A **Callback URL** is **not required** for the Installation Token integration. If the field is mandatory in your GitHub version, you can enter your Oobeya domain (e.g., `https://customer.oobeya.io`).
-   * Under the "Webhook" section, you can **uncheck "Active"**, since Oobeya collects data by using the GitHub API.
-6. Click the "Create GitHub App" button to save your changes.
-7. Open the "Permissions & events" tab from the left menu and select the following permissions as **"Read-only"** for the Actions, Administration, Code, Deployments, Issues, Members, Metadata, Organization Administration, Organization Events, Organization Projects, and Pull Requests.
+1. For this step, follow the same steps mentioned [here](step-by-step-integration-instructions-for-the-oobeya-github-application.md#step-1-create-a-new-github-app).
 
 ***
 
@@ -138,8 +128,10 @@ See the step-by-step integration guide below:
    * Organization app example: `https://github.com/organizations/{ORGANIZATION}/settings/apps/{APP_NAME}`\
      (e.g., [https://github.com/organizations/oobeyaio/settings/apps/oobeya-dora-metrics](https://github.com/organizations/oobeyaio/settings/apps/oobeya-dora-metrics)).
    * Personal account app: **Settings > Developer settings > GitHub Apps >** click "Edit" next to your app.
-2. On the "General" tab, find the **"App ID"** value in the "About" section (e.g., `123456`).
+2. On the "General" tab, find the **"App ID"** value in the "About" section (e.g., `123456`).,
 3. Copy this value; you will enter it into the **Application ID** field in Oobeya.
+
+<figure><img src="../../../.gitbook/assets/image (545).png" alt="" width="563"><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 The **App ID** and the **Client ID** are different values. For the Installation Token integration, Oobeya requires the numeric **App ID**, not the Client ID (`Iv1.xxxxxxxx` / `Iv23xxxxxxxx`).
@@ -151,7 +143,9 @@ The **App ID** and the **Client ID** are different values. For the Installation 
 
 1. On the GitHub App "General" tab, scroll down to the **"Private keys"** section.
 2. Click the "Generate a private key" button.
-3. GitHub will automatically download a `.pem` file to your computer (e.g., `oobeya-dora-metrics.2026-08-10.private-key.pem`). Store this file securely; you will upload it to Oobeya in Step 5.
+3. GitHub will automatically download a `.pem` file to your computer. Store this file securely; you will upload it to Oobeya in Step 5.
+
+<figure><img src="../../../.gitbook/assets/image (546).png" alt="" width="563"><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 GitHub shows the private key only once, at the moment it is generated. If the `.pem` file is lost, you cannot download it again — generate a new private key instead. Each generated key is listed with its SHA256 fingerprint and remains valid until you delete it, so it is a good practice to delete the keys you no longer use.
@@ -183,6 +177,8 @@ GitHub shows the private key only once, at the moment it is generated. If the `.
    * **Private Key (.pem):** Drag and drop the `.pem` file you downloaded in Step 3 into the upload area, or click the area to select the file.
 4. Click the "Test Connection" button to verify that the credentials are valid.
 5. Once the connection test is successful, click the "Add" button to save the data source.
+
+<figure><img src="../../../.gitbook/assets/image (547).png" alt="" width="338"><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Oobeya uses the App ID and the private key to generate a short-lived installation access token for the given Installation ID, and refreshes it automatically. You do not need to renew any token manually.

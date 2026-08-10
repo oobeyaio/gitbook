@@ -10,7 +10,7 @@ There four options to integrate [Oobeya](https://oobeya.io) with [GitHub](https:
 1. **Option 1:** [Use a Personal Access Token](github-integrations.md#id-1.-generate-github-personal-access-token)
 2. **Option 2:** [Use the official Oobeya GitHub App from the GitHub Marketplace. ](step-by-step-integration-instructions-for-the-oobeya-github-application.md#option-1-using-the-official-oobeya-github-app)
 3. **Option 3:** [Register your own GitHub application.](step-by-step-integration-instructions-for-the-oobeya-github-application.md#option-2-registering-your-own-github-application)
-4. **Option 4:** Use a GitHub App Installation Token
+4. **Option 4:** [Use a GitHub App Installation Token](step-by-step-integration-instructions-for-the-oobeya-github-application.md#option-3-using-a-github-app-installation-token)
 
 ***
 
