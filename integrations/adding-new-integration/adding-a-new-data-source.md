@@ -34,9 +34,3 @@ See the articles below for detailed information about the integrations:
 * [GitLab](../all-integrations/scm-addons/gitlab-addon.md) & Oobeya Integration
 * [Jenkins](../all-integrations/scm-addons/jenkins-integration.md) & Oobeya Integration
 * [SonarQube](../all-integrations/code-quality-addons/sonarqube-integration.md) & Oobeya Integration
-
-## **WHAT'S NEXT?**:dart:&#x20;
-
-* Creating Gitwiser Repository Analysis
-* [Adding A New Widget](../../dashboards/adding-a-new-widget.md)
-* [Updating and Deleting Data Sources](updating-and-deleting-data-sources.md)
