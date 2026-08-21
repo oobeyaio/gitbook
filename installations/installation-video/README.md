@@ -1,36 +1,64 @@
 ---
-description: Install Oobeya On-Premise Edition Using Docker Compose
+description: >-
+  Install Oobeya On-Premise Edition on a dedicated Linux server or virtual
+  machine using Docker Compose.
 icon: docker
 ---
 
 # Oobeya Installation Tutorial & Requirements (Docker)
 
+This deployment model is a good fit for organizations that want to run Oobeya inside infrastructure they control without operating a Kubernetes cluster.
+
+For Kubernetes-based environments, use the [Helm](https://docs.oobeya.io/installations/oobeya-installation-tutorial-helm), [Kubernetes](https://docs.oobeya.io/installations/oobeya-installation-tutorial-kubernetes), or [OpenShift](https://docs.oobeya.io/installations/oobeya-installation-tutorial-openshift) installation guides instead.
+
+***
+
 ### **PREREQUISITES**
 
-If you want to run Oobeya on a server (VM, AWS, Azure, GCP, etc.) without any performance issues, you should set the minimum resources as below:
+If you want to run Oobeya on a server (VM, AWS, Azure, GCP, etc.) without any performance issues, you should set the minimum resources as follows:
 
 #### **Minimum Hardware Requirements:**
 
-* 16GB RAM _(Server requires at least 16GB of RAM to run efficiently for enterprises.)_
-* 8 CPU / 4 Core
+* 16GB RAM _(The server requires at least 16GB of RAM to run efficiently for enterprises.)_
+* 8 CPU / 4 Cores
 * 100GB Disk Space
 
-#### **Required Applications:**
+{% hint style="info" %}
+For advanced infrastructure sizing guidance, see [Oobeya On-Premise Infrastructure Requirements](https://oobeya.io/on-premise/requirements).
 
-* Docker
-* docker-compose
+For large enterprise deployments, validate sizing with the Oobeya team before production rollout.
+{% endhint %}
+
+#### **Container Runtime**
+
+The Docker installation requires:
+
+* Docker Engine
+* Docker Compose
 
 #### Supported External NoSQL Databases
 
 * MongoDB Atlas, Azure CosmosDB, AWS DocumentDB, GCP Firestore, Custom MongoDB Server.
 
-#### **Access Requirements:**
+#### **Container Registry Access**
 
-* Access to Docker Hub.
-* Access to Azure Container Registry (ACR): https://oobeya.azurecr.io
-* Docker login credentials for ACR access (provided by the Oobeya Team).
+Allow outbound HTTPS access to the required Oobeya container registry:
 
-<p align="center"><a href="https://oobeya.io/contact" class="button primary">Request Your Docker Credentials</a></p>
+```
+oobeya.azurecr.io
+```
+
+If direct outbound registry access is not allowed, organizations can use an approved internal registry mirror or an offline image-transfer process.
+
+{% hint style="info" %}
+Coordinate offline or restricted-network installations with the Oobeya team before deployment.
+{% endhint %}
+
+#### **Request Oobeya Registry Credentials**
+
+Oobeya application images are distributed through the Oobeya container registry. You will need registry credentials provided by the Oobeya team before starting the installation.
+
+<a href="https://oobeya.io/contact" class="button primary" data-icon="paper-plane-top">Request Your Docker Credentials</a>
 
 ***
 
@@ -86,7 +114,7 @@ docker login -u {{user_name}} -p {{password}} oobeya.azurecr.io
 docker-compose up -d
 ```
 
-8- **Navigate** to the Oobeya browse URL to launch the Oobeya registration page. Then, set a new password for the _root user_ of the Oobeya.
+8- **Navigate** to the Oobeya browse URL to launch the Oobeya registration page. Then, set a new password for the _root user_ of Oobeya.
 
 9\. Log in with the _**root**_ user and explore Oobeya!
 
