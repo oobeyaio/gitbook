@@ -29,11 +29,7 @@ Before starting the integration:
 
 Oobeya supports both authentication types depending on your Jira environment:
 
-<table><thead><tr><th width="236.4971923828125">Environment</th><th width="336.054443359375">Authentication Type</th></tr></thead><tbody><tr><td><strong>Xray Cloud</strong></td><td>API Token or Basic Auth</td></tr><tr><td><strong>Xray Server / DC</strong></td><td>API Token or Basic Auth</td></tr></tbody></table>
-
-{% hint style="info" %}
-&#x20;For Xray Cloud users, you can generate your API token from Atlassian Account → Security → API Tokens.
-{% endhint %}
+<table><thead><tr><th width="236.4971923828125">Environment</th><th width="336.054443359375">Authentication Type</th></tr></thead><tbody><tr><td><strong>Xray Server / DC</strong></td><td>API Token or Basic Auth</td></tr></tbody></table>
 
 ***
 
@@ -49,7 +45,7 @@ Go to `Integrations → Test → Xray` and make sure the Xray addon is **install
 2. Click **Xray** addon and click **New Data Source**.
 3. Fill in the connection details:
 
-<table><thead><tr><th width="158.52154541015625">Field</th><th width="293.4365234375">Description</th><th width="315.4296875">Example</th></tr></thead><tbody><tr><td><strong>Data Source Name</strong></td><td>A custom name for your connection.</td><td>Company Xray Server</td></tr><tr><td><strong>Server URL</strong></td><td>Base URL of your Jira Xray instance.</td><td><p>Server: <code>https://JIRA_SERVER_URL</code> </p><p>Cloud: <code>https://yourcompany.atlassian.net</code></p></td></tr><tr><td><strong>Access Type</strong></td><td>Choose <strong>Basic</strong> or <strong>Token</strong>.</td><td>-</td></tr><tr><td><strong>Username / Email</strong></td><td>Your Jira username or email address.</td><td>test@company.com</td></tr><tr><td><strong>Password / Token</strong></td><td>Jira password or API token.</td><td>●●●●●●●</td></tr></tbody></table>
+<table><thead><tr><th width="158.52154541015625">Field</th><th width="293.4365234375">Description</th><th width="315.4296875">Example</th></tr></thead><tbody><tr><td><strong>Data Source Name</strong></td><td>A custom name for your connection.</td><td>Company Xray Server</td></tr><tr><td><strong>Server URL</strong></td><td>Base URL of your Jira Xray instance.</td><td>Server: <code>https://JIRA_SERVER_URL</code> </td></tr><tr><td><strong>Access Type</strong></td><td>Choose <strong>Basic</strong> or <strong>Token</strong>.</td><td>-</td></tr><tr><td><strong>Username / Email</strong></td><td>Your Jira username or email address.</td><td>test@company.com</td></tr><tr><td><strong>Password / Token</strong></td><td>Jira password or API token.</td><td>●●●●●●●</td></tr></tbody></table>
 
 4. Click **Test Connection** to validate credentials.
 5. Once the connection succeeds, click **Add** to save.
