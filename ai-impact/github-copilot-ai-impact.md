@@ -61,6 +61,7 @@ When adding GitHub Copilot as a data source:
 * `admin:org`
 * `read:org`
 * `manage_billing:copilot`
+* `manage_billing:enterprise`
 * `read:enterprise` _(required only for GH enterprise usage)_
 
 Once the token is entered, click **Test Connection** → **Update** to finalize.
