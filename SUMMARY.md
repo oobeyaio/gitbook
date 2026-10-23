@@ -83,6 +83,8 @@
   * [S12- High Lead Time For Changes (DORA)](team-insights-and-symptoms/symptoms-catalog/s12-high-lead-time-for-changes-dora.md)
   * [S13- Low Deployment Frequency (DORA)](team-insights-and-symptoms/symptoms-catalog/s13-low-deployment-frequency-dora.md)
   * [S14- High Change Failure Rate (DORA)](team-insights-and-symptoms/symptoms-catalog/s14-high-change-failure-rate-dora.md)
+  * [S15 - Unreachable Data Sources](team-insights-and-symptoms/symptoms-catalog/s15-unreachable-data-sources.md)
+  * [S16 - Unused Data Sources](team-insights-and-symptoms/symptoms-catalog/s16-unused-data-sources.md)
 * [Engineering Benchmarks](team-insights-and-symptoms/engineering-benchmarks.md)
 
 ## AI Impact
