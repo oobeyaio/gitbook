@@ -149,6 +149,7 @@
   * [Understanding Roles in Oobeya](administration/user-management-single-sign-on-auth-settings/understanding-roles-in-oobeya.md)
 * [License Management](administration/license-management/README.md)
   * [Updating The License Key](administration/license-management/updating-the-license-key.md)
+* [Automated Reanalysis for Analytics](administration/automated-reanalysis-for-analytics.md)
 
 ## DEVELOPMENT ANALYTICS - GITWISER <a href="#gitwiser-repo-analytics" id="gitwiser-repo-analytics"></a>
 
