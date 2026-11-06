@@ -90,7 +90,8 @@
 ## AI Impact
 
 * [GitHub Copilot - AI Impact](ai-impact/github-copilot-ai-impact.md)
-* [Claude Code - AI Impact](ai-impact/claude-code-ai-impact.md)
+* [Claude Code - AI Impact](ai-impact/claude-code-ai-impact/README.md)
+  * [Oobeya Collector Installation (Docker)](ai-impact/claude-code-ai-impact/oobeya-collector-installation-docker.md)
 * [AI Cost & Credits](ai-impact/ai-cost-and-credits.md)
 
 ## ALLOCATIONS
