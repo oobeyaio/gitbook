@@ -63,60 +63,78 @@ Requirements for these paths:
 The `nginx.conf` and ingress manifests that ship with Oobeya already contain these rules. If you maintain your own proxy configuration, add them as shown below.
 {% endhint %}
 
+{% hint style="info" %}
+You can find the whole configuration files below:\
+[Docker](https://oobeya-app.s3.amazonaws.com/oobeya-configs.zip)\
+[Helm](https://oobeya-app.s3.us-east-1.amazonaws.com/oobeya-helm-lts.tar)
+{% endhint %}
+
 {% tabs %}
 {% tab title="nginx" %}
 Add the four blocks inside your `server { ... }` block. `oobeya-api` is the upstream of the Oobeya platform service.
 
 ```nginx
 location = /mcp {
-    proxy_pass http://oobeya-api/mcp;
-    proxy_redirect off;
+    set $target_api "oobeya-dashboard";
+
+    proxy_pass http://$target_api:8080;
+    proxy_redirect     off;
     proxy_http_version 1.1;
-    proxy_buffering off;
+    proxy_buffering    off;
     proxy_read_timeout 300s;
 
-    proxy_set_header Host $host;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-Forwarded-Proto https;
-    proxy_set_header X-Forwarded-Port 443;
-    proxy_set_header X-Forwarded-Host $host;
+    proxy_set_header   Host $host;
+    proxy_set_header   X-Real-IP $remote_addr;
+    proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header   X-Forwarded-Host $host;
+    proxy_set_header   X-Forwarded-Proto https;
+    proxy_set_header   X-Forwarded-Port 443;
+    proxy_set_header   X-Forwarded-Scheme https;
 }
 
 location /.well-known/oauth-protected-resource {
-    proxy_pass http://oobeya-api;
-    proxy_redirect off;
+    set $target_api "oobeya-dashboard";
 
-    proxy_set_header Host $host;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-Forwarded-Proto https;
-    proxy_set_header X-Forwarded-Port 443;
-    proxy_set_header X-Forwarded-Host $host;
+    proxy_pass http://$target_api:8080;
+    proxy_redirect     off;
+
+    proxy_set_header   Host $host;
+    proxy_set_header   X-Real-IP $remote_addr;
+    proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header   X-Forwarded-Host $host;
+    proxy_set_header   X-Forwarded-Proto https;
+    proxy_set_header   X-Forwarded-Port 443;
+    proxy_set_header   X-Forwarded-Scheme https;
 }
 
 location /.well-known/oauth-authorization-server {
-    proxy_pass http://oobeya-api;
-    proxy_redirect off;
+    set $target_api "oobeya-dashboard";
 
-    proxy_set_header Host $host;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-Forwarded-Proto https;
-    proxy_set_header X-Forwarded-Port 443;
-    proxy_set_header X-Forwarded-Host $host;
+    proxy_pass http://$target_api:8080;
+    proxy_redirect     off;
+
+    proxy_set_header   Host $host;
+    proxy_set_header   X-Real-IP $remote_addr;
+    proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header   X-Forwarded-Host $host;
+    proxy_set_header   X-Forwarded-Proto https;
+    proxy_set_header   X-Forwarded-Port 443;
+    proxy_set_header   X-Forwarded-Scheme https;
 }
 
 location /oauth2/ {
-    proxy_pass http://oobeya-api/oauth2/;
-    proxy_redirect off;
+    set $target_api "oobeya-dashboard";
 
-    proxy_set_header Host $host;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-Forwarded-Proto https;
-    proxy_set_header X-Forwarded-Port 443;
-    proxy_set_header X-Forwarded-Host $host;
+    proxy_pass http://$target_api:8080;
+    proxy_redirect     off;
+
+    proxy_set_header   Host $host;
+    proxy_set_header   X-Real-IP $remote_addr;
+    proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header   X-Forwarded-Host $host;
+    proxy_set_header   X-Forwarded-Proto https;
+    proxy_set_header   X-Forwarded-Port 443;
+    proxy_set_header   X-Forwarded-Scheme https;
 }
 ```
 
