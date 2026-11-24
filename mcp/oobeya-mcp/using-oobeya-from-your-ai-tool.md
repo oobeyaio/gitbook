@@ -30,17 +30,7 @@ Available from **Oobeya 2.1.0**. Your administrator sets it up once; see [Oobeya
 
 Supported AI tools:
 
-| AI tool          | How you add Oobeya                                                |
-| ---------------- | ----------------------------------------------------------------- |
-| Claude Code      | One-click open (terminal or Claude Desktop), or terminal commands |
-| Codex            | One-click open (Codex app), or terminal commands                  |
-| Cursor           | One-click install                                                 |
-| VS Code          | One-click install                                                 |
-| Devin (Windsurf) | One-click install, or terminal commands                           |
-| GitHub Copilot   | Terminal commands                                                 |
-| Gemini CLI       | Terminal commands                                                 |
-| Grok Build       | Terminal commands                                                 |
-| OpenCode         | Terminal commands                                                 |
+<table><thead><tr><th width="212.27069091796875">AI tool</th><th>How you add Oobeya</th></tr></thead><tbody><tr><td>Claude Code</td><td>One-click open (terminal or Claude Desktop), or terminal commands</td></tr><tr><td>Codex</td><td>One-click open (Codex app), or terminal commands</td></tr><tr><td>Cursor</td><td>One-click install</td></tr><tr><td>VS Code</td><td>One-click install</td></tr><tr><td>Devin (Windsurf)</td><td>One-click install, or terminal commands</td></tr><tr><td>GitHub Copilot</td><td>Terminal commands</td></tr><tr><td>Gemini CLI</td><td>Terminal commands</td></tr><tr><td>Grok Build</td><td>Terminal commands</td></tr><tr><td>OpenCode</td><td>Terminal commands</td></tr></tbody></table>
 
 ## 2. Connect Your AI Tool
 

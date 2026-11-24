@@ -21,6 +21,12 @@
   * [Oobeya Version Upgrade for Kubernetes Installations](installations/oobeya-installation-tutorial-kubernetes/oobeya-version-upgrade-for-kubernetes-installations.md)
 * [Oobeya Installation Tutorial (OpenShift)](installations/oobeya-installation-tutorial-openshift.md)
 
+## AI Access (MCP) <a href="#mcp" id="mcp"></a>
+
+* [Oobeya MCP](mcp/oobeya-mcp/README.md)
+  * [Setup for Administrators](mcp/oobeya-mcp/setup-for-administrators.md)
+  * [Using Oobeya from Your AI Tool](mcp/oobeya-mcp/using-oobeya-from-your-ai-tool.md)
+
 ## INTEGRATIONS
 
 * [Integration Catalog](integrations/all-integrations/README.md)
@@ -254,9 +260,3 @@
 
 * [Support Request Workflow](support/support-request-workflow.md)
 * [Customer Success & Support Guide](support/customer-success-and-support-guide.md)
-
-## AI Access (MCP) <a href="#mcp" id="mcp"></a>
-
-* [Oobeya MCP](mcp/oobeya-mcp/README.md)
-  * [Setup for Administrators](mcp/oobeya-mcp/setup-for-administrators.md)
-  * [Using Oobeya from Your AI Tool](mcp/oobeya-mcp/using-oobeya-from-your-ai-tool.md)
