@@ -254,3 +254,9 @@
 
 * [Support Request Workflow](support/support-request-workflow.md)
 * [Customer Success & Support Guide](support/customer-success-and-support-guide.md)
+
+## AI Access (MCP) <a href="#mcp" id="mcp"></a>
+
+* [Oobeya MCP](mcp/oobeya-mcp/README.md)
+  * [Setup for Administrators](mcp/oobeya-mcp/setup-for-administrators.md)
+  * [Using Oobeya from Your AI Tool](mcp/oobeya-mcp/using-oobeya-from-your-ai-tool.md)
