@@ -68,7 +68,7 @@ Each item also has your own **status**: **Open**, **On it**, **Done** or **Won't
 
 * **Gamification**.
 * **Surveys**: open surveys for you, and **Create a survey** if you can create one.
-* **Connect your AI tool (MCP)**: whether an AI tool is connected to your Oobeya account, with a link to connect one. See [Using Oobeya from Your AI Tool (MCP)](/broken/pages/7b86def1736f4e977a2f570a49ab51f4485c2936).
+* **Connect your AI tool (MCP)**: whether an AI tool is connected to your Oobeya account, with a link to connect one. See [Using Oobeya from Your AI Tool](https://docs.oobeya.io/mcp/oobeya-mcp/using-oobeya-from-your-ai-tool).
 
 ## Team and Organization Sections
 
