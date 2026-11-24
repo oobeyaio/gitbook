@@ -8,6 +8,7 @@
 * [Product Tour](getting-started/product-tour.md)
 * [Get Started with Oobeya](getting-started/get-started-with-oobeya.md)
 * [Playground: Live Demo](getting-started/playground-live-demo.md)
+* [Home Page](getting-started/home-page.md)
 
 ## INSTALLATION (ON-PREMISE) <a href="#installations" id="installations"></a>
 
