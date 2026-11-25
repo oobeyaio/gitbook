@@ -2,7 +2,7 @@
 description: >-
   Explore the best practices for integrating Oobeya with Azure DevOps Scrum
   Boards.
-icon: windows
+hidden: true
 ---
 
 # Best practices for integrating Oobeya with Azure DevOps Scrum Boards

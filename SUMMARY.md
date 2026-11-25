@@ -5,15 +5,15 @@
 * [Welcome to Oobeya!](README.md)
 * [Oobeya Quick Onboarding Guide](getting-started/oobeya-quick-onboarding-guide.md)
 * [Metrics List](getting-started/metrics/README.md)
+  * [Project Analytics](getting-started/metrics/project-analytics.md)
   * [Development Analytics](getting-started/metrics/development-analytics.md)
   * [Pull Request Analytics](getting-started/metrics/pull-request-analytics.md)
   * [Delivery Analytics and DORA Metrics](getting-started/metrics/delivery-analytics-and-dora-metrics.md)
-  * [Project Analytics](getting-started/metrics/project-analytics.md)
+  * [AI Coding Assistant Impact](getting-started/metrics/ai-coding-assistant-impact.md)
+  * [AI Cost and Credits](getting-started/metrics/ai-cost-and-credits.md)
   * [Code Quality Analytics](getting-started/metrics/code-quality-analytics.md)
   * [Application Performance Metrics](getting-started/metrics/application-performance-metrics.md)
   * [Test Analytics](getting-started/metrics/test-analytics.md)
-  * [AI Coding Assistant Impact](getting-started/metrics/ai-coding-assistant-impact.md)
-  * [AI Cost and Credits](getting-started/metrics/ai-cost-and-credits.md)
   * [Document Analytics for Confluence](getting-started/metrics/document-analytics-for-confluence.md)
   * [Resource Allocation](getting-started/metrics/resource-allocation.md)
   * [Bug Report](getting-started/metrics/bug-report.md)
@@ -24,8 +24,8 @@
   * [Interpretation Guidelines](getting-started/metrics/interpretation-guidelines.md)
 * [Product Tour](getting-started/product-tour.md)
 * [Product Tour](https://oobeya.io/product-tour)
-* [Home Page](getting-started/home-page.md)
 * [Release Notes](https://oobeya.io/changelog)
+* [Home Page](getting-started/home-page.md)
 * [Get Started with Oobeya](getting-started/get-started-with-oobeya.md)
 * [Playground: Live Demo](getting-started/playground-live-demo.md)
 
@@ -142,14 +142,6 @@
   * [S16 - Unused Data Sources](team-insights-and-symptoms/symptoms-catalog/s16-unused-data-sources.md)
 * [Engineering Benchmarks](team-insights-and-symptoms/engineering-benchmarks.md)
 
-## USE CASES
-
-* [Proactive Issue Detection (Engineering Insights)](use-cases/proactive-issue-detection.md)
-* [Optimizing Team and Resource Utilization](use-cases/optimizing-team-and-resource-utilization.md)
-* [Gamification for Engineering KPIs](use-cases/gamification-for-engineering-kpis.md)
-* [Measuring the Impact of AI Coding Assistants](use-cases/measuring-the-impact-of-ai-coding-assistants.md)
-* [Measuring and Improving Test Efficiency with Oobeya Test Analytics](use-cases/measuring-test-efficiency.md)
-
 ## DevEx Surveys
 
 * [DevEx Surveys](devex-surveys/devex-surveys.md)
@@ -158,45 +150,6 @@
 
 * [Gamification (Oyunlaştırma)](gamification/gamification-tr.md)
 * [Gamification](gamification/gamification.md)
-
-## ALLOCATIONS
-
-* [Resource Allocation (Kaynak Tahsisi)](allocations/resource-allocation-tr.md)
-* [Resource Allocation](allocations/resource-allocation.md)
-
-## Bug Report
-
-* [Bug Report Modülü](bug-report/bug-report-modulu.md)
-* [Bug Report](bug-report/bug-report.md)
-
-## Activity Heatmap
-
-* [Aktivite Isı Haritası (Activity Heatmap)](activity-heatmap/aktivite-isi-haritasi.md)
-* [Activity Heatmap](activity-heatmap/activity-heatmap.md)
-
-## PRODUCT DOCS <a href="#product" id="product"></a>
-
-* [⭐ Oobeya Release Notes](product/release-notes/README.md)
-  * [🎁 Oobeya 2024 Q1 - Release Notes](product/release-notes/oobeya-2024-q1-release-notes.md)
-  * [🎁 Oobeya 2023 Q4 - Release Notes](product/release-notes/oobeya-2023-q4-release-notes.md)
-  * [🎁 Oobeya 2023 Q3 - Release Notes](product/release-notes/oobeya-2023-q3-release-notes.md)
-  * [🎁 Oobeya 2023 Q2 - Release Notes](product/release-notes/oobeya-2023-q2-release-notes.md)
-  * [🎁 Oobeya 2023 Q1 - Release Notes](product/release-notes/oobeya-2023-q1-release-notes.md)
-  * [🎁 Oobeya Nov & Dec '22 Updates](product/release-notes/oobeya-nov-and-dec-22-updates.md)
-  * [🎁 Oobeya September 2022 Updates](product/release-notes/oobeya-september-2022-updates.md)
-  * [🎁 Oobeya August 2022 Updates](product/release-notes/oobeya-august-2022-updates.md)
-  * [🎁 Oobeya July 2022 Updates](product/release-notes/oobeya-july-2022-updates.md)
-  * [🎁 Oobeya June 2022 Updates](product/release-notes/oobeya-june-2022-updates.md)
-  * [🎁 Oobeya Apr & May 2022 Updates](product/release-notes/oobeya-apr-and-may-2022-updates.md)
-  * [🎁 Oobeya March 2022 Updates](product/release-notes/oobeya-march-2022-updates.md)
-  * [🎁 Oobeya Feb 2022 Updates](product/release-notes/oobeya-feb-2022-updates.md)
-  * [🎁 Oobeya Jan 2022 Updates](product/release-notes/oobeya-jan-2022-updates.md)
-  * [OOBEYA-2.0.8 - Release Notes](product/release-notes/oobeya-2.0.8-release-notes.md)
-  * [OOBEYA-2.0.4 - Release Notes](product/release-notes/oobeya-2.0.4.md)
-  * [OOBEYA-2.0.0](product/release-notes/oobeya-2.0.0.md)
-  * [OOBEYA-1.4.6](product/release-notes/oobeya-1.4.6.md)
-  * [QAD-1.0 - 1.4](product/release-notes/qad-1.0-1.4.md)
-* [Developer Experience Metrics](product/developer-experience-metrics.md)
 
 ## DEVELOPMENT ANALYTICS - GITWISER <a href="#gitwiser-repo-analytics" id="gitwiser-repo-analytics"></a>
 
@@ -232,6 +185,11 @@
   * [Updating an Agile Board Analysis](project-analytics/project-analytics/updating-an-agile-board-analysis.md)
 * [Best practices for integrating Oobeya with Azure DevOps Scrum Boards](project-analytics/best-practices-for-integrating-oobeya-with-azure-devops-scrum-boards.md)
 
+## Bug Report
+
+* [Bug Report Modülü](bug-report/bug-report-modulu.md)
+* [Bug Report](bug-report/bug-report.md)
+
 ## Document Analytics
 
 * [Document Analytics (Confluence)](document-analytics/document-analytics-confluence.md)
@@ -241,26 +199,15 @@
 * [Total Code Quality Index (TCQI)](quality-analytics/total-code-quality-index-tcqi.md)
 * [Code Quality Index (TCQI & PCQI) \[TR\]](quality-analytics/code-quality-index-tcqi-and-pcqi-tr.md)
 
-## Test Analytics
+## ALLOCATIONS
 
-* [1. Yeni Test Analizi Oluşturma](test-analytics/yeni-test-analizi-olusturma.md)
-* [2. Test Analytics – Admin Settings](test-analytics/test-analytics-admin-ayarlari.md)
-* [3. Takım Eşlemesi (Team Mapping)](test-analytics/takim-eslemesi.md)
-* [Test Otomasyon Metrikleri ve API Dokümanı](test-analytics/test-otomasyon-metrikleri-ve-api-dokumani.md)
+* [Resource Allocation (Kaynak Tahsisi)](allocations/resource-allocation-tr.md)
+* [Resource Allocation](allocations/resource-allocation.md)
 
-## Best Practices
+## Activity Heatmap
 
-* [Configuring Git Author Tracking in SonarQube](best-practices/configuring-git-author-tracking-in-sonarqube.md)
-* [Azure DevOps Guides](best-practices/azure-devops-guides.md)
-
-## Guides
-
-## PROFILES  <a href="#scorecards" id="scorecards"></a>
-
-* [Introduction](scorecards/introduction.md)
-* [Adding A Profile](scorecards/adding-a-profile.md)
-* [Developer Scorecard](scorecards/individual-scorecards.md)
-* [Adding A Related Account Information To Oobeya Profile](scorecards/adding-a-related-account-information-to-oobeya-profile.md)
+* [Aktivite Isı Haritası (Activity Heatmap)](activity-heatmap/aktivite-isi-haritasi.md)
+* [Activity Heatmap](activity-heatmap/activity-heatmap.md)
 
 ## Team Health
 
@@ -270,6 +217,46 @@
 * [Project Analytics (Scrum Teams) Widget](team-health/project-analytics-scrum-teams-widget.md)
 * [Developer Onboarding Metrics Widget](team-health/developer-onboarding-metrics-widget.md)
 * [Updating Team Scorecard configuration to display DORA Metrics](team-health/updating-team-scorecard-configuration-to-display-dora-metrics.md)
+
+## PRODUCT DOCS <a href="#product" id="product"></a>
+
+* [⭐ Oobeya Release Notes](product/release-notes/README.md)
+  * [🎁 Oobeya 2024 Q1 - Release Notes](product/release-notes/oobeya-2024-q1-release-notes.md)
+  * [🎁 Oobeya 2023 Q4 - Release Notes](product/release-notes/oobeya-2023-q4-release-notes.md)
+  * [🎁 Oobeya 2023 Q3 - Release Notes](product/release-notes/oobeya-2023-q3-release-notes.md)
+  * [🎁 Oobeya 2023 Q2 - Release Notes](product/release-notes/oobeya-2023-q2-release-notes.md)
+  * [🎁 Oobeya 2023 Q1 - Release Notes](product/release-notes/oobeya-2023-q1-release-notes.md)
+  * [🎁 Oobeya Nov & Dec '22 Updates](product/release-notes/oobeya-nov-and-dec-22-updates.md)
+  * [🎁 Oobeya September 2022 Updates](product/release-notes/oobeya-september-2022-updates.md)
+  * [🎁 Oobeya August 2022 Updates](product/release-notes/oobeya-august-2022-updates.md)
+  * [🎁 Oobeya July 2022 Updates](product/release-notes/oobeya-july-2022-updates.md)
+  * [🎁 Oobeya June 2022 Updates](product/release-notes/oobeya-june-2022-updates.md)
+  * [🎁 Oobeya Apr & May 2022 Updates](product/release-notes/oobeya-apr-and-may-2022-updates.md)
+  * [🎁 Oobeya March 2022 Updates](product/release-notes/oobeya-march-2022-updates.md)
+  * [🎁 Oobeya Feb 2022 Updates](product/release-notes/oobeya-feb-2022-updates.md)
+  * [🎁 Oobeya Jan 2022 Updates](product/release-notes/oobeya-jan-2022-updates.md)
+  * [OOBEYA-2.0.8 - Release Notes](product/release-notes/oobeya-2.0.8-release-notes.md)
+  * [OOBEYA-2.0.4 - Release Notes](product/release-notes/oobeya-2.0.4.md)
+  * [OOBEYA-2.0.0](product/release-notes/oobeya-2.0.0.md)
+  * [OOBEYA-1.4.6](product/release-notes/oobeya-1.4.6.md)
+  * [QAD-1.0 - 1.4](product/release-notes/qad-1.0-1.4.md)
+* [Developer Experience Metrics](product/developer-experience-metrics.md)
+
+## Test Analytics
+
+* [1. Yeni Test Analizi Oluşturma](test-analytics/yeni-test-analizi-olusturma.md)
+* [2. Test Analytics – Admin Settings](test-analytics/test-analytics-admin-ayarlari.md)
+* [3. Takım Eşlemesi (Team Mapping)](test-analytics/takim-eslemesi.md)
+* [Test Otomasyon Metrikleri ve API Dokümanı](test-analytics/test-otomasyon-metrikleri-ve-api-dokumani.md)
+
+## Guides
+
+## PROFILES  <a href="#scorecards" id="scorecards"></a>
+
+* [Introduction](scorecards/introduction.md)
+* [Adding A Profile](scorecards/adding-a-profile.md)
+* [Developer Scorecard](scorecards/individual-scorecards.md)
+* [Adding A Related Account Information To Oobeya Profile](scorecards/adding-a-related-account-information-to-oobeya-profile.md)
 
 ## Organization
 
@@ -282,6 +269,19 @@
 ## Problem Analytics
 
 * [Problem Analytics](problem-analytics/problem-analytics.md)
+
+## USE CASES
+
+* [Proactive Issue Detection (Engineering Insights)](use-cases/proactive-issue-detection.md)
+* [Optimizing Team and Resource Utilization](use-cases/optimizing-team-and-resource-utilization.md)
+* [Gamification for Engineering KPIs](use-cases/gamification-for-engineering-kpis.md)
+* [Measuring the Impact of AI Coding Assistants](use-cases/measuring-the-impact-of-ai-coding-assistants.md)
+* [Measuring and Improving Test Efficiency with Oobeya Test Analytics](use-cases/measuring-test-efficiency.md)
+
+## Best Practices
+
+* [Configuring Git Author Tracking in SonarQube](best-practices/configuring-git-author-tracking-in-sonarqube.md)
+* [Azure DevOps Guides](best-practices/azure-devops-guides.md)
 
 ## CUSTOM DASHBOARDS <a href="#dashboards" id="dashboards"></a>
 

@@ -2,6 +2,7 @@
 description: >-
   Use Oobeya from Claude Code, Cursor, VS Code, GitHub Copilot and other AI
   tools through the Model Context Protocol (MCP).
+icon: mcp
 ---
 
 # Oobeya MCP

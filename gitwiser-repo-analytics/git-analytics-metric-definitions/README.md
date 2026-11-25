@@ -1,7 +1,3 @@
----
-icon: code-branch
----
-
 # Git Analytics - Metric Definitions
 
 ### Git Analytics - Work Type Metrics
