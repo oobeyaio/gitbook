@@ -10,6 +10,10 @@ Oobeya opens with a personal home page. It brings together the things that need 
 
 What you see depends on your company role, your teams and your Oobeya permissions. Every number on the page comes from the same data as the rest of Oobeya, and each section links to the page where you can act on it.
 
+{% embed url="https://youtu.be/ve1RkRoqGlc" %}
+A quick tour of the Oobeya home page.
+{% endembed %}
+
 {% hint style="info" %}
 Available from **Oobeya 2.1**.
 {% endhint %}

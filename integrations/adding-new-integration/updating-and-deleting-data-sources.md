@@ -5,41 +5,48 @@ icon: plug-circle-minus
 
 # Updating and Deleting Data Sources
 
-## **OVERVIEW**
+Data sources need attention when, for example:
 
-There are some cases that cause data source corruption. Therefore, you may need to manage your existing Data Sources.
+* a token expires or is revoked,
+* the server's domain name changes,
+* the service account's password or permissions change.
 
-* Tokens that you generated may be expired,
-* The Domain name of the server you saved may be changed,
-* The credentials of the user may be changed...
+Oobeya checks the connection of every data source each night. Failed checks show on the tool's card on the **Integrations** page (**N failed**) and in a banner at the top of the page.
 
-## **1. UPDATING DATA SOURCES** :pencil2:&#x20;
+### Opening a tool's data sources
 
-1. Navigate to **Data Sources**.
-2. Select the addon that you want to update.&#x20;
+1. Select **Integrations** in the **Administration** section of the left menu.
+2. Click the tool's card. The **Manage Data Sources** window lists its data sources.
 
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FRu1CubbXnWg3WXuSRwAI%2Ffile.png?alt=media)
+<figure><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FITAgI7q2VVeVGS1730DJ%2Fdatasource-list.png?alt=media&#x26;token=39b5353d-8708-45b9-add2-9586456d8332" alt="Manage Data Sources window with the data source list"><figcaption><p>The data source list of a tool, with the actions of each data source.</p></figcaption></figure>
 
-3\. Click the _edit icon_ and edit the data in the form.&#x20;
+Each data source has these actions:
 
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FQhV76Ukq9Iz0g9LcfwED%2Ffile.png?alt=media)
+| Icon   | Action                                                                                                                                       |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Reload | **Check now**: runs the connection check for this data source. When a check fails, the list shows how long the data source has been failing. |
+| Pencil | **Edit**: opens the form to update the data source.                                                                                          |
+| Trash  | **Delete**: deletes the data source after confirmation.                                                                                      |
 
-4\. Click the **"Update"** button to save the changes.
+To check every data source of every tool at once, click **Check all now** at the top right of the Integrations page.
 
-## **2. DELETING DATA SOURCES** :x:&#x20;
+### Updating a data source
 
-If you want to **delete a data source permanently**, follow the steps below:
+1. Open the tool's data sources and click the **edit** (pencil) icon.
+2. Change the fields you need. The form also shows the **Data Source ID**, which you can copy (some API calls and support requests need it).
+3. Click **Test Connection**, then **Update**.
 
-1. Navigate to **Data Sources**.
-2. Select the addon whose data source you want to delete.
-3. Click the _delete icon_ to delete the data source.&#x20;
+### Deleting a data source
 
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FxrU8LL01QSpFDqrXQtNH%2Ffile.png?alt=media)
+{% hint style="warning" %}
+Deleting a data source cannot be undone. Analyses that use it stop receiving data.
+{% endhint %}
 
-4\. Confirm the name of the data source you want to delete and click the **"Delete Data Source"** button.&#x20;
+1. Open the tool's data sources and click the **delete** (trash) icon.
+2. In the **Delete Data Source** window, type the data source name to confirm, then click **Delete**.
 
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2Fsld8HefvW3NKQQPsdnSk%2Ffile.png?alt=media)
+When you delete the last data source of a tool, the tool's card goes back to **Not connected**.
 
-## **WHAT'S NEXT?** :dart:&#x20;
+### What's next?
 
-* [Adding a New Data Source](adding-a-new-data-source.md)
+* [Adding a New Data Source](https://docs.oobeya.io/integrations/adding-new-integration/adding-a-new-data-source)

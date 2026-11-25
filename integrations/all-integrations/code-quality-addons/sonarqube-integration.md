@@ -11,7 +11,7 @@ Delivering **high-quality software** requires continuous attention to **code rel
 
 ***
 
-### 1. Generate a SonarQube Server User Token&#x20;
+#### 1. Generate a SonarQube Server User Token
 
 A **User Token** allows Oobeya to connect to your SonarQube Server instance and retrieve project data securely.
 
@@ -20,7 +20,7 @@ The token creation process has been updated.\
 For the official reference, see: [Generating and Using Tokens](https://docs.sonarsource.com/sonarqube-server/user-guide/managing-tokens)
 {% endhint %}
 
-#### Steps:
+**Steps:**
 
 1. Log in to your **SonarQube Server** instance.
 2. Click your **user avatar** (top-right corner) → select **My Account** → open the **Security** tab.
@@ -33,37 +33,30 @@ For the official reference, see: [Generating and Using Tokens](https://docs.sona
 The token should belong to a user with at least **Browse** access to all relevant projects. For organization-wide visibility, use a user account with **Admin** permissions.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (503).png" alt=""><figcaption><p>Generating a new user token</p></figcaption></figure>
+<figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FSRZyeeJAQqMSDZGkNaHa%2Fimage.png?alt=media&#x26;token=c1c9bb67-857e-48b6-80c5-21765cf94405" alt=""><figcaption><p>Generating a new user token</p></figcaption></figure>
 
 ***
 
-### 2. Install the SonarQube Add-on in Oobeya
+### 2. Connect SonarQube Server in Oobeya
 
-1. Log in to Oobeya with an **Administrator** account.
-2. Navigate to **Integrations.**
-3. Locate **SonarQube Server** and click **Install**.
+1. Sign in to Oobeya with an **Administrator** account and select **Integrations** in the **Administration** section of the left menu.
+2. In the **Code Quality & Security** section, click the **SonarQube Server** card. If SonarQube Server already has data sources, click **+ New Data Source** in the window that opens.
+3. Select the version **Sonar 6+** and fill in the form (see the fields below).
+4. Click **Test Connection** to verify the connection, then click **Add**.
 
-<figure><img src="../../../.gitbook/assets/image (518).png" alt="SonarQube Integration"><figcaption><p>SonarQube Server Integration</p></figcaption></figure>
+| Field                | Value                                                                   |
+| -------------------- | ----------------------------------------------------------------------- |
+| **Data Source Name** | A name you choose for this connection, for example _SonarQube Server_.  |
+| **Server URL**       | Your SonarQube Server URL, for example `https://sonarqube.example.com`. |
+| **Token**            | The user token from step 1.                                             |
 
-Once installed, the SonarQube Server connector becomes available in your **Data Sources** list.
+<figure><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FCGIWq3MJVotDXBgQzVIy%2Fform-sonarqube-server.png?alt=media&#x26;token=a6a3cf69-ac28-49ab-8340-c440d914244f" alt="SonarQube Server data source form in Oobeya"><figcaption><p>The SonarQube Server data source form on the Integrations page.</p></figcaption></figure>
 
-***
+{% hint style="info" %}
+Since Oobeya 2.1 there is no separate install step: the integration is enabled when you save its first data source. See [Adding New Integration](https://docs.oobeya.io/integrations/adding-new-integration).
+{% endhint %}
 
-### 3. Add a SonarQube Data Source
-
-1. Go to **Data Sources → SonarQube Server**.
-2. Click **New Data Source**.
-3. Fill out the form:
-   * **Name:** (e.g., `SonarQube – Production`)
-   * **Base URL:** Your SonarQube server address (e.g., `https://sonar.company.com`)
-   * **User Token:** Paste the token you generated earlier
-4. Click **Test Connection** to verify access.
-
-<figure><img src="../../../.gitbook/assets/image (519).png" alt="" width="375"><figcaption><p>Adding a new SonarQube data source</p></figcaption></figure>
-
-***
-
-### 4. Explore Your Code Quality Insights
+#### 3. Explore Your Code Quality Insights
 
 After integration, Oobeya continuously imports your **SonarQube metrics**, including:
 
@@ -76,27 +69,23 @@ You can explore this data in:
 
 * **Dashboards** — for overall visibility
 
-<figure><img src="../../../.gitbook/assets/image (510).png" alt=""><figcaption><p>Improved visibility and ownership for better code quality and security</p></figcaption></figure>
-
-
+<figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FJlKQQ2eDGm8eSzqPZ3fX%2Fimage.png?alt=media&#x26;token=c7ba2797-1fe6-4aad-bac1-f3ad27476e58" alt=""><figcaption><p>Improved visibility and ownership for better code quality and security</p></figcaption></figure>
 
 * **Organizational, Team, and Individual Scorecards** — to track trends and KPIs
 
-<figure><img src="../../../.gitbook/assets/image (509).png" alt=""><figcaption><p>Sonarqube metrics in Team Scorecards</p></figcaption></figure>
+<figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FsD91TH29lh6Pf6t9y4Ax%2Fimage.png?alt=media&#x26;token=2db5cde2-3786-44da-8b68-45d2d6d3a2a7" alt=""><figcaption><p>Sonarqube metrics in Team Scorecards</p></figcaption></figure>
 
+* **Engineering Insights / Symptoms** — to proactively detect unhealthy code practices **-** [_learn more here_](https://docs.oobeya.io/use-cases/proactive-issue-detection)_._<br>
 
+<figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FfHlXLua9Qx96i9VSBnrI%2Fimage.png?alt=media&#x26;token=4650bf21-1cf6-4f5a-b075-2449e01444e5" alt=""><figcaption><p>Code Quality Insights: Auto-detected Symptoms</p></figcaption></figure>
 
-* **Engineering Insights / Symptoms** — to proactively detect unhealthy code practices **-** [_learn more here_](../../../use-cases/proactive-issue-detection.md)_._<br>
+* **Gamification -** [_learn more here_](https://docs.oobeya.io/use-cases/gamification-for-engineering-kpis)_._
 
-<figure><img src="../../../.gitbook/assets/image (508).png" alt=""><figcaption><p>Code Quality Insights: Auto-detected Symptoms</p></figcaption></figure>
-
-* **Gamification -** [_learn more here_](../../../use-cases/gamification-for-engineering-kpis.md)_._
-
-<figure><img src="../../../.gitbook/assets/image (511).png" alt=""><figcaption><p>Leveraging gamification to improve code quality</p></figcaption></figure>
+<figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FjQ8S7p1dE3ISmWzvZimB%2Fimage.png?alt=media&#x26;token=e51efeaf-d291-4c48-be9e-c420ceec6e8f" alt=""><figcaption><p>Leveraging gamification to improve code quality</p></figcaption></figure>
 
 ***
 
-### 5. Troubleshooting
+#### 4. Troubleshooting
 
 If your connection test fails or data is missing, review the following checks:
 
@@ -107,11 +96,11 @@ Contact Oobeya Support or reach out to your Customer Success Manager.
 
 ***
 
-### Summary: Connect in 5 Steps
+#### Summary: Connect in 5 Steps
 
 <table><thead><tr><th width="83.13421630859375">Step</th><th width="329.26531982421875">Action</th><th>Result</th></tr></thead><tbody><tr><td>1</td><td>Generate a User Token in SonarQube</td><td>Secure authentication</td></tr><tr><td>2</td><td>Install the SonarQube Server Add-on in Oobeya</td><td>Enable integration</td></tr><tr><td>3</td><td>Add a Data Source</td><td>Connect Oobeya to your SonarQube server</td></tr><tr><td>4</td><td>View Dashboards and Scorecards</td><td>Monitor real-time code quality</td></tr></tbody></table>
 
-## **Next Steps** :dart:&#x20;
+### **Next Steps**
 
-* [Network Access Requirements ](../../network-access-requirements.md)
-* [Create a new Gitwiser Analysis](../../../gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics.md)
+* [Network Access Requirements](https://docs.oobeya.io/integrations/network-access-requirements)
+* [Create a new Gitwiser Analysis](https://docs.oobeya.io/gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics)

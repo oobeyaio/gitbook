@@ -8,6 +8,10 @@ description: >-
 
 The Oobeya MCP server gives your AI tool direct access to Oobeya through the Model Context Protocol (MCP). You ask a question in your own words, the tool reads the answer from Oobeya, and every number comes from the same data you see in the Oobeya UI. The tool works with your Oobeya account and your permissions.
 
+{% embed url="https://youtu.be/yyjTUPF8waU" %}
+Watch Oobeya MCP in action.
+{% endembed %}
+
 {% hint style="info" %}
 Available from **Oobeya 2.1.0**. Your administrator sets it up once; see [Oobeya MCP Server: Setup for Administrators](setup-for-administrators.md).
 {% endhint %}

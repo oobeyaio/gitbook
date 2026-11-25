@@ -14,12 +14,12 @@ Gitwiser allows you to fine-tune your analytics by excluding unnecessary files, 
 
 ***
 
-### 1- Global Exclusions (Admin Setting)
+#### 1- Global Exclusions (Admin Setting)
 
 Admins can define exclusion patterns that apply to all repositories across the platform.
 
 * Navigate to:\
-  **Administration** → **Admin Settings** → **Gitwiser & DORA Metrics** → **Git Analytics**
+  **Administration** → **Coding, Review & Delivery** (Analytics section) → **Git Analytics** tab
 * In the **Exclusion List**, add glob patterns such as:\
   \*\*/_.aac → excludes all .aac files_\
   _\*\*/_.apng → excludes all .apng files
@@ -27,11 +27,11 @@ Admins can define exclusion patterns that apply to all repositories across the p
 
 📌 These exclusions are global and affect all repos.
 
-<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2Fr6S1IAPmmBEEzOR5HUqa%2Fimage.png?alt=media&#x26;token=f096e7f2-3d56-49ee-bc69-ffac2d1a36d3" alt=""><figcaption></figcaption></figure>
 
 ***
 
-### 2- Repository-level Exclusions
+#### 2- Repository-level Exclusions
 
 You can configure exclusion patterns for a specific repository.
 
@@ -40,7 +40,7 @@ You can configure exclusion patterns for a specific repository.
 * During setup, you'll see the **Advanced Settings** step
 * Add your file exclusion patterns there (e.g., \*\*/\*.xml, \*\*/\*sample\*/\*\*)
 
-<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FkWnFIkPwQ71kpc7ChRD8%2Fimage.png?alt=media&#x26;token=410ae19f-7b7c-41a2-a9f4-ca4c0b2d14ea" alt=""><figcaption></figcaption></figure>
 
 **If the analysis already exists:**
 
@@ -50,11 +50,11 @@ You can configure exclusion patterns for a specific repository.
 * Select **Update Analysis**
 * You'll be able to edit exclusion patterns here
 
-<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FQe2GC0ZJXef43moxinLU%2Fimage.png?alt=media&#x26;token=a7683009-d26b-429a-b01b-b5e41cdba266" alt=""><figcaption></figcaption></figure>
 
 ***
 
-### 3- Commit-level Exclusions
+#### 3- Commit-level Exclusions
 
 Specific commits can also be manually excluded from analytics.
 
@@ -66,10 +66,10 @@ Specific commits can also be manually excluded from analytics.
 
 🧠 Useful for filtering out noise like formatting commits, reverts, or merge commits.
 
-<figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FBepLfpTqyw6wXRamZS3J%2Fimage.png?alt=media&#x26;token=f7e46393-e3e8-41c4-b66c-b1f77eab2588" alt=""><figcaption></figcaption></figure>
 
 ***
 
-### Conclusion
+#### Conclusion
 
 Using **Git Analytics Exclusions** effectively helps ensure your metrics reflect meaningful contributions by filtering out noise like binary files, test data, or irrelevant commits. Whether you're applying exclusions globally, per repository, or at the commit level, these tools give you full control over the scope of your analysis in Gitwiser. For best results, review and refine your exclusion patterns regularly based on your team's workflow.

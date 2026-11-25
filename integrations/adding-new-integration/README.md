@@ -4,24 +4,30 @@ icon: plug-circle-check
 
 # Adding New Integration
 
-Step-by-step guide to add a new integration:
+Since Oobeya 2.1, all integrations and their data sources live on a single **Integrations** page. There is no separate Marketplace, Data Sources page, or install step: select a tool and add its data source.
+
+<figure><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FHse7i91bO4p05dwNDfRr%2Fintegrations-page.png?alt=media&#x26;token=7c6d68c4-3f16-4465-8558-24bd70761735" alt="Oobeya Integrations page with tools grouped by category"><figcaption><p>The Integrations page groups every supported tool by category.</p></figcaption></figure>
 
 {% stepper %}
 {% step %}
-### [installing-an-addon.md](installing-an-addon.md "mention")
+#### Open Integrations
 
-The integrations placed in Oobeya allow you to connect your SDLC/DevOps tools with Oobeya, enabling data collection.
+Sign in with an **Administrator** or **Super User** account and select **Integrations** in the **Administration** section of the left menu. [Installing an Addon](https://docs.oobeya.io/integrations/adding-new-integration/installing-an-addon) explains the page and what changed in 2.1.
 {% endstep %}
 
 {% step %}
-### [adding-a-new-data-source.md](adding-a-new-data-source.md "mention")
+#### Add a data source
 
-After installing an addon on the Oobeya Integrations page, you can add a new data source to connect your tools and accounts with Oobeya.
+Select the tool's card and fill in the connection form. See [Adding a New Data Source](https://docs.oobeya.io/integrations/adding-new-integration/adding-a-new-data-source).
 {% endstep %}
 
 {% step %}
-### [updating-and-deleting-data-sources.md](updating-and-deleting-data-sources.md "mention")
+#### Test and save
 
-Learn how to manage your existing data sources.
+Click **Test Connection**, then **Add**. You can re-check, edit, or delete the data source later. See [Updating and Deleting Data Sources](https://docs.oobeya.io/integrations/adding-new-integration/updating-and-deleting-data-sources).
 {% endstep %}
 {% endstepper %}
+
+{% hint style="info" %}
+Tool-specific steps, such as which token to create and which permissions it needs, are in the [Integration Catalog](https://docs.oobeya.io/integrations/all-integrations).
+{% endhint %}

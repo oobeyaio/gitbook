@@ -6,21 +6,21 @@ description: >-
 
 # Starting an Agile Board Analysis
 
-#### Step 0 – Create a New Analysis
+**Step 0 – Create a New Analysis**
 
 To start an Agile Board Analytics setup:
 
 1. Open **Analytics** from the left-hand menu.
-2. Navigate to **Project Analytics**.
-3. Click **New Analysis** in the top-right corner.
+2. Select **Projects & Boards**.
+3. Click **+ Analysis** in the top-right corner.
 
 This opens the Agile Board Analysis initialization wizard.
 
-<figure><img src="../../.gitbook/assets/image (513).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2Fu5iJDssDb2rkQgHhCyYh%2Fimage.png?alt=media&#x26;token=b458a147-a0c6-4dc1-afcc-918193e1b989" alt=""><figcaption></figcaption></figure>
 
 ***
 
-#### Step 1 – General Settings
+**Step 1 – General Settings**
 
 In this step, you define the main context of the analysis.
 
@@ -41,11 +41,11 @@ In this step, you define the main context of the analysis.
 
 Click **Next** to continue.
 
-<figure><img src="../../.gitbook/assets/image (515).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FIWUZedm2NX3S7Q1bMjvp%2Fimage.png?alt=media&#x26;token=b29180d3-41a9-41a6-9be4-445b93e04ef7" alt=""><figcaption></figcaption></figure>
 
 ***
 
-#### Step 2 – State Mapping
+**Step 2 – State Mapping**
 
 Map workflow states to Oobeya’s standard flow categories. By default, Oobeya automatically maps states using the selected board’s workflow configuration.
 
@@ -67,11 +67,11 @@ Map workflow states to Oobeya’s standard flow categories. By default, Oobeya a
 
 Click **Next** to continue.
 
-<figure><img src="../../.gitbook/assets/image (516).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FLkNHrx0A77RcLLk4b4wS%2Fimage.png?alt=media&#x26;token=e4d5b719-e358-4b22-b0a5-e504aba7ccf6" alt=""><figcaption></figcaption></figure>
 
 ***
 
-#### Step 3 – Field Mapping
+**Step 3 – Field Mapping**
 
 Configure how effort and sprint planning behavior are interpreted.
 
@@ -89,10 +89,10 @@ Configure how effort and sprint planning behavior are interpreted.
 
 Click **Next** to proceed.
 
-<figure><img src="../../.gitbook/assets/image (517).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2Fb5Si5Y4n2S0h0lGrR3iI%2Fimage.png?alt=media&#x26;token=bce8cd97-4379-4d1a-9260-0a915da8f6af" alt=""><figcaption></figcaption></figure>
 
 ***
 
-#### Step 4 – Finish
+**Step 4 – Finish**
 
 Review the configuration and complete the setup. Once finished, Oobeya starts analyzing historical data for the selected board and date range.

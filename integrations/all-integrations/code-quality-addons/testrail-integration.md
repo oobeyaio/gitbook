@@ -5,48 +5,44 @@ hidden: true
 
 # TestRail Integration
 
-## 1. Enable API Setting on TestRail :tools:&#x20;
+### 1. Enable API Setting on TestRail
 
-1. Click "**Administration**" on the right as follows:&#x20;
+1. Click "**Administration**" on the right as follows:
 
 ![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FaSlXej5ix51TzSYch3N3%2Ffile.png?alt=media)
 
-2\. Click "**Site Settings**":&#x20;
+2\. Click "**Site Settings**":
 
 ![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2Fz4TmtxPdcEDDJQaCnxUa%2Ffile.png?alt=media)
 
-3\. Click to the "**API**" tab, select the "**Enable API**" option, and click the "**Save Settings**" button:&#x20;
+3\. Click to the "**API**" tab, select the "**Enable API**" option, and click the "**Save Settings**" button:
 
 ![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2F3OSiFPQeZXve94UaOkC6%2Ffile.png?alt=media)
 
-## 2. Install TestRail Addon on Oobeya :jigsaw:&#x20;
+### 2. Connect TestRail in Oobeya
 
-1. Log in to [Oobeya](https://oobeya.io/) with an Administrator account.
-2. Navigate to Market Place and select the **TestRail** addon and then click the "**Install**" button.
+1. Sign in to Oobeya with an **Administrator** account and select **Integrations** in the **Administration** section of the left menu.
+2. In the **Test** section, click the **Test Rail** card. If TestRail already has data sources, click **+ New Data Source** in the window that opens.
+3. Select the version **TestRail V2** and fill in the form (see the fields below).
+4. Click **Test Connection** to verify the connection, then click **Add**.
 
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FkG1XMaFdpG0ajGdELkYe%2Ffile.png?alt=media)
+| Field                | Value                                                              |
+| -------------------- | ------------------------------------------------------------------ |
+| **Data Source Name** | A name you choose for this connection, for example _TestRail_.     |
+| **Server URL**       | Your TestRail URL, for example `https://your-company.testrail.io`. |
+| **Username**         | The e-mail address of a TestRail user.                             |
+| **Password**         | The password the user signs in to TestRail with.                   |
 
-## 3. Add a New Data Source :electric\_plug:&#x20;
+<figure><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2Fi0bcYwB1okUgzPK97JKl%2Fform-testrail.png?alt=media&#x26;token=db025eb3-11bd-4454-bd5b-5858cf839800" alt="TestRail data source form in Oobeya"><figcaption><p>The TestRail data source form on the Integrations page.</p></figcaption></figure>
 
-1. Navigate to Data Sources and select **TestRail** to add a new data source.&#x20;
+{% hint style="info" %}
+Since Oobeya 2.1 there is no separate install step: the integration is enabled when you save its first data source. See [Adding New Integration](https://docs.oobeya.io/integrations/adding-new-integration).
+{% endhint %}
 
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2Fi1eciQEx3n8KfUuyPVad%2Ffile.png?alt=media)
+### Ready to Connect
 
-2\. Click the "New Data Source" button and fill in the form as :&#x20;
+Now Oobeya is connected with your own TestRail Cloud to track & visualize the status of tests with dashboards and reports.
 
-* **Data Source Name:** You can enter any name for your TestRail Data Source.&#x20;
-* **Server URL:** Enter this area (ex: https://\<yourCompany>.testrail.io).&#x20;
-* **Username:** The username that you use to sign in to the TestRail.&#x20;
-* **Password:** The password that you use to sign in to the TestRail.&#x20;
+### **Next Steps**
 
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FoEZOkPKVajZVudYrQ2Dg%2Ffile.png?alt=media)
-
-3\. Click the "**Test Connection**" button to verify the connection.&#x20;
-
-## Ready to Connect :rocket:&#x20;
-
-Now Oobeya is connected with your own TestRail Cloud to track & visualize the status of tests with dashboards and reports.&#x20;
-
-## **Next Steps** :dart:&#x20;
-
-* [Add a new Widget](../../../dashboards/adding-a-new-widget.md)
+* [Add a new Widget](https://docs.oobeya.io/dashboards/adding-a-new-widget)

@@ -6,21 +6,21 @@ icon: user-plus
 
 Follow the steps below to add a new user.
 
-1\. Navigate to _**Administration Panel > Admin Settings**_.
+1\. Select **Administration** in the left menu, then **User Management** in the **Organization** section.
 
-2\. Open _**Users & Groups**_.
+2\. Open the **Users** tab.
 
 3\. Click the "**New User**" button.
 
-![](<../../.gitbook/assets/image (202).png>)
+![](https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MGIlBSTjQtZxUoFwUx4%2F-MHABFh59_7wcb57FRKm%2F-MHAIY2qglvri_vJMxTL%2Fimage.png?alt=media\&token=6e1b4d54-9808-431e-a477-942c53117cd1)
 
-4\. Enter the user information.&#x20;
+4\. Enter the user information.
 
-![](<../../.gitbook/assets/image (220).png>)
+![](https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MGIlBSTjQtZxUoFwUx4%2F-MHAeLzXtz__6XhKbool%2F-MHAl2UMS-_-rrgKA6ZR%2Fimage.png?alt=media\&token=bd7f8c3c-8f64-40bf-9da3-de05f830b175)
 
 5\. Set the **application role** (_User, Admin_) and **company role** (_developer, team lead, product manager_...) of the user. Select _teams to lead_, if the user has a leading role such as _Team Lead, Manager,_ or _Director_...
 
-![](<../../.gitbook/assets/image (255).png>)
+![](https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MGIlBSTjQtZxUoFwUx4%2F-MHAeLzXtz__6XhKbool%2F-MHAhCNdlrJgtx0ituee%2Fimage.png?alt=media\&token=7d4897e2-d194-4aab-bd48-d83e3e48fe17)
 
 {% hint style="info" %}
 **Role(s):** Pre-defined application roles to manage permissions of the users. (Default is 'Role User')
@@ -33,6 +33,6 @@ Follow the steps below to add a new user.
 
 6\. Click **"Add"** to create the user account.
 
-![](<../../.gitbook/assets/image (113).png>)
+![](https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MGIlBSTjQtZxUoFwUx4%2F-MHAeLzXtz__6XhKbool%2F-MHAh0WHN5dUGzVBqz18%2Fimage.png?alt=media\&token=83ce28c7-92ee-40b4-ab9c-e631f9625bd1)
 
 **Note:** The user will be created with a default password. After first login, the system forces the user to change the password.

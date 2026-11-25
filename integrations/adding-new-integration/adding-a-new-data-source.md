@@ -5,32 +5,44 @@ icon: plug-circle-plus
 
 # Adding A New Data Source
 
-## **OVERVIEW**
+A **data source** is one connection to one tool: for example, one GitHub organization, one Jira site, or one SonarQube server. You can add several data sources for the same tool.
 
-If you want to work with a data source, you must install the addon of the tool that you want to connect.
+### Adding a data source
 
-After installing an addon on Oobeya Integrations page, you are able to add a new data source in order to connect your own tools and accounts with Oobeya.
+1. Sign in with an **Administrator** or **Super User** account.
+2. Select **Integrations** in the **Administration** section of the left menu.
+3. Find the tool, either in its category or with **Search for an app**, and click its card.
+   * If the tool has no data source yet, the connection form opens directly.
+   * If the tool already has data sources, the **Manage Data Sources** window lists them. Click **+ New Data Source**.
+4. Select the **version** of the tool, if the form offers more than one.
+5. Fill in the form. The fields depend on the tool; typical fields are:
+   * **Data Source Name**: a name you choose, shown in analysis forms (for example, _GitHub - Platform_).
+   * **Server URL**: the address of a self-hosted tool. Cloud-only tools do not ask for it.
+   * **Username**, **Password**, **Token**, or **API key**: the credentials Oobeya uses to read data. Use a read-only service account where possible.
+6. Click **Test Connection** to check that Oobeya can reach the tool with these credentials.
+7. Click **Add**.
 
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FLnn6JjQV3N0oVT2VuLZj%2Ffile.png?alt=media)
+<figure><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FCgBcQzIBi0ckrGvKIwbZ%2Fform-jira.png?alt=media&#x26;token=167e231b-d7d0-4ba6-98f1-5dc71d68c176" alt="Manage Data Sources form for Jira"><figcaption><p>Example: the Jira data source form.</p></figcaption></figure>
 
-## **ADDING A NEW DATA SOURCE**:electric\_plug:&#x20;
+The tool is enabled automatically when its first data source is saved, and its card shows the connection status from then on.
 
-1\. Navigate to **Data Sources**.&#x20;
+{% hint style="info" %}
+Each form has a link to the tool's integration guide ("See the integration document for … here"). The guides explain which token to create and which permissions it needs.
+{% endhint %}
 
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2Fk0l4xogFxAgSX8XsLGbn%2Ffile.png?alt=media)
+### Integration guides
 
-2\. Click the addon that you want to connect.
+| Category                | Guides                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Source Code Management  | [Azure DevOps](https://docs.oobeya.io/integrations/all-integrations/scm-addons/azure-devops-integration), [GitHub](https://docs.oobeya.io/integrations/all-integrations/scm-addons/github-integrations), [GitHub Enterprise](https://docs.oobeya.io/integrations/all-integrations/scm-addons/github-enterprise-integration), [GitLab](https://docs.oobeya.io/integrations/all-integrations/scm-addons/gitlab-addon), [Bitbucket Cloud](https://docs.oobeya.io/integrations/all-integrations/scm-addons/bitbucket-cloud-integration), [Bitbucket Server](https://docs.oobeya.io/integrations/all-integrations/scm-addons/bitbucket-server-integration), [Gitea](https://docs.oobeya.io/integrations/all-integrations/scm-addons/gitea-integration), [Gerrit](https://docs.oobeya.io/integrations/all-integrations/scm-addons/gerrit-integration) |
+| CI/CD                   | [Jenkins](https://docs.oobeya.io/integrations/all-integrations/scm-addons/jenkins-integration), [Argo CD](https://docs.oobeya.io/integrations/all-integrations/scm-addons/argo-cd-integration), [Octopus Deploy](https://docs.oobeya.io/integrations/all-integrations/scm-addons/octopus-deploy-integration), [TeamCity](https://docs.oobeya.io/integrations/all-integrations/scm-addons/teamcity-integration)                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Project Management      | [Jira Cloud](https://docs.oobeya.io/integrations/all-integrations/project-management-addons/jira-cloud-integration), [Jira Server](https://docs.oobeya.io/integrations/all-integrations/project-management-addons/jira-server-integration), [Confluence](https://docs.oobeya.io/integrations/all-integrations/project-management-addons/confluence-integration), [ServiceNow](https://docs.oobeya.io/integrations/all-integrations/project-management-addons/servicenow-integration)                                                                                                                                                                                                                                                                                                                                                            |
+| AI Coding Assistants    | [Claude Code](https://docs.oobeya.io/ai-impact/claude-code-ai-impact), [Codex](https://docs.oobeya.io/integrations/all-integrations/ai-coding-assistants/codex-integration), [Cursor](https://docs.oobeya.io/integrations/all-integrations/ai-coding-assistants/cursor-integration), [GitHub Copilot](https://docs.oobeya.io/ai-impact/github-copilot-ai-impact)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Code Quality & Security | [SonarQube Server](https://docs.oobeya.io/integrations/all-integrations/code-quality-addons/sonarqube-integration), [SonarQube Cloud](https://docs.oobeya.io/integrations/all-integrations/code-quality-addons/sonarqube-cloud-integration), [Fortify](https://docs.oobeya.io/integrations/all-integrations/code-quality-addons/fortify-integration), [Veracode](https://docs.oobeya.io/integrations/all-integrations/code-quality-addons/veracode-integration)                                                                                                                                                                                                                                                                                                                                                                                 |
+| Test                    | [Xray](https://docs.oobeya.io/integrations/all-integrations/code-quality-addons/xray-integration), [Zephyr](https://docs.oobeya.io/integrations/all-integrations/test-addons/zephyr-integration), [TestRail](https://docs.oobeya.io/integrations/all-integrations/code-quality-addons/testrail-integration), [Testinium](https://docs.oobeya.io/integrations/all-integrations/test-addons/testinium-integration)                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Monitoring/APM          | [AppDynamics](https://docs.oobeya.io/integrations/all-integrations/apm-monitoring-addons/appdynamics-integration), [Azure Application Insights](https://docs.oobeya.io/integrations/all-integrations/apm-monitoring-addons/azure-application-insights-integration), [Dynatrace](https://docs.oobeya.io/integrations/all-integrations/apm-monitoring-addons/dynatrace-integration), [Elastic APM](https://docs.oobeya.io/integrations/all-integrations/apm-monitoring-addons/elastic-apm-integration), [New Relic](https://docs.oobeya.io/integrations/all-integrations/apm-monitoring-addons/new-relic-integration), [Sentry](https://docs.oobeya.io/integrations/all-integrations/apm-monitoring-addons/sentry-integration)                                                                                                                    |
 
-3\. Click **"New Data Source"** button and fill in the form.&#x20;
+### Next steps
 
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FbwaOpjP1b3ANToIRPrxB%2Ffile.png?alt=media)
-
-See the articles below for detailed information about the integrations:
-
-* [Azure DevOps](../all-integrations/scm-addons/azure-devops-integration.md) & Oobeya Integration
-* [Bitbucket Server](../all-integrations/scm-addons/bitbucket-server-integration.md) & Oobeya Integration
-* [Bitbucket Cloud](../all-integrations/scm-addons/bitbucket-cloud-integration.md) & Oobeya Integration
-* [GitHub](../all-integrations/scm-addons/github-integrations.md) & Oobeya Integration
-* [GitLab](../all-integrations/scm-addons/gitlab-addon.md) & Oobeya Integration
-* [Jenkins](../all-integrations/scm-addons/jenkins-integration.md) & Oobeya Integration
-* [SonarQube](../all-integrations/code-quality-addons/sonarqube-integration.md) & Oobeya Integration
+* [Updating and deleting data sources](https://docs.oobeya.io/integrations/adding-new-integration/updating-and-deleting-data-sources)
+* [Network access requirements](https://docs.oobeya.io/integrations/network-access-requirements)

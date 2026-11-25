@@ -6,13 +6,13 @@ description: >-
 
 # Oobeya Collector Installation (Docker)
 
-The **Oobeya Collector** receives the OpenTelemetry data that Claude Code sends from your developers' machines and hands it to Oobeya. It is needed only for the [Claude Code integration](./); install it if your organization uses Claude Code.
+The **Oobeya Collector** receives the OpenTelemetry data that Claude Code sends from your developers' machines and hands it to Oobeya. It is needed only for the [Claude Code integration](https://docs.oobeya.io/ai-impact/claude-code-ai-impact); install it if your organization uses Claude Code.
 
 The collector runs from its own Docker Compose file, separate from the Oobeya services. It keeps accepting data while Oobeya is being upgraded or restarted, and the data waits in Oobeya's RabbitMQ until Oobeya processes it.
 
 ***
 
-### How It Works
+#### How It Works
 
 ```
 Claude Code ──HTTP──▶ Oobeya Collector :8097 ──▶ RabbitMQ ──▶ Oobeya
@@ -29,7 +29,7 @@ The collector does not open or interpret the data. For every request it checks t
 
 ***
 
-### 1. Prerequisites
+#### 1. Prerequisites
 
 * An Oobeya Docker installation in which **MongoDB and RabbitMQ run from `docker-compose.infra.yml`**, separate from `docker-compose.yml`. The collector joins the `oobeya-network` network that this file creates.
 * Network access from every network your developers work from (office, VPN, remote) to port `8097` of the collector host.
@@ -42,7 +42,7 @@ For Helm, Kubernetes and OpenShift installations, contact the Oobeya team.
 
 ***
 
-### 2. Start MongoDB and RabbitMQ
+#### 2. Start MongoDB and RabbitMQ
 
 In the Oobeya installation directory, make sure the infrastructure services are running. This also creates the shared `oobeya-network` network:
 
@@ -52,7 +52,7 @@ docker compose -f docker-compose.infra.yml up -d
 
 ***
 
-### 3. Configure the Collector
+#### 3. Configure the Collector
 
 Edit `collector.env` in the Oobeya installation directory:
 
@@ -80,11 +80,11 @@ OOBEYA_GATEWAY_INTERNAL_URL=http://oobeya-gateway:8099
 
 If the collector runs on a different host than Oobeya, set `RABBITMQ_HOST` to the Oobeya host and `OOBEYA_GATEWAY_INTERNAL_URL` to `http://<oobeya-host>:8099`.
 
-See the [configuration reference](oobeya-collector-installation-docker.md#configuration-reference) for all variables.
+See the [configuration reference](https://docs.oobeya.io/ai-impact/claude-code-ai-impact/oobeya-collector-installation-docker#configuration-reference) for all variables.
 
 ***
 
-### 4. Connect Oobeya to the Collector
+#### 4. Connect Oobeya to the Collector
 
 Edit `env.list` and uncomment the Claude Code section:
 
@@ -96,11 +96,11 @@ OOBEYA_COLLECTOR_PUBLIC_URL=http://<collector-host>:8097
 ```
 {% endcode %}
 
-| Variable                        | Purpose                                                                                                                                                                                                                                              |
-| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OOBEYA_GATEWAY_INTERNAL_URL`   | Lets Oobeya verify ingest tokens when a Claude Code data source is tested.                                                                                                                                                                           |
-| `OOBEYA_COLLECTOR_INTERNAL_URL` | The collector's management port. Oobeya reads the Claude Code queue only while this is set, and shows the collector status and logs from it. If the collector runs on another host, use `http://<collector-host>:58097`.                             |
-| `OOBEYA_COLLECTOR_PUBLIC_URL`   | The address developers' machines reach. Oobeya puts it into the Claude Code settings it generates. If you use a [load balancer](oobeya-collector-installation-docker.md#recommended-https-with-a-load-balancer), set its HTTPS address here instead. |
+| Variable                        | Purpose                                                                                                                                                                                                                                                                                                  |
+| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `OOBEYA_GATEWAY_INTERNAL_URL`   | Lets Oobeya verify ingest tokens when a Claude Code data source is tested.                                                                                                                                                                                                                               |
+| `OOBEYA_COLLECTOR_INTERNAL_URL` | The collector's management port. Oobeya reads the Claude Code queue only while this is set, and shows the collector status and logs from it. If the collector runs on another host, use `http://<collector-host>:58097`.                                                                                 |
+| `OOBEYA_COLLECTOR_PUBLIC_URL`   | The address developers' machines reach. Oobeya puts it into the Claude Code settings it generates. If you use a [load balancer](https://docs.oobeya.io/ai-impact/claude-code-ai-impact/oobeya-collector-installation-docker#recommended-https-with-a-load-balancer), set its HTTPS address here instead. |
 
 Recreate the addons service so it picks up the new variables:
 
@@ -110,7 +110,7 @@ docker compose up -d --force-recreate oobeya-addons
 
 ***
 
-### 5. Start the Collector
+#### 5. Start the Collector
 
 ```bash
 docker compose -f docker-compose.collector.yml --env-file collector.env up -d
@@ -118,7 +118,7 @@ docker compose -f docker-compose.collector.yml --env-file collector.env up -d
 
 ***
 
-### 6. Verify the Installation
+#### 6. Verify the Installation
 
 On the collector host, check that the collector is ready. It is ready once it is connected to RabbitMQ and has received the token list from the Oobeya gateway:
 
@@ -136,11 +136,11 @@ curl -i -X POST http://<collector-host>:8097/claude/v1/metrics -H "Content-Type:
 
 Expected result: `HTTP/1.1 401`. The collector is reachable, and it rejected this test request only because it carries no token.
 
-Then continue with the [Claude Code integration](./). The collector status also appears in Oobeya under the Claude Code data source → **Data status and Claude Code settings**.
+Then continue with the [Claude Code integration](https://docs.oobeya.io/ai-impact/claude-code-ai-impact). The collector status also appears in Oobeya under the Claude Code data source → **Data status and Claude Code settings**.
 
 ***
 
-### Recommended: HTTPS with a Load Balancer
+#### Recommended: HTTPS with a Load Balancer
 
 The collector itself serves plain HTTP. Without HTTPS, the ingest token and the usage data travel unencrypted between your developers' machines and the collector. We recommend putting the collector behind your load balancer or reverse proxy with a DNS name and a TLS certificate, for example `https://oobeya-collector.mycompany.com`.
 
@@ -173,16 +173,16 @@ Forward only `/claude/` to the collector. Do not expose port `58097`, RabbitMQ (
 
 ***
 
-### Upgrades
+#### Upgrades
 
 * **Upgrading Oobeya** does not stop the collector or RabbitMQ. Claude Code data keeps arriving and is processed once the Oobeya services are back. Update the Oobeya services with `docker-compose.yml` only; leave `docker-compose.infra.yml` and `docker-compose.collector.yml` running.
 * **Upgrading the collector:** set `OOBEYA_COLLECTOR_TAG` in `collector.env` and run the start command again. The collector stops gracefully; data accepted before the restart is already in RabbitMQ. While it restarts, Claude Code retries for a few seconds; a longer interruption loses the events sent in that period.
 
 ***
 
-### Operations
+#### Operations
 
-**Logs.** Download them in Oobeya under **Admin → General Settings → System Logs → Oobeya Collector**, or on the host:
+**Logs.** Download them in Oobeya under **Administration → System Settings → System Logs → Oobeya Collector**, or on the host:
 
 ```bash
 docker logs oobeya-collector
@@ -198,7 +198,7 @@ curl -X POST http://127.0.0.1:58097/actuator/deadletters
 
 ***
 
-### Configuration Reference
+#### Configuration Reference
 
 | Variable                                  | Default                      | Description                                                                                                                                            |
 | ----------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -219,7 +219,7 @@ curl -X POST http://127.0.0.1:58097/actuator/deadletters
 
 Restart the collector after changing a variable.
 
-#### Responses to Claude Code
+**Responses to Claude Code**
 
 | Status | When                                                                     | Claude Code retries |
 | ------ | ------------------------------------------------------------------------ | ------------------- |

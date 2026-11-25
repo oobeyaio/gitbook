@@ -4,16 +4,8 @@ description: Learn about how you can integrate your Project Management tools wit
 
 # Project Management
 
-
-
-{% content-ref url="jira-server-integration.md" %}
-[jira-server-integration.md](jira-server-integration.md)
-{% endcontent-ref %}
-
-{% content-ref url="jira-cloud-integration.md" %}
-[jira-cloud-integration.md](jira-cloud-integration.md)
-{% endcontent-ref %}
-
-{% content-ref url="../scm-addons/azure-devops-integration.md" %}
-[azure-devops-integration.md](../scm-addons/azure-devops-integration.md)
-{% endcontent-ref %}
+* [Jira Server Integration](https://docs.oobeya.io/integrations/all-integrations/project-management-addons/jira-server-integration)
+* [Jira Cloud Integration](https://docs.oobeya.io/integrations/all-integrations/project-management-addons/jira-cloud-integration)
+* [Azure DevOps Integration](https://docs.oobeya.io/integrations/all-integrations/scm-addons/azure-devops-integration)
+* [Confluence Integration](https://docs.oobeya.io/integrations/all-integrations/project-management-addons/confluence-integration)
+* [ServiceNow Integration](https://docs.oobeya.io/integrations/all-integrations/project-management-addons/servicenow-integration)

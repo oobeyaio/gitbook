@@ -44,15 +44,19 @@
     * [TeamCity Integration](integrations/all-integrations/scm-addons/teamcity-integration.md)
     * [Gerrit Integration](integrations/all-integrations/scm-addons/gerrit-integration.md)
     * [Gitea Integration](integrations/all-integrations/scm-addons/gitea-integration.md)
+    * [Argo CD Integration](integrations/all-integrations/scm-addons/argo-cd-integration.md)
   * [Quality & Security](integrations/all-integrations/code-quality-addons/README.md)
     * [SonarQube Server Integration](integrations/all-integrations/code-quality-addons/sonarqube-integration.md)
     * [TestRail Integration](integrations/all-integrations/code-quality-addons/testrail-integration.md)
     * [SonarQube Cloud Integration](integrations/all-integrations/code-quality-addons/sonarqube-cloud-integration.md)
     * [Veracode Integration](integrations/all-integrations/code-quality-addons/veracode-integration.md)
     * [Xray Integration](integrations/all-integrations/code-quality-addons/xray-integration.md)
+    * [Fortify Integration](integrations/all-integrations/code-quality-addons/fortify-integration.md)
   * [Project Management](integrations/all-integrations/project-management-addons/README.md)
     * [Jira Cloud Integration](integrations/all-integrations/project-management-addons/jira-cloud-integration.md)
     * [Jira Server Integration](integrations/all-integrations/project-management-addons/jira-server-integration.md)
+    * [Confluence Integration](integrations/all-integrations/project-management-addons/confluence-integration.md)
+    * [ServiceNow Integration](integrations/all-integrations/project-management-addons/servicenow-integration.md)
   * [APM / Monitoring](integrations/all-integrations/apm-monitoring-addons/README.md)
     * [AppDynamics Integration](integrations/all-integrations/apm-monitoring-addons/appdynamics-integration.md)
     * [Azure Application Insights Integration](integrations/all-integrations/apm-monitoring-addons/azure-application-insights-integration.md)
@@ -60,6 +64,12 @@
     * [Elastic APM Integration](integrations/all-integrations/apm-monitoring-addons/elastic-apm-integration.md)
     * [New Relic Integration](integrations/all-integrations/apm-monitoring-addons/new-relic-integration.md)
     * [Sentry Integration](integrations/all-integrations/apm-monitoring-addons/sentry-integration.md)
+  * [AI Coding Assistants](integrations/all-integrations/ai-coding-assistants/README.md)
+    * [Codex Integration](integrations/all-integrations/ai-coding-assistants/codex-integration.md)
+    * [Cursor Integration](integrations/all-integrations/ai-coding-assistants/cursor-integration.md)
+  * [Test](integrations/all-integrations/test-addons/README.md)
+    * [Zephyr Integration](integrations/all-integrations/test-addons/zephyr-integration.md)
+    * [Testinium Integration](integrations/all-integrations/test-addons/testinium-integration.md)
 * [Adding New Integration](integrations/adding-new-integration/README.md)
   * [Installing An Addon](integrations/adding-new-integration/installing-an-addon.md)
   * [Adding A New Data Source](integrations/adding-new-integration/adding-a-new-data-source.md)
@@ -100,6 +110,12 @@
 * [Claude Code - AI Impact](ai-impact/claude-code-ai-impact/README.md)
   * [Oobeya Collector Installation (Docker)](ai-impact/claude-code-ai-impact/oobeya-collector-installation-docker.md)
 * [AI Cost & Credits](ai-impact/ai-cost-and-credits.md)
+* [AI Impact Overview](ai-impact/ai-impact-overview.md)
+* [AI Usage](ai-impact/ai-usage.md)
+
+## DevEx Surveys
+
+* [DevEx Surveys](devex-surveys/devex-surveys.md)
 
 ## ALLOCATIONS
 
@@ -156,9 +172,12 @@
   * [Adding a New User](administration/user-management-single-sign-on-auth-settings/adding-a-new-user.md)
   * [Deactivating a User](administration/user-management-single-sign-on-auth-settings/deactivating-a-user.md)
   * [Understanding Roles in Oobeya](administration/user-management-single-sign-on-auth-settings/understanding-roles-in-oobeya.md)
+  * [Okta Integration](administration/user-management-single-sign-on-auth-settings/okta-integration.md)
 * [License Management](administration/license-management/README.md)
   * [Updating The License Key](administration/license-management/updating-the-license-key.md)
 * [Automated Reanalysis for Analytics](administration/automated-reanalysis-for-analytics.md)
+* [Administration Settings](administration/administration-settings.md)
+* [API Keys](administration/api-keys.md)
 
 ## DEVELOPMENT ANALYTICS - GITWISER <a href="#gitwiser-repo-analytics" id="gitwiser-repo-analytics"></a>
 
@@ -231,6 +250,19 @@
 * [Project Analytics (Scrum Teams) Widget](team-health/project-analytics-scrum-teams-widget.md)
 * [Developer Onboarding Metrics Widget](team-health/developer-onboarding-metrics-widget.md)
 * [Updating Team Scorecard configuration to display DORA Metrics](team-health/updating-team-scorecard-configuration-to-display-dora-metrics.md)
+* [Team Health](team-health/team-health-overview.md)
+
+## Organization
+
+* [Organization](organization/organization.md)
+
+## Trend Reports
+
+* [Trend Reports](trend-reports/trend-reports.md)
+
+## Problem Analytics
+
+* [Problem Analytics](problem-analytics/problem-analytics.md)
 
 ## CUSTOM DASHBOARDS <a href="#dashboards" id="dashboards"></a>
 

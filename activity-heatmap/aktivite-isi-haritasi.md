@@ -17,24 +17,24 @@ Bu modül sayesinde:
 
 ***
 
-### 1. Genel Özellikler
+#### 1. Genel Özellikler
 
 * Günlük, haftalık, aylık, çeyreklik veya özel tarih aralığında analiz
 * PR, commit, kod satır değişiklikleri ve kod gözden geçirme yorum aktivitelerinin takibi
 * Geliştirici bazında renkli ısı haritası görünümü
 * Geliştirici İş Günlüğü (Work Log) ile detaylı süreç katkı analizi
 * Takım seçimi ve rol bazlı filtreleme
-* Çalışma günü filtresi (Admin Panel > General Settings üzerinden yapılandırılır)
+* Çalışma günü filtresi (Administration > Time Settings üzerinden yapılandırılır)
 
-<figure><img src="../.gitbook/assets/image (481).png" alt=""><figcaption><p>Activity Heatmap Genel Görünüm</p></figcaption></figure>
+<figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FnEJ2Mw9DOl1Yt1LU0XiI%2Fimage.png?alt=media&#x26;token=6524f1c1-2b3b-4bcd-827f-d53644ea5972" alt=""><figcaption><p>Activity Heatmap Genel Görünüm</p></figcaption></figure>
 
 ***
 
-### 2. Skor Hesaplama Mekanizması
+#### 2. Skor Hesaplama Mekanizması
 
 **Activity Heatmap** modülünde geliştirici aktiviteleri farklı katkı türlerinden alınan verilerle hesaplanır ve normalize edilerek ısı haritasında görselleştirilir.
 
-#### 2.1. Günlük Normalizasyon & Z-Skor:
+**2.1. Günlük Normalizasyon & Z-Skor:**
 
 1. Her günün en yüksek skor alan geliştiricisi %100 referans olarak alınır.
 2. Diğer geliştiriciler bu maksimum değere oranlanır → `rank_ratio`
@@ -43,7 +43,7 @@ Bu modül sayesinde:
 5. Bu oranlar **z-skoruna** çevrilerek 0–100 aralığına normalize edilir.
 6. Isı haritasında bu skorlar renk tonlarına dönüştürülür.
 
-#### 2.2. Aktivite Bazlı Skor Formülleri:
+**2.2. Aktivite Bazlı Skor Formülleri:**
 
 **2.2.1. Commit Aktiviteleri:**
 
@@ -82,13 +82,13 @@ Bu mekanizma sayesinde ekipler arasında **adil karşılaştırmalar** yapılabi
 
 ***
 
-### 3. Admin Panel Ayarları
+#### 3. Admin Panel Ayarları
 
 Farklı faaliyetlere ağırlık değerleri atanır. Bu katsayılar, her bir faaliyet türünün genel ısı haritası skorunu ve sıcaklık görselleştirmesini nasıl etkilediğini belirler.
 
 **Konum:** `Administration > Activity Heatmap`
 
-#### Katsayı (Coefficient) Ayarları
+**Katsayı (Coefficient) Ayarları**
 
 Her aktivite türü için, katkının toplam skor üzerindeki ağırlığını belirleyebilirsiniz.
 
@@ -98,11 +98,11 @@ Her aktivite türü için, katkının toplam skor üzerindeki ağırlığını b
 
 ***
 
-### 4. Dashboard Bileşenleri
+#### 4. Dashboard Bileşenleri
 
 **Activity Heatmap Dashboard**, geliştiricilerin günlük aktivitelerini farklı açılardan analiz edebilmeniz için birden fazla bileşenden oluşur. Her bileşen, katkı türlerini, zaman içindeki eğilimleri ve ekip içindeki dağılımları farklı perspektiflerden görselleştirir.
 
-#### 4.1. Etkinlik Isı Haritası (Activity Heatmap)
+**4.1. Etkinlik Isı Haritası (Activity Heatmap)**
 
 **Activity Heatmap**, geliştiricilerin günlük aktivitelerini görselleştiren temel bileşendir. Her hücre, bir geliştiricinin belirli bir gündeki katkı skorunu temsil eder.
 
@@ -114,9 +114,9 @@ Her aktivite türü için, katkının toplam skor üzerindeki ağırlığını b
 Activity Heatmap, ekiplerin iş yükü dengesizliklerini görsel olarak fark etmesini ve potansiyel aşırı yüklenmeleri ya da düşük katılımları hızlıca tespit etmesini sağlar.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption><p>Activity Heatmap</p></figcaption></figure>
+<figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FdzrUeZKfzaFD1eAfaVBn%2Fimage.png?alt=media&#x26;token=f314684d-e1d1-4008-aa3b-8a186e77f3a3" alt=""><figcaption><p>Activity Heatmap</p></figcaption></figure>
 
-#### 4.2. Geliştirici İş Günlüğü (Developer Work Log)
+**4.2. Geliştirici İş Günlüğü (Developer Work Log)**
 
 **Developer Work Log**, seçilen tarih aralığında her geliştiricinin günlük aktivitelerini ayrıntılı olarak listeler. Isı haritası üzerinde görülen skorların arka planındaki ham verileri tablo formatında sunar.
 
@@ -132,13 +132,13 @@ görüntülenir.
 Amaç, sadece genel skorlara bakmakla kalmayıp, her bir geliştiricinin hangi günlerde daha aktif olduğunu ve hangi katkı türlerinde yoğunlaştığını ayrıntılı şekilde analiz etmektir.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image (483).png" alt=""><figcaption><p>Developer Work Log</p></figcaption></figure>
+<figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2Frw1yvXBqpUwtR0KZJARR%2Fimage.png?alt=media&#x26;token=147fe9f8-45f8-46c4-9084-d62661fc99be" alt=""><figcaption><p>Developer Work Log</p></figcaption></figure>
 
-#### 4.3. Filtreler
+**4.3. Filtreler**
 
 **Activity Heatmap** modülü, daha odaklı ve anlamlı analizler yapabilmeniz için çeşitli filtreleme seçenekleri sunar:
 
-* **Çalışma Günleri (Working Days)**: Skorların yalnızca şirketinizin tanımlı çalışma günleri (örn. Pazartesi–Cuma) üzerinden hesaplanmasını sağlar. Bu ayar, **Admin > General Settings** bölümünden yapılandırılır.
+* **Çalışma Günleri (Working Days)**: Skorların yalnızca şirketinizin tanımlı çalışma günleri (örn. Pazartesi–Cuma) üzerinden hesaplanmasını sağlar. Bu ayar, **Administration > Time Settings** bölümünden yapılandırılır.
 * **Takım Seçimi (Team Selection)**: Bir veya birden fazla takım seçilerek, ısı haritasında yalnızca bu takımlara ait aktiviteler görüntülenebilir.
 * **Rol Filtresi (Role Filter)**: Organizasyon içindeki belirli roller (örn. Developer, QA) seçilerek, sadece bu rollerin aktiviteleri analizlere dahil edilir. Bu sayede doğrudan geliştirme dışındaki katkılar hariç tutulabilir.
 * **Aktivite Türü (Activity Type)**: İstenilen aktivite türleri (Commit, PR açma, Review, Yorum vb.) seçilerek, ısı haritası sadece bu aktiviteler üzerinden görüntülenebilir.
@@ -147,15 +147,15 @@ Amaç, sadece genel skorlara bakmakla kalmayıp, her bir geliştiricinin hangi g
 Bu filtreler sayesinde ekipler, belirli zaman aralıklarında, belirli roller veya aktiviteler özelinde, çok daha net ve hedefli içgörüler elde edebilir.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image (482).png" alt="" width="461"><figcaption><p>Modül Filtreleri</p></figcaption></figure>
+<figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FG2L0nFndIQtLHR7Azfy0%2Fimage.png?alt=media&#x26;token=fb40c6c8-62e3-476c-8cf4-87458a748cc9" alt="" width="461"><figcaption><p>Modül Filtreleri</p></figcaption></figure>
 
 ***
 
-### 5. Veri Kaynakları
+#### 5. Veri Kaynakları
 
 **Activity Heatmap** modülü, geliştirici aktivitelerini hesaplamak için farklı yazılım geliştirme araçlarından ve katkı türlerinden veri toplar.
 
-* **Commits**: Git repository’lerindeki commit kayıtları  (_Azure DevOps, GitHub, GitLab, Bitbucket, Gitea_)
+* **Commits**: Git repository’lerindeki commit kayıtları (_Azure DevOps, GitHub, GitLab, Bitbucket, Gitea_)
 * **Kod Değişiklikleri**: Eklenen, silinen ve düzenlenen satır sayıları
 * **Pull Requestler**: Açılan PR’lar (GitHub, GitLab, Bitbucket, Azure Repos vb.)
 * **Kod İncelemeleri (Reviews)**: Yapılan kod incelemeleri, onaylanan veya geri gönderilen PR’lar
@@ -168,7 +168,7 @@ Bu kaynaklardan gelen veriler, admin panelde tanımlanan katsayılarla ağırlı
 
 ***
 
-### 6. Önerilen Kullanımlar
+#### 6. Önerilen Kullanımlar
 
 **Activity Heatmap** modülü, ekip aktivitelerinin daha adil, dengeli ve verimli hale getirilmesi için farklı senaryolarda kullanılabilir:
 
@@ -180,7 +180,7 @@ Bu modül yalnızca bireysel performans ölçümü için değil, aynı zamanda e
 
 ***
 
-### 7. SSS (Sıkça Sorulan Sorular)
+#### 7. SSS (Sıkça Sorulan Sorular)
 
 <details>
 

@@ -10,5 +10,9 @@ The Oobeya MCP server connects the AI tool you already use to Oobeya. Ask about 
 
 Available from Oobeya 2.1.0. Supported AI tools: Claude Code, Codex, Cursor, VS Code, Devin (Windsurf), GitHub Copilot, Gemini CLI, Grok Build and OpenCode.
 
+{% embed url="https://youtu.be/yyjTUPF8waU" %}
+Watch Oobeya MCP in action.
+{% endembed %}
+
 * Administrators: [setup-for-administrators.md](setup-for-administrators.md "mention")  — reverse proxy paths, verification, access control and privacy.
 * Everyone: [using-oobeya-from-your-ai-tool.md](using-oobeya-from-your-ai-tool.md "mention") — connect your AI tool, approve access and start asking.

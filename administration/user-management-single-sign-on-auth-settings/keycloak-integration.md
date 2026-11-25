@@ -7,13 +7,13 @@ icon: asterisk
 
 # Keycloak Integration
 
-### Overview
+#### Overview
 
 By integrating Keycloak as an identity provider, Oobeya can authenticate users via your existing IAM setup, improving security, user experience, and centralized access management.
 
 ***
 
-### Prerequisites
+#### Prerequisites
 
 Before you begin, make sure you have:
 
@@ -24,9 +24,9 @@ Before you begin, make sure you have:
 
 ***
 
-### Part 1: Configure Keycloak
+#### Part 1: Configure Keycloak
 
-#### Step 1: Create a New Client
+**Step 1: Create a New Client**
 
 1. Log in to the **Keycloak Admin Console**
 2. Select your **Realm** (or create a new one)
@@ -35,7 +35,7 @@ Before you begin, make sure you have:
 
 ***
 
-#### Step 2: General Settings
+**Step 2: General Settings**
 
 Configure the client with the following values:
 
@@ -43,7 +43,7 @@ Configure the client with the following values:
 
 ***
 
-#### Step 3: Access Settings
+**Step 3: Access Settings**
 
 | Setting                         | Value                        | Example                                            |
 | ------------------------------- | ---------------------------- | -------------------------------------------------- |
@@ -56,7 +56,7 @@ Configure the client with the following values:
 
 ***
 
-#### Step 4: Capability Configuration
+**Step 4: Capability Configuration**
 
 Set authentication flows as follows:
 
@@ -70,7 +70,7 @@ Set authentication flows as follows:
 
 ***
 
-#### Step 5: Client Credentials
+**Step 5: Client Credentials**
 
 1. Open the **Credentials** tab
 2. Copy the **Client Secret**
@@ -78,16 +78,16 @@ Set authentication flows as follows:
 
 ***
 
-### Part 2: Configure Oobeya
+#### Part 2: Configure Oobeya
 
-#### Step 1: Open Keycloak Settings
+**Step 1: Open Keycloak Settings**
 
 1. Log in to Oobeya as an **Administrator**
-2. Navigate to **Settings > Keycloak Authentication**
+2. Select **Administration** in the left menu, then **Authentication** in the **Platform** section, and open the **Keycloak** tab
 
 ***
 
-#### Step 2: Enable Keycloak Authentication
+**Step 2: Enable Keycloak Authentication**
 
 Enable the toggle:
 
@@ -95,7 +95,7 @@ Enable the toggle:
 
 ***
 
-#### Step 3: Connection Settings
+**Step 3: Connection Settings**
 
 Fill in the required fields:
 
@@ -103,7 +103,7 @@ Fill in the required fields:
 
 ***
 
-#### Step 4: User Management Options
+**Step 4: User Management Options**
 
 **Do not allow login if user does not exist in Oobeya**
 
@@ -122,7 +122,7 @@ Fill in the required fields:
 
 ***
 
-#### Step 5: Save Configuration
+**Step 5: Save Configuration**
 
 * Review all settings
 * Click **Save** to apply
@@ -130,9 +130,9 @@ Fill in the required fields:
 
 ***
 
-### Part 3: Test the Integration
+#### Part 3: Test the Integration
 
-#### Authentication Test
+**Authentication Test**
 
 1. Log out of Oobeya
 2. Open the Oobeya login page
@@ -142,7 +142,7 @@ Fill in the required fields:
 
 ***
 
-#### Verify User Creation
+**Verify User Creation**
 
 1. Log in as an Oobeya admin
 2. Open **Users** section
@@ -150,7 +150,7 @@ Fill in the required fields:
 
 ***
 
-### Troubleshooting
+#### Troubleshooting
 
 * Ensure redirect URLs match exactly
 * Verify realm and client ID consistency

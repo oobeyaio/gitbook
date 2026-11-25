@@ -4,17 +4,17 @@ description: Learn about Sentry & Oobeya Integration.
 
 # Sentry Integration
 
-## 1. Generate Sentry Auth Token :tools:&#x20;
+### 1. Generate Sentry Auth Token
 
-1. Click on your **account** name on Sentry and select the "**API keys**" as in the following:&#x20;
+1. Click on your **account** name on Sentry and select the "**API keys**" as in the following:
 
 ![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2F02MyNKdx6EC4OSpB9seu%2Ffile.png?alt=media)
 
-2\. Click to the "**Create New Token**" button:&#x20;
+2\. Click to the "**Create New Token**" button:
 
 ![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2Fg8cOw0U6XLkbBb8Z6vl6%2Ffile.png?alt=media)
 
-3\. Configure the "**Scopes**" area by selecting permissions and then click the "**Create Token**" button.&#x20;
+3\. Configure the "**Scopes**" area by selecting permissions and then click the "**Create Token**" button.
 
 ![Inserting image...](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FbiL51gPGL9GYDblzgT2q%2Ffile.png?alt=media)
 
@@ -22,32 +22,30 @@ description: Learn about Sentry & Oobeya Integration.
 
 ![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FaEoYHdQaKLCuzuhLyA4A%2Ffile.png?alt=media)
 
-## 2. Install Sentry Addon on Oobeya :jigsaw:&#x20;
+### 2. Connect Sentry in Oobeya
 
-1. Log in to [Oobeya](https://oobeya.io/) with an Administrator account.&#x20;
-2. Navigate to **Market Place**, select the Sentry addon, and click the "**Install**" button.&#x20;
+1. Sign in to Oobeya with an **Administrator** account and select **Integrations** in the **Administration** section of the left menu.
+2. In the **Monitoring/APM** section, click the **Sentry** card. If Sentry already has data sources, click **+ New Data Source** in the window that opens.
+3. Select the version **Sentry v0** and fill in the form (see the fields below).
+4. Click **Test Connection** to verify the connection, then click **Add**.
 
-![Inserting image...](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2Fadykdmz0970eOEBzy2Du%2Ffile.png?alt=media)
+| Field                | Value                                                        |
+| -------------------- | ------------------------------------------------------------ |
+| **Data Source Name** | A name you choose for this connection, for example _Sentry_. |
+| **Server URL**       | The URL of your Sentry instance.                             |
+| **Token**            | The auth token from step 1.                                  |
 
-## 3. Add A New Data Source :electric\_plug:&#x20;
+<figure><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2Fm2pGUBcXo6bUjxsovySl%2Fform-sentry.png?alt=media&#x26;token=26bd5a4c-d950-4289-a35d-fb17382da1d7" alt="Sentry data source form in Oobeya"><figcaption><p>The Sentry data source form on the Integrations page.</p></figcaption></figure>
 
-1. Navigate to **Data Sources**, and select **Sentry** to add a new data source.&#x20;
+{% hint style="info" %}
+Since Oobeya 2.1 there is no separate install step: the integration is enabled when you save its first data source. See [Adding New Integration](https://docs.oobeya.io/integrations/adding-new-integration).
+{% endhint %}
 
-![Inserting image...](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FhOVW8k35O7kUv0uqpHgn%2Ffile.png?alt=media)
+### Ready to Connect
 
-2\. Click the "**New Data Source**" button and fill in the form using the Token generated on Sentry in the first step. You can type any name for the "Data Source Name" field.&#x20;
+Now Oobeya is connected with your own **Sentry** account to diagnose, fix, and optimize the performance of the code.
 
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FqVaJhi6pK6FGF7WHNABo%2Ffile.png?alt=media)
+### **Next Steps**
 
-3\. Click the "**Test Connection**" button to verify the connection.&#x20;
-
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FtiMCmmjnnJPIjgiDxfK7%2Ffile.png?alt=media)
-
-## Ready to Connect :rocket:&#x20;
-
-Now Oobeya is connected with your own **Sentry** account to diagnose, fix, and optimize the performance of the code.&#x20;
-
-## **Next Steps** :dart:&#x20;
-
-* [Network Access Requirements ](../../network-access-requirements.md)
-* [Create a new Gitwiser Analysis](../../../gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics.md)
+* [Network Access Requirements](https://docs.oobeya.io/integrations/network-access-requirements)
+* [Create a new Gitwiser Analysis](https://docs.oobeya.io/gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics)

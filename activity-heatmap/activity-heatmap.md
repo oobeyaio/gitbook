@@ -16,24 +16,24 @@ With this module, you can:
 
 ***
 
-### 1. Key Features
+#### 1. Key Features
 
 * Analysis by daily, weekly, monthly, quarterly, or custom time range
 * Tracking of PR, commit, code line changes, and code review comments
 * Color-coded heatmap view by developer
 * Developer Work Log with detailed contribution analysis
 * Team selection and role-based filtering
-* Working days filter (configured under Admin Panel > General Settings)
+* Working days filter (configured under Administration > Time Settings)
 
 <figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FnEJ2Mw9DOl1Yt1LU0XiI%2Fimage.png?alt=media&#x26;token=6524f1c1-2b3b-4bcd-827f-d53644ea5972" alt=""><figcaption><p>Activity Heatmap Overview</p></figcaption></figure>
 
 ***
 
-### 2. Scoring Mechanism
+#### 2. Scoring Mechanism
 
 In the **Activity Heatmap** module, developer activities are calculated using data from different contribution types and normalized for visualization in the heatmap.
 
-#### 2.1. Daily Normalization & Z-Score
+**2.1. Daily Normalization & Z-Score**
 
 1. The highest-scoring developer each day is taken as the 100% reference.
 2. Other developers are scaled against this maximum → `rank_ratio`.
@@ -42,7 +42,7 @@ In the **Activity Heatmap** module, developer activities are calculated using da
 5. Ratios are converted to **z-scores** and normalized into the 0–100 range.
 6. These scores are mapped into color tones in the heatmap.
 
-#### 2.2. Activity-Based Score Formulas
+**2.2. Activity-Based Score Formulas**
 
 **2.2.1. Commit Activities**
 
@@ -81,13 +81,13 @@ This mechanism ensures **fair comparisons** across teams, allows organizations t
 
 ***
 
-### 3. Admin Panel Settings
+#### 3. Admin Panel Settings
 
 Weight values are assigned to different activities. These coefficients determine how each activity type influences the overall heatmap score and visualization.
 
 **Location:** `Administration > Activity Heatmap`
 
-#### Coefficient Settings
+**Coefficient Settings**
 
 For each activity type, you can define its weight on the total score.
 
@@ -97,11 +97,11 @@ For each activity type, you can define its weight on the total score.
 
 ***
 
-### 4. Dashboard Components
+#### 4. Dashboard Components
 
 The **Activity Heatmap Dashboard** consists of multiple components to analyze daily developer activities from different perspectives. Each component visualizes contribution types, trends over time, and distribution within teams.
 
-#### 4.1. Activity Heatmap
+**4.1. Activity Heatmap**
 
 **Activity Heatmap** is the core component that visualizes developers’ daily activities. Each cell represents a developer’s contribution score for a given day.
 
@@ -115,7 +115,7 @@ The Activity Heatmap helps teams visually detect workload imbalances and quickly
 
 <figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FdzrUeZKfzaFD1eAfaVBn%2Fimage.png?alt=media&#x26;token=f314684d-e1d1-4008-aa3b-8a186e77f3a3" alt=""><figcaption><p>Activity Heatmap</p></figcaption></figure>
 
-#### 4.2. Developer Work Log
+**4.2. Developer Work Log**
 
 The **Developer Work Log** provides a detailed list of daily activities for each developer within the selected date range. It provides the raw data behind the scores displayed in the heatmap in a tabular format.
 
@@ -131,11 +131,11 @@ The goal is not only to view general scores, but also to analyze in detail which
 
 <figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2Frw1yvXBqpUwtR0KZJARR%2Fimage.png?alt=media&#x26;token=147fe9f8-45f8-46c4-9084-d62661fc99be" alt=""><figcaption><p>Developer Work Log</p></figcaption></figure>
 
-#### 4.3. Filters
+**4.3. Filters**
 
 The **Activity Heatmap** module offers various filtering options to enable more focused and meaningful analysis:
 
-* **Working Days**: Ensures scores are calculated only based on your company’s defined working days (e.g., Monday–Friday). Configurable in **Admin > General Settings**.
+* **Working Days**: Ensures scores are calculated only based on your company’s defined working days (e.g., Monday–Friday). Configurable in **Administration > Time Settings**.
 * **Team Selection**: Select one or more teams to view only their activities in the heatmap.
 * **Role Filter**: Choose specific roles (e.g., Developer, QA) to include only those roles in the analysis. Non-development contributions can be excluded.
 * **Activity Type**: Select desired activity types (commits, PR creation, reviews, comments, etc.) to filter the heatmap by those contributions.
@@ -148,7 +148,7 @@ With these filters, teams can gain more precise and targeted insights for specif
 
 ***
 
-### 5. Data Sources
+#### 5. Data Sources
 
 The **Activity Heatmap** module aggregates data from different development tools and contribution types to calculate developer activities.
 
@@ -165,7 +165,7 @@ Data from these sources is weighted with the coefficients defined in the admin p
 
 ***
 
-### 6. Recommended Use Cases
+#### 6. Recommended Use Cases
 
 The **Activity Heatmap** module can be used in different scenarios to make team activities fairer, more balanced, and more effective:
 
@@ -177,7 +177,7 @@ This module is not only for measuring individual performance but also a powerful
 
 ***
 
-### 7. FAQ (Frequently Asked Questions)
+#### 7. FAQ (Frequently Asked Questions)
 
 <details>
 

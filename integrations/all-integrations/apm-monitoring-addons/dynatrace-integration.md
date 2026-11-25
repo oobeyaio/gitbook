@@ -1,42 +1,46 @@
 # Dynatrace Integration
 
-## 1. Generate a Dynatrace Access Token :tools:&#x20;
+### 1. Generate a Dynatrace Access Token
 
 1.  Click on the search box and search for “Access Tokens”.<br>
 
-    <figure><img src="../../../.gitbook/assets/image (416).png" alt=""><figcaption><p>Dynatrace Access Tokens</p></figcaption></figure>
-2.  Click on the "**Generate new token**" button: <br>
+    <figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FigfFB8DzrLTsxYCElNFO%2Fimage.png?alt=media&#x26;token=bc4aeda2-03f3-43d9-b1b3-a13bf3e1aeba" alt=""><figcaption><p>Dynatrace Access Tokens</p></figcaption></figure>
+2.  Click on the "**Generate new token**" button:<br>
 
-    <figure><img src="../../../.gitbook/assets/image (417).png" alt=""><figcaption></figcaption></figure>
-3.  Select the required permission scopes. \
+    <figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FuZXuhXRpl9UQGJdlL1SO%2Fimage.png?alt=media&#x26;token=fea4ab92-48f7-4e74-8123-9dbd51494c1f" alt=""><figcaption></figcaption></figure>
+3.  Select the required permission scopes.\
     **Required Scopes:** Read API token, Read entities, Read metrics\
     \
     The required **URL address** (https://\*\*\*\*\*\*\*.live.dynatrace.com) for Oobeya's data source form is in the second box below. You can copy it.\
     \
     Then, click on the "Generate token" button.<br>
 
-    <figure><img src="../../../.gitbook/assets/image (418).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FWzY06hqyvZRZNi59F3CB%2Fimage.png?alt=media&#x26;token=d635c751-da57-4f04-a653-529ef36e908b" alt=""><figcaption></figcaption></figure>
 
-## 2. Install Dynatrace on Oobeya :jigsaw:&#x20;
+### 2. Connect Dynatrace in Oobeya
 
-1. Log in to [Oobeya](https://oobeya.io/) with an Administrator account.&#x20;
-2.  Navigate to **Integrations**, select Dynatrace, and click the "**Install**" button. <br>
+1. Sign in to Oobeya with an **Administrator** account and select **Integrations** in the **Administration** section of the left menu.
+2. In the **Monitoring/APM** section, click the **Dynatrace** card. If Dynatrace already has data sources, click **+ New Data Source** in the window that opens.
+3. Select the version **Dynatrace API V2** and fill in the form (see the fields below).
+4. Click **Test Connection** to verify the connection, then click **Add**.
 
-    <figure><img src="../../../.gitbook/assets/image (419).png" alt=""><figcaption><p>Oobeya Dynatrace Integration</p></figcaption></figure>
+| Field                | Value                                                           |
+| -------------------- | --------------------------------------------------------------- |
+| **Data Source Name** | A name you choose for this connection, for example _Dynatrace_. |
+| **Server URL**       | Your Dynatrace environment URL.                                 |
+| **Token**            | The access token from step 1.                                   |
 
-## 3. Add A New Data Source :electric\_plug:&#x20;
+<figure><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2F3FVtl4H7oESi32bygkkZ%2Fform-dynatrace.png?alt=media&#x26;token=0f23e361-e211-4701-addb-5fea5472e54d" alt="Dynatrace data source form in Oobeya"><figcaption><p>The Dynatrace data source form on the Integrations page.</p></figcaption></figure>
 
-1. Navigate to **Data Sources**, and select **Dynatrace** to add a new data source.&#x20;
-2.  Click the "**New Data Source**" button and fill in the form using the Token generated on Dynatrace in the first step. You can type any name for the "Data Source Name" field. <br>
+{% hint style="info" %}
+Since Oobeya 2.1 there is no separate install step: the integration is enabled when you save its first data source. See [Adding New Integration](https://docs.oobeya.io/integrations/adding-new-integration).
+{% endhint %}
 
-    <figure><img src="../../../.gitbook/assets/image (420).png" alt=""><figcaption><p>Dynatrace Data Source Connection Form</p></figcaption></figure>
-3. &#x20;Click the "**Test Connection**" button to verify the connection.&#x20;
+### Ready to Connect
 
-## Ready to Connect :rocket:&#x20;
+Now Oobeya is connected to your **Dynatrace** account to diagnose, fix, and optimize the performance of the code.
 
-Now Oobeya is connected to your **Dynatrace** account to diagnose, fix, and optimize the performance of the code.&#x20;
+### **Next Steps**
 
-## **Next Steps** :dart:&#x20;
-
-* [Network Access Requirements ](../../network-access-requirements.md)
-* [Create a new Gitwiser Analysis](../../../gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics.md)
+* [Network Access Requirements](https://docs.oobeya.io/integrations/network-access-requirements)
+* [Create a new Gitwiser Analysis](https://docs.oobeya.io/gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics)

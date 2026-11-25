@@ -4,18 +4,10 @@ description: Learn about how you can integrate your quality and security tools w
 
 # Quality & Security
 
-{% content-ref url="sonarqube-integration.md" %}
-[sonarqube-integration.md](sonarqube-integration.md)
-{% endcontent-ref %}
+On the Integrations page, SonarQube Server, SonarQube Cloud, Fortify, and Veracode are in the **Code Quality & Security** category. Xray and TestRail are in the **Test** category; see [Test](https://docs.oobeya.io/integrations/all-integrations/test-addons).
 
-{% content-ref url="sonarqube-cloud-integration.md" %}
-[sonarqube-cloud-integration.md](sonarqube-cloud-integration.md)
-{% endcontent-ref %}
-
-{% content-ref url="veracode-integration.md" %}
-[veracode-integration.md](veracode-integration.md)
-{% endcontent-ref %}
-
-{% content-ref url="xray-integration.md" %}
-[xray-integration.md](xray-integration.md)
-{% endcontent-ref %}
+* [SonarQube Server Integration](https://docs.oobeya.io/integrations/all-integrations/code-quality-addons/sonarqube-integration)
+* [SonarQube Cloud Integration](https://docs.oobeya.io/integrations/all-integrations/code-quality-addons/sonarqube-cloud-integration)
+* [Veracode Integration](https://docs.oobeya.io/integrations/all-integrations/code-quality-addons/veracode-integration)
+* [Xray Integration](https://docs.oobeya.io/integrations/all-integrations/code-quality-addons/xray-integration)
+* [Fortify Integration](https://docs.oobeya.io/integrations/all-integrations/code-quality-addons/fortify-integration)

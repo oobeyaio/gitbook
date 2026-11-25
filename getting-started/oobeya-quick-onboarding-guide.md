@@ -7,7 +7,7 @@ icon: list-check
 
 # Oobeya Quick Onboarding Guide
 
-## Quick Onboarding Guide
+### Quick Onboarding Guide
 
 Use this guide to connect your engineering tools, configure your organization, and create your first actionable engineering view in Oobeya.
 
@@ -15,7 +15,7 @@ This guide is primarily intended for Oobeya **Workspace Administrators** respons
 
 ***
 
-### Before You Begin
+#### Before You Begin
 
 Make sure that:
 
@@ -29,7 +29,7 @@ Make sure that:
 
 ***
 
-### Onboarding Overview
+#### Onboarding Overview
 
 The recommended onboarding sequence is:
 
@@ -46,7 +46,7 @@ The recommended onboarding sequence is:
 
 ***
 
-### Step 1: Define Your Initial Scope
+#### Step 1: Define Your Initial Scope
 
 Before connecting tools, define what you want to onboard first.
 
@@ -74,7 +74,7 @@ A clearly defined scope makes it easier to validate data, repository ownership, 
 
 ***
 
-### Step 2: Connect Your Source Code Management Platform
+#### Step 2: Connect Your Source Code Management Platform
 
 Oobeya uses source code management data as the foundation for Development Analytics.
 
@@ -82,24 +82,15 @@ Commonly supported SCM platforms include:
 
 * GitHub, GitLab, Azure DevOps, Bitbucket, Gitea, Gerrit.
 
-#### 2.1 Install the Add-on
+**2.1 Add a Data Source**
 
-1. Open **Integrations** in Oobeya.
-2. Find your SCM platform.
-3. Select the add-on.
-4. Click **Install**.
+Since Oobeya 2.1 there is no separate install step: every integration is on the **Integrations** page.
 
-See [Installing an Add-on](https://docs.oobeya.io/integrations/adding-new-integration/installing-an-addon).
-
-#### 2.2 Add a Data Source
-
-After installing the add-on:
-
-1. Navigate to **Data Sources**.
-2. Select the installed SCM platform.
-3. Click **New Data Source**.
+1. Select **Integrations** in the **Administration** section of the left menu.
+2. Find your SCM platform in the **Source Code Management** category and click its card.
+3. If the platform already has data sources, click **+ New Data Source**.
 4. Enter the required URL, credentials, token, or connection details.
-5. Save the data source.
+5. Click **Test Connection**, then **Add**.
 6. Validate that Oobeya can access the expected organizations, projects, and repositories.
 
 See [Adding a New Data Source](https://docs.oobeya.io/integrations/adding-new-integration/adding-a-new-data-source).
@@ -110,7 +101,7 @@ For provider-specific requirements and permission details, review the [Integrati
 
 ***
 
-### Step 3: Initialize Development Analytics
+#### Step 3: Initialize Development Analytics
 
 After connecting your SCM platform, create your first Development Analytics analysis.
 
@@ -127,8 +118,8 @@ Development Analytics can analyze:
 
 To start an analysis:
 
-1. Open **Development Analytics**.
-2. Click **New Analysis**.
+1. Open **Coding, Review & Delivery** (**Analytics** section of the left menu).
+2. Click **+ Analysis**.
 3. Select your SCM platform and data source.
 4. Select the project, repository, and branch.
 5. Choose the CI/CD strategy used by the repository.
@@ -138,7 +129,7 @@ To start an analysis:
 
 See [Setting Up Development Analytics and DORA Metrics](https://docs.oobeya.io/gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics).
 
-#### Configuration Notes
+**Configuration Notes**
 
 * Select the correct primary or development branch.
 * Choose the CI/CD strategy that reflects the actual delivery workflow.
@@ -151,7 +142,7 @@ The initial historical analysis may take some time depending on the selected dat
 
 ***
 
-### Step 4: Connect Additional Engineering Tools
+#### Step 4: Connect Additional Engineering Tools
 
 While the initial repository analysis is running, connect the other tools used across your software delivery lifecycle.
 
@@ -165,31 +156,31 @@ Browse all available tools in the [Integration Catalog](https://docs.oobeya.io/i
 
 ***
 
-### Step 5: Add Users and Map Identities
+#### Step 5: Add Users and Map Identities
 
 Users must be configured correctly so that Oobeya can associate engineering activity with the correct profiles and teams.
 
 You can add users through:
 
-#### Microsoft Entra ID
+**Microsoft Entra ID**
 
 Configure authentication and user access through Microsoft Entra ID.
 
 See [Microsoft Entra ID Integration](https://docs.oobeya.io/administration/user-management-single-sign-on-auth-settings/azure-ad-integration).
 
-#### LDAP or Active Directory
+**LDAP or Active Directory**
 
 Connect your corporate directory to authenticate and import users.
 
 See [LDAP / Active Directory Integration](https://docs.oobeya.io/administration/user-management-single-sign-on-auth-settings/configuring-ldap-active-directory).
 
-#### Manual User Creation
+**Manual User Creation**
 
 Create individual users directly in Oobeya.
 
 See [Adding a New User](https://docs.oobeya.io/administration/user-management-single-sign-on-auth-settings/adding-a-new-user).
 
-#### Verify Contributor Accounts
+**Verify Contributor Accounts**
 
 A single developer may appear under different usernames or email addresses across Git, project management, code quality, and identity systems.
 
@@ -204,7 +195,7 @@ Review contributor identities and merge duplicate accounts where necessary. Corr
 
 ***
 
-### Step 6: Create Your Teams
+#### Step 6: Create Your Teams
 
 Teams connect people, repositories, projects, and engineering metrics within Oobeya.
 
@@ -219,7 +210,7 @@ To create a team:
 
 See [Adding a Team](https://docs.oobeya.io/team-health/adding-a-team).
 
-#### Team Configuration Checklist
+**Team Configuration Checklist**
 
 Before continuing, verify that:
 
@@ -234,7 +225,7 @@ Before continuing, verify that:
 
 ***
 
-### Step 7: Configure the Team Scorecard
+#### Step 7: Configure the Team Scorecard
 
 Team Scorecards provide a unified view of engineering health by combining metrics from multiple data sources.
 
@@ -266,7 +257,7 @@ Start with a small number of meaningful metrics rather than displaying every ava
 
 ***
 
-### Step 8: Initialize Project Analytics
+#### Step 8: Initialize Project Analytics
 
 Connect a project management platform when you want to analyze delivery flow, work item progress, planning effectiveness, and predictability.
 
@@ -286,8 +277,8 @@ Project Analytics can provide visibility into:
 To start an analysis:
 
 1. Connect Jira, Azure Boards, or another supported project management platform.
-2. Open **Project Analytics**.
-3. Click **New Analysis**.
+2. Open **Projects & Boards** (**Analytics** section of the left menu).
+3. Click **+ Analysis**.
 4. Select the data source, project, and board.
 5. Configure work item types, workflow statuses, and analysis settings.
 6. Associate the analysis with the relevant team.
@@ -300,11 +291,11 @@ See [Starting a Project Analytics Analysis](https://docs.oobeya.io/project-analy
 
 ***
 
-### Step 9: Validate Your Data
+#### Step 9: Validate Your Data
 
 Before expanding Oobeya across the organization, validate the first results with the relevant engineering teams.
 
-#### Development Analytics
+**Development Analytics**
 
 Confirm that:
 
@@ -315,7 +306,7 @@ Confirm that:
 * [ ] Bot accounts and service users are handled appropriately.
 * [ ] Outlier or irrelevant commits are excluded when necessary.
 
-#### DORA Metrics
+**DORA Metrics**
 
 Confirm that:
 
@@ -325,7 +316,7 @@ Confirm that:
 * [ ] Production failures are detected from the correct source.
 * [ ] Deployment environments are mapped correctly.
 
-#### Project Analytics
+**Project Analytics**
 
 Confirm that:
 
@@ -335,7 +326,7 @@ Confirm that:
 * [ ] Unnecessary work item types are excluded.
 * [ ] Team and project relationships are accurate.
 
-#### Teams and Users
+**Teams and Users**
 
 Confirm that:
 
@@ -348,7 +339,7 @@ Data validation should involve both the Oobeya administrator and the engineering
 
 ***
 
-### Step 10: Configure Automatic Updates
+#### Step 10: Configure Automatic Updates
 
 After validating the first analyses, configure automatic reanalysis so that Oobeya keeps engineering data up to date.
 
@@ -366,26 +357,26 @@ For on-premise environments, monitor resource consumption as the number of integ
 
 ***
 
-### Step 11: Expand Your Oobeya Setup
+#### Step 11: Expand Your Oobeya Setup
 
 After the initial teams and data sources are validated, you can gradually enable additional Oobeya capabilities.
 
-#### Engineering Insights and Symptoms
+**Engineering Insights and Symptoms**
 
 Automatically identify recurring bottlenecks, risks, and engineering anti-patterns.
 
 * [Symptoms Catalog](https://docs.oobeya.io/team-insights-and-symptoms/symptoms-catalog)
 * [Engineering Benchmarks](https://docs.oobeya.io/team-insights-and-symptoms/engineering-benchmarks)
 
-#### AI Coding Assistant Impact
+**AI Coding Assistant Impact**
 
 Understand AI coding assistant adoption and its relationship with engineering outcomes.
 
 * [Measuring the Impact of AI Coding Assistants](https://docs.oobeya.io/use-cases/measuring-the-impact-of-ai-coding-assistants)
 * [GitHub Copilot – AI Impact](https://docs.oobeya.io/ai-impact/github-copilot-ai-impact)
-* [AI Cost and Credits](../ai-impact/ai-cost-and-credits.md)
+* [AI Cost and Credits](https://docs.oobeya.io/ai-impact/ai-cost-and-credits)
 
-#### Resource Allocation
+**Resource Allocation**
 
 Understand how engineering capacity is distributed across projects and work categories.
 
@@ -393,11 +384,11 @@ Understand how engineering capacity is distributed across projects and work cate
 
 ***
 
-### Recommended Rollout Approach
+#### Recommended Rollout Approach
 
 For enterprise onboarding, use an incremental rollout:
 
-#### Phase 1: Pilot
+**Phase 1: Pilot**
 
 * [ ] Select one or two representative teams.
 * [ ] Connect the minimum required tools.
@@ -405,14 +396,14 @@ For enterprise onboarding, use an incremental rollout:
 * [ ] Create the first Team Scorecards.
 * [ ] Review results with engineering managers.
 
-#### Phase 2: Standardize
+**Phase 2: Standardize**
 
 * [ ] Define common repository and project configuration standards.
 * [ ] Establish consistent team ownership and identity mapping.
 * [ ] Agree on the core metrics and scorecard structure.
 * [ ] Document exceptions for different engineering workflows.
 
-#### Phase 3: Scale
+**Phase 3: Scale**
 
 * [ ] Onboard additional teams and business units.
 * [ ] Introduce additional integrations and modules.
@@ -420,7 +411,7 @@ For enterprise onboarding, use an incremental rollout:
 * [ ] Configure role-based access.
 * [ ] Establish recurring engineering reviews.
 
-#### Phase 4: Improve
+**Phase 4: Improve**
 
 * [ ] Review engineering Symptoms and trends.
 * [ ] Compare teams using relevant benchmarks and context.
@@ -429,7 +420,7 @@ For enterprise onboarding, use an incremental rollout:
 
 ***
 
-### Onboarding Completion Checklist
+#### Onboarding Completion Checklist
 
 Use this checklist before completing the initial onboarding:
 
@@ -451,7 +442,7 @@ Use this checklist before completing the initial onboarding:
 
 ***
 
-### Next Steps
+#### Next Steps
 
 After completing the onboarding process:
 
@@ -461,6 +452,6 @@ After completing the onboarding process:
 
 ***
 
-### Need Help?
+#### Need Help?
 
 The Oobeya team is dedicated to ensuring a smooth onboarding experience. If you have any questions or feedback, reach out to us on our [website](https://oobeya.io/contact/) or via your dedicated support channels.

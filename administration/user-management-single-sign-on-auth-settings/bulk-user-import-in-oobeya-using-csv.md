@@ -6,7 +6,7 @@ icon: users-gear
 
 Oobeya allows you to create multiple users simultaneously by importing a CSV file. The CSV file should contain information about each user in a specific format.
 
-### CSV File Format
+#### CSV File Format
 
 An example CSV file should look like this:
 
@@ -16,7 +16,7 @@ An example CSV file should look like this:
 Grace,Hopper,grace.hopper@oobeya.io,DEVELOPER,grace.hopper,DB
 </code></pre>
 
-#### Explanation of Fields
+**Explanation of Fields**
 
 * **name**: First name of the user
 * **surname**: Last name of the user
@@ -44,16 +44,16 @@ TECH_LEAD
 
 ***
 
-### Importing the CSV File
+#### Importing the CSV File
 
-1. Navigate to _**Administration Panel > Go To Admin Settings**_.
-2. Open _**Users & Groups**_.
+1. Select **Administration** in the left menu, then **User Management** in the **Organization** section.
+2. Open the **Users** tab.
 3.  Click the **settings icon** and select **"Bulk Import From CSV"**.<br>
 
-    <figure><img src="../../.gitbook/assets/image (37).png" alt=""><figcaption><p>Bulk import</p></figcaption></figure>
+    <figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2F3D01fhbZ5tGitp5uKwVi%2Fimage.png?alt=media&#x26;token=08c3cb70-3346-445e-bb3b-5897d15b33b6" alt=""><figcaption><p>Bulk import</p></figcaption></figure>
 4. Select your CSV file and click the '**Import**' button.
 
-<figure><img src="../../.gitbook/assets/image (190).png" alt="" width="375"><figcaption><p>Import CSV file</p></figcaption></figure>
+<figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FPF4E07p6ex0ZiZFWTcZu%2Fimage.png?alt=media&#x26;token=77905257-5413-4265-a5e2-30af7b7e59ff" alt="" width="375"><figcaption><p>Import CSV file</p></figcaption></figure>
 
 {% hint style="danger" %}
 Please make sure that your CSV file does not include any syntax errors. Otherwise, you may view an error message.

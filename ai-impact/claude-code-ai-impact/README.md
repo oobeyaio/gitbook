@@ -14,11 +14,11 @@ The integration works with every way of running Claude Code:
 
 * **Claude Console** (API billing)
 * **Claude Team** and **Claude Enterprise** plans
-* **Amazon Bedrock, Google Vertex AI, Microsoft Foundry** or an LLM gateway (requires one extra setting, see [step 4](./#claude-code-on-amazon-bedrock-google-vertex-ai-microsoft-foundry-or-an-llm-gateway))
+* **Amazon Bedrock, Google Vertex AI, Microsoft Foundry** or an LLM gateway (requires one extra setting, see [step 4](https://docs.oobeya.io/ai-impact/claude-code-ai-impact#claude-code-on-amazon-bedrock-google-vertex-ai-microsoft-foundry-or-an-llm-gateway))
 
 ***
 
-### How It Works
+#### How It Works
 
 ```
 Claude Code (developer machines) ──OpenTelemetry over HTTP(S)──▶ Oobeya Collector ──▶ Oobeya AI Impact
@@ -26,21 +26,21 @@ Claude Code (developer machines) ──OpenTelemetry over HTTP(S)──▶ Oobey
 
 * Claude Code sends its usage totals every **5 minutes** and its events (prompts, model requests, tool runs) every **minute**.
 * The **Oobeya Collector** checks the ingest token of every request and queues the data. It is the only Oobeya address your developers' machines need to reach.
-* Oobeya stores the data as it arrives and calculates the AI Impact metrics on the [reanalysis schedule](./#id-6.-set-the-analysis-schedule). Every analysis recalculates the last 7 days, so data that arrives late is still counted.
+* Oobeya stores the data as it arrives and calculates the AI Impact metrics on the [reanalysis schedule](https://docs.oobeya.io/ai-impact/claude-code-ai-impact#id-6.-set-the-analysis-schedule). Every analysis recalculates the last 7 days, so data that arrives late is still counted.
 * Optionally, an **Anthropic API key** on the data source adds the list of licensed members and, on Claude Enterprise, the billed cost.
 
 {% hint style="info" %}
-Oobeya does not receive or store the content of prompts, responses, code or files. See [Collected Data and Privacy](./#id-9.-collected-data-and-privacy).
+Oobeya does not receive or store the content of prompts, responses, code or files. See [Collected Data and Privacy](https://docs.oobeya.io/ai-impact/claude-code-ai-impact#id-9.-collected-data-and-privacy).
 {% endhint %}
 
 ***
 
-### 1. Prerequisites
+#### 1. Prerequisites
 
 * **Oobeya Collector** is installed and reachable from your developers' machines.
-  * On-premise installations: your DevOps team installs it with the [Oobeya Collector Installation (Docker)](oobeya-collector-installation-docker.md) guide and gives you the collector address, for example `http://oobeya-collector.mycompany.com:8097`, or an `https://` address if the collector is behind a load balancer. HTTPS is recommended, because over plain HTTP the ingest token travels unencrypted; see [Recommended: HTTPS with a Load Balancer](oobeya-collector-installation-docker.md#recommended-https-with-a-load-balancer).
+  * On-premise installations: your DevOps team installs it with the [Oobeya Collector Installation (Docker)](https://docs.oobeya.io/ai-impact/claude-code-ai-impact/oobeya-collector-installation-docker) guide and gives you the collector address, for example `http://oobeya-collector.mycompany.com:8097`, or an `https://` address if the collector is behind a load balancer. HTTPS is recommended, because over plain HTTP the ingest token travels unencrypted; see [Recommended: HTTPS with a Load Balancer](https://docs.oobeya.io/ai-impact/claude-code-ai-impact/oobeya-collector-installation-docker#recommended-https-with-a-load-balancer).
   * If the Oobeya team hosts your installation, ask them for your collector address.
-* You have admin rights in Oobeya (Integrations, Data Sources and Api Key pages).
+* You have admin rights in Oobeya (Integrations and API Keys pages).
 * For an organization-wide rollout, someone who can change the Claude Code **managed settings**: a Claude organization owner (Team and Enterprise plans) or your device management (MDM) team.
 * Network access:
 
@@ -51,31 +51,32 @@ Oobeya does not receive or store the content of prompts, responses, code or file
 
 ***
 
-### 2. Enable the Claude Code Integration
+#### 2. Add the Claude Code Data Source
 
-1. Navigate to **Integrations → Coding Assistant** in Oobeya.
-2. Select **Claude Code** and click **Install**.
+1. Select **Integrations** in the **Administration** section of the left menu.
+2. In the **AI Coding Assistants** section, click the **Claude Code** card. If Claude Code already has data sources, click **+ New Data Source** in the window that opens.
+3. Fill in the form:
+   * **Version:** _OpenTelemetry_.
+   * **Data Source Name:** a descriptive name (e.g. _Claude Code - Engineering_).
+   * **Ingest token:** click **Generate** to create one, or paste one you created on the **API Keys** page. See [Ingest Token](https://docs.oobeya.io/ai-impact/claude-code-ai-impact#ingest-token) below.
+   * **Anthropic API key** _(optional)_: adds information that OpenTelemetry does not carry. See [Anthropic API Key](https://docs.oobeya.io/ai-impact/claude-code-ai-impact#anthropic-api-key) below.
+4. Click **Test Connection**, then **Add**.
+
+<figure><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FGU5zCPwQHYVvQqjuA1UA%2Fform-claude-code.png?alt=media&#x26;token=de3c3cb5-b9f7-4876-a27c-d6c24a2fca58" alt="Claude Code data source form in Oobeya"><figcaption><p>The Claude Code data source form. <strong>Generate</strong> creates an ingest token named after the data source.</p></figcaption></figure>
+
+{% hint style="info" %}
+Since Oobeya 2.1 there is no separate install step: the integration is enabled when you save its first data source.
+{% endhint %}
 
 ***
 
-### 3. Configure the Data Source
-
-Go to **Data Sources** and add a **Data Source for Claude Code**:
-
-* **Data Source Name:** a descriptive name (e.g. _Claude Code - Engineering_).
-* **Version:** _OpenTelemetry_.
-* **Ingest token:** generate a new token in the form, or paste one you created on the Api Key page. See [Ingest Token](./#ingest-token) below.
-* **Anthropic API key** _(optional)_: adds information that OpenTelemetry does not carry. See [Anthropic API Key](./#anthropic-api-key) below.
-
-Click **Test Connection**, then save the data source.
-
-#### Ingest Token
+**Ingest Token**
 
 Claude Code authenticates to the Oobeya Collector with an **ingest token**. You can get one in two ways:
 
-* **In the data source form (simplest):** generate the token while you add the data source. Oobeya creates it with the **Ingest (Collector)** scope, and it also appears on the **Admin → Api Key** page, where you can revoke it later.
-* **On the Api Key page:**
-  1. Go to **Admin → Api Key**.
+* **In the data source form (simplest):** enter the **Data Source Name** first, then click **Generate** next to the **Ingest token** field. Oobeya creates an **Ingest (Collector)** token named after the data source and fills in the field; it warns you if a token with that name already exists. The token also appears on the **Administration → API Keys** page, where you can revoke it later.
+* **On the API Keys page:**
+  1. Go to **Administration → API Keys**.
   2. Under **Generate Tokens**, select the scope **Ingest (Collector)**.
   3. Enter a **Token name** that you will recognize later (e.g. _Claude Code - Engineering_) and click **Generate Ingest (Collector) token**.
   4. Copy the token. It is shown only once, right after it is created.
@@ -86,10 +87,10 @@ An **Ingest (Collector)** token only works for sending data to the Oobeya Collec
 {% endhint %}
 
 {% hint style="warning" %}
-The ingest token is distributed to every developer's machine as part of the Claude Code settings, so anyone who has it can send data to this data source. Treat it as a shared secret. If it leaks, revoke it on the **Api Key** page, create a new one, update the data source and distribute the new settings.
+The ingest token is distributed to every developer's machine as part of the Claude Code settings, so anyone who has it can send data to this data source. Treat it as a shared secret. If it leaks, revoke it on the **API Keys** page, create a new one, update the data source and distribute the new settings.
 {% endhint %}
 
-#### Anthropic API Key
+**Anthropic API Key**
 
 The Anthropic API key is optional. Claude Code data flows without it; the key adds what OpenTelemetry does not carry.
 
@@ -105,7 +106,7 @@ Scopes cannot be added to an existing Claude Enterprise key. If the test reports
 
 ***
 
-### 4. Roll Out the Claude Code Settings
+#### 4. Roll Out the Claude Code Settings
 
 Claude Code starts sending data once it is configured with the collector address and the ingest token. Oobeya prepares this configuration for you:
 
@@ -149,7 +150,7 @@ Then distribute the settings with one of these options. Claude Code applies them
 
 Managed settings take precedence over every other settings file, so developers cannot turn them off locally.
 
-#### Claude Code on Amazon Bedrock, Google Vertex AI, Microsoft Foundry or an LLM gateway
+**Claude Code on Amazon Bedrock, Google Vertex AI, Microsoft Foundry or an LLM gateway**
 
 Without a Claude account sign-in, Claude Code does not report the developer's e-mail. Add it for each developer, for example through a per-user MDM profile or the user settings:
 
@@ -159,7 +160,7 @@ Without a Claude account sign-in, Claude Code does not report the developer's e-
 
 ***
 
-### 5. Verify the Data Flow
+#### 5. Verify the Data Flow
 
 Ask a developer to restart Claude Code and run a prompt. Events arrive within about a minute, usage totals within five minutes.
 
@@ -171,7 +172,7 @@ Open the data source and click **Data status and Claude Code settings**. The **D
 | **Receiving data**               | Data arrived in the last 24 hours.                                                           |
 | **No data in the last 24 hours** | Data arrived before, but not in the last 24 hours.                                           |
 
-The section also shows the **Last received** time, the number of **Developers sending data in the last 24 hours**, the **First data date**, the **Accepted requests** and the **Claude organization IDs** the data came from. If the collector or its queue has a problem, a message explains it (see [Troubleshooting](./#id-11.-troubleshooting)).
+The section also shows the **Last received** time, the number of **Developers sending data in the last 24 hours**, the **First data date**, the **Accepted requests** and the **Claude organization IDs** the data came from. If the collector or its queue has a problem, a message explains it (see [Troubleshooting](https://docs.oobeya.io/ai-impact/claude-code-ai-impact#id-11.-troubleshooting)).
 
 {% hint style="info" %}
 The Data status shows data the moment Oobeya receives it. The AI Impact dashboards show it after the next analysis.
@@ -179,11 +180,11 @@ The Data status shows data the moment Oobeya receives it. The AI Impact dashboar
 
 ***
 
-### 6. Set the Analysis Schedule
+#### 6. Set the Analysis Schedule
 
 Oobeya calculates the AI Impact metrics from the received data on a schedule.
 
-1. Go to **Admin → AI Assistant → Automated Reanalysis**.
+1. Go to **Administration → AI Impact → Automated Reanalysis**.
 2. Choose a **Reanalyze Period**: _Daily at 6:00 AM_, _Every hour_, _Every 6 hours_ or _Every 12 hours_. The setting applies to all AI assistants and follows the server time zone.
 3. Click **Save**.
 
@@ -193,18 +194,18 @@ Every analysis recalculates the last 7 days. Reanalysis never deletes the Claude
 
 ***
 
-### 7. Match Claude Code Users to Developers
+#### 7. Match Claude Code Users to Developers
 
 Claude Code reports the **e-mail of the Claude account** the developer is signed in with. Oobeya matches this e-mail to its developer accounts, and team-level metrics follow each developer's team membership.
 
 If a developer's Claude e-mail differs from the e-mail Oobeya knows, merge the accounts:
 
-* [Merging Contributor Accounts](../../gitwiser-repo-analytics/settings-for-git-analytics/merging-contributor-accounts.md)
-* [Adding A Related Account Information To Oobeya Profile](../../scorecards/adding-a-related-account-information-to-oobeya-profile.md)
+* [Merging Contributor Accounts](https://docs.oobeya.io/gitwiser-repo-analytics/settings-for-git-analytics/merging-contributor-accounts)
+* [Adding A Related Account Information To Oobeya Profile](https://docs.oobeya.io/scorecards/adding-a-related-account-information-to-oobeya-profile)
 
 ***
 
-### 8. Viewing Results
+#### 8. Viewing Results
 
 Go to **AI Impact** and select your Claude Code data source. Claude Code data appears in the **AI Impact**, **Metrics** and **Cost & Credits** tabs, together with your other AI coding assistants.
 
@@ -227,13 +228,13 @@ Go to **AI Impact** and select your Claude Code data source. Claude Code data ap
 Claude Code does not report suggested lines, chat usage, lines per language or AI credits. Oobeya shows these metrics as empty, not as zero, and the widgets explain which assistants a combined figure includes.
 {% endhint %}
 
-#### Cost
+**Cost**
 
-On the **Cost & Credits** tab, Claude Code cost is **estimated from Claude Code list prices**. When a Claude Enterprise API key is set on the data source, the net amount is the **billed** amount and the difference is shown as discount. See [AI Cost & Credits](../ai-cost-and-credits.md).
+On the **Cost & Credits** tab, Claude Code cost is **estimated from Claude Code list prices**. When a Claude Enterprise API key is set on the data source, the net amount is the **billed** amount and the difference is shown as discount. See [AI Cost & Credits](https://docs.oobeya.io/ai-impact/ai-cost-and-credits).
 
 ***
 
-### 9. Collected Data and Privacy
+#### 9. Collected Data and Privacy
 
 **Stored per developer, day and session**
 
@@ -248,11 +249,11 @@ On the **Cost & Credits** tab, Claude Code cost is **estimated from Claude Code 
 
 Claude Code does not send prompt text unless `OTEL_LOG_USER_PROMPTS` is enabled; Oobeya does not need it, so leave it unset.
 
-**Retention.** Claude Code cannot send past data again, so Oobeya keeps the received data until the data source is deleted. Deleting the data source deletes this data permanently. To stop the token as well, revoke it on the **Api Key** page.
+**Retention.** Claude Code cannot send past data again, so Oobeya keeps the received data until the data source is deleted. Deleting the data source deletes this data permanently. To stop the token as well, revoke it on the **API Keys** page.
 
 ***
 
-### 10. Limitations
+#### 10. Limitations
 
 * **No historical backfill.** Data starts when developers restart Claude Code with the settings.
 * **Inactive users.** OpenTelemetry carries only usage, so licensed developers who do not use Claude Code are visible only when an Anthropic API key is set on the data source.
@@ -262,20 +263,20 @@ Claude Code does not send prompt text unless `OTEL_LOG_USER_PROMPTS` is enabled;
 
 ***
 
-### 11. Troubleshooting
+#### 11. Troubleshooting
 
 **Test Connection fails**
 
-| Message                                                                               | What to do                                                                                         |
-| ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| The token was not found. Create a token with the Ingest scope on the API Tokens page. | Check that the whole token was copied, or generate a new one ([Ingest Token](./#ingest-token)).    |
-| The token has been revoked. / The token has expired.                                  | Generate a new ingest token.                                                                       |
-| The token does not have the Ingest scope.                                             | Full API tokens do not work here. Use an Ingest (Collector) token.                                 |
-| This token is already used by another Claude data source.                             | Each data source needs its own ingest token.                                                       |
-| The token could not be verified because of a system configuration problem.            | Contact your system administrator; the Oobeya services cannot reach each other.                    |
-| Anthropic rejected the API key.                                                       | Use a Claude Console admin key (`sk-ant-admin01-…`) or a Claude Enterprise key (`sk-ant-api01-…`). |
-| The Claude Enterprise key has neither the read:members nor the read:analytics scope.  | Create a new key with both scopes.                                                                 |
-| The Anthropic API (api.anthropic.com) is not reachable from the addons service.       | Allow outbound HTTPS from the Oobeya server to `api.anthropic.com`.                                |
+| Message                                                                               | What to do                                                                                                                                          |
+| ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| The token was not found. Create a token with the Ingest scope on the API Tokens page. | Check that the whole token was copied, or generate a new one ([Ingest Token](https://docs.oobeya.io/ai-impact/claude-code-ai-impact#ingest-token)). |
+| The token has been revoked. / The token has expired.                                  | Generate a new ingest token.                                                                                                                        |
+| The token does not have the Ingest scope.                                             | Full API tokens do not work here. Use an Ingest (Collector) token.                                                                                  |
+| This token is already used by another Claude data source.                             | Each data source needs its own ingest token.                                                                                                        |
+| The token could not be verified because of a system configuration problem.            | Contact your system administrator; the Oobeya services cannot reach each other.                                                                     |
+| Anthropic rejected the API key.                                                       | Use a Claude Console admin key (`sk-ant-admin01-…`) or a Claude Enterprise key (`sk-ant-api01-…`).                                                  |
+| The Claude Enterprise key has neither the read:members nor the read:analytics scope.  | Create a new key with both scopes.                                                                                                                  |
+| The Anthropic API (api.anthropic.com) is not reachable from the addons service.       | Allow outbound HTTPS from the Oobeya server to `api.anthropic.com`.                                                                                 |
 
 **Data status shows "No data received yet"**
 
@@ -303,16 +304,16 @@ curl -i -X POST http://oobeya-collector.mycompany.com:8097/claude/v1/metrics -H 
 
 **Collector logs**
 
-Go to **Admin → General Settings → System Logs**, and under **Download Service Logs** select **Oobeya Collector**. It is listed while the Claude Code integration is installed.
+Go to **Administration → System Settings → System Logs**, and under **Download Service Logs** select **Oobeya Collector**. It is listed while the Claude Code integration is installed.
 
 **Data status shows data, but the dashboards are empty**
 
 * Wait for the next analysis, or click **Reanalyze** in the AI Impact header.
-* Check that the developers' Claude e-mails match their Oobeya accounts ([step 7](./#id-7.-match-claude-code-users-to-developers)).
+* Check that the developers' Claude e-mails match their Oobeya accounts ([step 7](https://docs.oobeya.io/ai-impact/claude-code-ai-impact#id-7.-match-claude-code-users-to-developers)).
 
 ***
 
-### FAQ
+#### FAQ
 
 <details>
 
@@ -342,7 +343,7 @@ The Data status updates within a minute. The dashboards update after the next an
 
 <summary>Does Oobeya see our prompts or code?</summary>
 
-No. Oobeya stores counts and totals only. See [Collected Data and Privacy](./#id-9.-collected-data-and-privacy).
+No. Oobeya stores counts and totals only. See [Collected Data and Privacy](https://docs.oobeya.io/ai-impact/claude-code-ai-impact#id-9.-collected-data-and-privacy).
 
 </details>
 
@@ -350,21 +351,16 @@ No. Oobeya stores counts and totals only. See [Collected Data and Privacy](./#id
 
 <summary>What happens to the data while Oobeya is being upgraded?</summary>
 
-On installations that follow the [Oobeya Collector Installation (Docker)](oobeya-collector-installation-docker.md) guide, the collector and its queue keep running during an Oobeya upgrade, and the data is processed once Oobeya is back.
+On installations that follow the [Oobeya Collector Installation (Docker)](https://docs.oobeya.io/ai-impact/claude-code-ai-impact/oobeya-collector-installation-docker) guide, the collector and its queue keep running during an Oobeya upgrade, and the data is processed once Oobeya is back.
 
 </details>
 
-#### Learn more about the module:
+**Learn more about the module:**
 
-{% content-ref url="../ai-cost-and-credits.md" %}
-[ai-cost-and-credits.md](../ai-cost-and-credits.md)
-{% endcontent-ref %}
+* [AI Cost & Credits](https://docs.oobeya.io/ai-impact/ai-cost-and-credits)
+* [Measuring the Impact of AI Coding Assistants](https://docs.oobeya.io/use-cases/measuring-the-impact-of-ai-coding-assistants)
 
-{% content-ref url="../../use-cases/measuring-the-impact-of-ai-coding-assistants.md" %}
-[measuring-the-impact-of-ai-coding-assistants.md](../../use-cases/measuring-the-impact-of-ai-coding-assistants.md)
-{% endcontent-ref %}
+### **Next Steps**
 
-## **Next Steps** :dart:
-
-* [Oobeya Collector Installation (Docker)](oobeya-collector-installation-docker.md)
-* [Network Access Requirements](../../integrations/network-access-requirements.md)
+* [Oobeya Collector Installation (Docker)](https://docs.oobeya.io/ai-impact/claude-code-ai-impact/oobeya-collector-installation-docker)
+* [Network Access Requirements](https://docs.oobeya.io/integrations/network-access-requirements)

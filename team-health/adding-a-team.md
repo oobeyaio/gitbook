@@ -4,24 +4,30 @@ description: Let's explore the Team
 
 # Adding A Team
 
-1. After login into the Oobeya, click on "Profile\&Teams" on the sidebar.
+Teams group developer profiles so that Oobeya can report their metrics together. Teams can be nested into a hierarchy (for example company → division → department → team) that follows your [organizational chart](https://docs.oobeya.io/administration/administration-settings#organization).
 
-![](<../.gitbook/assets/image (241).png>)
+1. Select **Team Health** in the **Teams & Organization** section of the left menu.
+2. On the **Teams** tab, click **+ Team**.
+3. Fill in the **Add a New Team** form:
 
-2\. Click on "Teams" tab, then click on "New Team" button to add a new Team.
+| Field                  | Description                                                                                                              |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| **Organization Level** | The level of the unit in your organizational chart. Levels are defined in **Administration** > **Organizational Chart**. |
+| **Unit Name**          | The name of the team or unit.                                                                                            |
+| **Short Name**         | A short name shown in the team's avatar and in narrow views.                                                             |
+| **Included Teams**     | Lower-level teams that belong to this unit.                                                                              |
+| **Upper Level Teams**  | The unit this team belongs to.                                                                                           |
+| **Unit Members**       | The developer profiles in the team.                                                                                      |
+| **Unit Lead(s)**       | The team's leads.                                                                                                        |
 
-![](<../.gitbook/assets/image (276).png>)
+4. Click **Add**.
 
-3\. After clicking on the new team, a pop-up window will appear on the Oobeya. Fill in the mandatory fields as mentioned below.
+<figure><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FhmAeggYoXBAbYiB86ea0%2Fteam-health.png?alt=media&#x26;token=3863e1a5-7b59-431b-9158-55e9864e5466" alt="Team Health page, Teams tab, with the team tree"><figcaption><p>Team Health > Teams: the team tree with leads, members, repositories, and connected tools.</p></figcaption></figure>
 
-![](<../.gitbook/assets/image (345).png>)
+To update a team, click the **edit** (pencil) icon in the **Action** column. To delete it, click the **delete** (trash) icon.
 
-Users can add **Organization Level** from **Administration -> Executive Dashboards -> Organizational Chart.**
+### Related
 
-![](<../.gitbook/assets/image (185).png>)
-
-4\. Users can update teams by pressing "Update Team" option or delete teams by clicking "Delete" button.
-
-![](<../.gitbook/assets/image (204).png>)
-
-![](<../.gitbook/assets/image (290).png>)
+* [Team Health](https://docs.oobeya.io/team-health/team-health-overview)
+* [Team Scorecard](https://docs.oobeya.io/team-health/team-scorecards)
+* [Adding A Profile](https://docs.oobeya.io/scorecards/adding-a-profile)

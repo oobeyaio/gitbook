@@ -4,40 +4,17 @@ description: Learn how you can integrate your SCM & CI/CD tools with Oobeya.
 
 # SCM (Git) & CI/CD
 
-![Oobeya Integrations | SCM & CI/CD Addons](<../../../.gitbook/assets/Screenshot 2024-12-13 at 12.05.28.png>)
+<figure><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FHse7i91bO4p05dwNDfRr%2Fintegrations-page.png?alt=media&#x26;token=7c6d68c4-3f16-4465-8558-24bd70761735" alt="Oobeya Integrations page"><figcaption><p>Source Code Management and CI/CD tools on the Integrations page.</p></figcaption></figure>
 
-{% content-ref url="azure-devops-integration.md" %}
-[azure-devops-integration.md](azure-devops-integration.md)
-{% endcontent-ref %}
+On the Integrations page these tools appear in the **Source Code Management** and **CI/CD** categories.
 
-{% content-ref url="bitbucket-cloud-integration.md" %}
-[bitbucket-cloud-integration.md](bitbucket-cloud-integration.md)
-{% endcontent-ref %}
-
-{% content-ref url="bitbucket-server-integration.md" %}
-[bitbucket-server-integration.md](bitbucket-server-integration.md)
-{% endcontent-ref %}
-
-{% content-ref url="github-integrations.md" %}
-[github-integrations.md](github-integrations.md)
-{% endcontent-ref %}
-
-{% content-ref url="gitlab-addon.md" %}
-[gitlab-addon.md](gitlab-addon.md)
-{% endcontent-ref %}
-
-{% content-ref url="jenkins-integration.md" %}
-[jenkins-integration.md](jenkins-integration.md)
-{% endcontent-ref %}
-
-{% content-ref url="octopus-deploy-integration.md" %}
-[octopus-deploy-integration.md](octopus-deploy-integration.md)
-{% endcontent-ref %}
-
-{% content-ref url="teamcity-integration.md" %}
-[teamcity-integration.md](teamcity-integration.md)
-{% endcontent-ref %}
-
-{% content-ref url="gerrit-integration.md" %}
-[gerrit-integration.md](gerrit-integration.md)
-{% endcontent-ref %}
+* [Azure DevOps Integration](https://docs.oobeya.io/integrations/all-integrations/scm-addons/azure-devops-integration)
+* [Bitbucket Cloud Integration](https://docs.oobeya.io/integrations/all-integrations/scm-addons/bitbucket-cloud-integration)
+* [Bitbucket Server Integration](https://docs.oobeya.io/integrations/all-integrations/scm-addons/bitbucket-server-integration)
+* [GitHub Integration](https://docs.oobeya.io/integrations/all-integrations/scm-addons/github-integrations)
+* [GitLab Integration](https://docs.oobeya.io/integrations/all-integrations/scm-addons/gitlab-addon)
+* [Jenkins & Cloudbees Integration](https://docs.oobeya.io/integrations/all-integrations/scm-addons/jenkins-integration)
+* [Octopus Deploy Integration](https://docs.oobeya.io/integrations/all-integrations/scm-addons/octopus-deploy-integration)
+* [TeamCity Integration](https://docs.oobeya.io/integrations/all-integrations/scm-addons/teamcity-integration)
+* [Gerrit Integration](https://docs.oobeya.io/integrations/all-integrations/scm-addons/gerrit-integration)
+* [Argo CD Integration](https://docs.oobeya.io/integrations/all-integrations/scm-addons/argo-cd-integration)

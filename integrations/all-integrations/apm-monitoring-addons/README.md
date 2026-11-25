@@ -4,7 +4,13 @@ description: Learn about how you can integrate your APM / Monitoring tools with 
 
 # APM / Monitoring
 
+On the Integrations page these tools are in the **Monitoring/APM** category. Oobeya reads performance data to help diagnose and optimize your code.
 
-
-<table><thead><tr><th width="246">Tool</th><th width="182">Categories</th><th width="205">Modules</th><th>Plan</th></tr></thead><tbody><tr><td><a href="appdynamics-integration.md">AppDynamics</a></td><td>Monitoring &#x26; APM</td><td></td><td></td></tr><tr><td><a href="azure-application-insights-integration.md">Azure Application Insights</a></td><td>Monitoring &#x26; APM</td><td>APM</td><td>Cloud</td></tr><tr><td><a href="dynatrace-integration.md">Dynatrace</a></td><td></td><td></td><td></td></tr><tr><td><a href="elastic-apm-integration.md">Elastic APM</a></td><td></td><td></td><td></td></tr><tr><td><a href="new-relic-integration.md">New Relic</a></td><td>Monitoring &#x26; APM</td><td>APM, Incident Management</td><td>Cloud</td></tr><tr><td>Datadog (beta)</td><td>Monitoring &#x26; APM</td><td>APM, Incident Management</td><td>Cloud</td></tr><tr><td><a href="sentry-integration.md">Sentry</a></td><td></td><td></td><td></td></tr></tbody></table>
-
+| Tool                       | Guide                                                                                                                                                       |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AppDynamics                | [AppDynamics Integration](https://docs.oobeya.io/integrations/all-integrations/apm-monitoring-addons/appdynamics-integration)                               |
+| Azure Application Insights | [Azure Application Insights Integration](https://docs.oobeya.io/integrations/all-integrations/apm-monitoring-addons/azure-application-insights-integration) |
+| Dynatrace                  | [Dynatrace Integration](https://docs.oobeya.io/integrations/all-integrations/apm-monitoring-addons/dynatrace-integration)                                   |
+| Elastic APM                | [Elastic APM Integration](https://docs.oobeya.io/integrations/all-integrations/apm-monitoring-addons/elastic-apm-integration)                               |
+| New Relic                  | [New Relic Integration](https://docs.oobeya.io/integrations/all-integrations/apm-monitoring-addons/new-relic-integration)                                   |
+| Sentry                     | [Sentry Integration](https://docs.oobeya.io/integrations/all-integrations/apm-monitoring-addons/sentry-integration)                                         |

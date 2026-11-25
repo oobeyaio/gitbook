@@ -4,7 +4,7 @@ The **Total Code Quality Index (TCQI)** is a composite metric in Oobeya that qua
 
 ***
 
-## What TCQI Measures
+### What TCQI Measures
 
 The TCQI goes beyond raw issue counts. It evaluates:
 
@@ -22,7 +22,7 @@ This results in a set of actionable, easy-to-compare indices:
 
 ***
 
-## Core Concepts
+### Core Concepts
 
 **TCQI** is built on **three core inputs** from SonarQube:
 
@@ -32,11 +32,11 @@ These inputs are transformed into scores using **configurable coefficients** def
 
 ***
 
-## Configurable Coefficients
+### Configurable Coefficients
 
-All coefficients can be customized in **Admin Settings > Code Quality > Code Quality Index**.
+All coefficients can be customized in **Administration > Quality & Security > Code Quality Index**.
 
-#### 🔸 Severity Coefficients
+**🔸 Severity Coefficients**
 
 | Severity | Coefficient |
 | -------- | ----------- |
@@ -44,7 +44,7 @@ All coefficients can be customized in **Admin Settings > Code Quality > Code Qua
 | Medium   | 0.3         |
 | Low      | 0.1         |
 
-#### 🔸 Quality Category Coefficients
+**🔸 Quality Category Coefficients**
 
 | Category        | Coefficient |
 | --------------- | ----------- |
@@ -54,9 +54,9 @@ All coefficients can be customized in **Admin Settings > Code Quality > Code Qua
 
 ***
 
-## Step-by-Step Calculation
+### Step-by-Step Calculation
 
-### 1. **Calculate Issue Risk Scores**
+#### 1. **Calculate Issue Risk Scores**
 
 Each issue is scored independently per quality category it belongs to:
 
@@ -68,7 +68,7 @@ Because issues may belong to multiple categories, the same issue may contribute 
 
 ***
 
-### 2. **Calculate Project-Level Category Risk Scores**
+#### 2. **Calculate Project-Level Category Risk Scores**
 
 For each category:
 
@@ -82,7 +82,7 @@ Project Maintainability Risk Score = Sum(Maintainability_Issue_Risk_Score)
 
 ***
 
-### 3. **Final** Total Code Quality Index (**TCQI) Formula**
+#### 3. **Final** Total Code Quality Index (**TCQI) Formula**
 
 ```
 Total_Risk_Score = Sum(Issue_Risk_Score)
@@ -92,7 +92,7 @@ TCQI = 5 × (1− (Total_Risk_Score / (Lines_of_Code + Total_Risk_Score)​)
 
 ***
 
-## Why Use TCQI?
+### Why Use TCQI?
 
 * **Standardized and Scalable**: Works across small and large codebases alike.
 * **Actionable**: Highlights critical areas in security, reliability, or maintainability.
@@ -101,12 +101,12 @@ TCQI = 5 × (1− (Total_Risk_Score / (Lines_of_Code + Total_Risk_Score)​)
 
 ***
 
-## Where to Configure
+### Where to Configure
 
 To tailor the TCQI model to your organization:
 
 Go to:\
-**`Admin Settings > Code Quality > Code Quality Index`**
+**`Administration > Quality & Security > Code Quality Index`**
 
 There, you can:
 
@@ -115,6 +115,6 @@ There, you can:
 
 ***
 
-## Summary
+### Summary
 
 Oobeya’s Total Code Quality Index provides a **balanced, flexible, and insightful view** of your engineering organization’s code health. It connects static code analysis to strategic engineering decisions—helping you drive long-term quality improvements.

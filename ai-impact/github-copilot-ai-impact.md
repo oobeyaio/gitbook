@@ -11,7 +11,7 @@ The **AI Coding Assistant Impact** module in Oobeya enables organizations to mea
 
 ***
 
-### 1. Prerequisites
+#### 1. Prerequisites
 
 Before configuring the AI Impact module:
 
@@ -30,27 +30,25 @@ Before configuring the AI Impact module:
 
 ***
 
-### 2. Enable GitHub Copilot Integration
+#### 2. Add the GitHub Copilot Data Source
 
-1. Navigate to **Integrations → Coding Assistant** in Oobeya.
-2. Select **GitHub Copilot** and **click "Install".**
+1. Select **Integrations** in the **Administration** section of the left menu.
+2. In the **AI Coding Assistants** section, click the **GitHub Copilot** card. If GitHub Copilot already has data sources, click **+ New Data Source** in the window that opens.
+3. Fill in the form as described below, click **Test Connection**, then **Add**.
 
-<figure><img src="../.gitbook/assets/image (485).png" alt=""><figcaption><p>GitHub Copilot Integration</p></figcaption></figure>
+<figure><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FIyvdh91B3nNWJ2UCibyd%2Fform-github-copilot.png?alt=media&#x26;token=ab3d6f11-32f1-4ff1-806d-e884bb3af82c" alt="GitHub Copilot data source form in Oobeya"><figcaption><p>The GitHub Copilot data source form.</p></figcaption></figure>
 
-***
-
-### 3. Configure Data Source
-
-Go to Data Sources and add a **Data Source for GitHub Copilot.**
-
-<figure><img src="../.gitbook/assets/image (487).png" alt=""><figcaption><p>Adding A Data Source</p></figcaption></figure>
+{% hint style="info" %}
+Since Oobeya 2.1 there is no separate install step: the integration is enabled when you save its first data source.
+{% endhint %}
 
 When adding GitHub Copilot as a data source:
 
 * **Data Source Name:** Assign a descriptive name (e.g., _GitHub Copilot Org_).
-* **API Token:** Provide a GitHub PAT with the following scopes:
+* **Enterprise** _(optional)_: the slug of your GitHub enterprise account, if your Copilot licenses are managed at enterprise level.
+* **Token:** Provide a GitHub PAT with the following scopes:
 
-#### Required Token Scopes
+**Required Token Scopes**
 
 * `repo`
 * `repo:status`
@@ -68,7 +66,7 @@ Once the token is entered, click **Test Connection** → **Update** to finalize.
 
 ***
 
-### 4. Map GitHub Copilot to Oobeya Teams
+#### 4. Map GitHub Copilot to Oobeya Teams
 
 To ensure GitHub Copilot usage data flows correctly into Oobeya’s team dashboards, you need to map GitHub organizations and teams to Oobeya teams.
 
@@ -81,7 +79,7 @@ To ensure GitHub Copilot usage data flows correctly into Oobeya’s team dashboa
    * **Organizations**: Pick the GitHub organization(s) linked with Copilot.
    * **Teams**: Map GitHub Copilot teams to the corresponding Oobeya team.
 
-<figure><img src="../.gitbook/assets/image (484).png" alt="Mapping GitHub Copilot Teams in Oobeya"><figcaption><p>Mapping GitHub Copilot Teams in Oobeya</p></figcaption></figure>
+<figure><img src="https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FOb22Ss23EJ3aCiIMJrRc%2Fimage.png?alt=media&#x26;token=11a1bd86-be3c-4231-925b-e147dc40f5d1" alt="Mapping GitHub Copilot Teams in Oobeya"><figcaption><p>Mapping GitHub Copilot Teams in Oobeya</p></figcaption></figure>
 
 {% hint style="info" %}
 This mapping ensures that adoption, engagement, and acceptance metrics from GitHub Copilot are correctly associated with your Oobeya team structure.
@@ -89,7 +87,7 @@ This mapping ensures that adoption, engagement, and acceptance metrics from GitH
 
 ***
 
-### 5. Viewing Results
+#### 5. Viewing Results
 
 Once configured, the AI Impact module provides analytics from the **Org level → Team level → User level**:
 
@@ -109,7 +107,7 @@ Once configured, the AI Impact module provides analytics from the **Org level �
 
 ***
 
-### 6. Dashboard Components
+#### 6. Dashboard Components
 
 * **Copilot Adoption Over Time** – Track licensed, active, and engaged users.
 * **Engagement & Acceptance Trends** – Measure quality of usage (accepted vs suggested completions).
@@ -118,15 +116,13 @@ Once configured, the AI Impact module provides analytics from the **Org level �
 * **Team & User Metrics** – Detect top users, low activity users, and training needs.
 * **Comparison Between Actual Contributions and AI Contributions**
 
-#### Learn more about the module:
+**Learn more about the module:**
 
-{% content-ref url="../use-cases/measuring-the-impact-of-ai-coding-assistants.md" %}
-[measuring-the-impact-of-ai-coding-assistants.md](../use-cases/measuring-the-impact-of-ai-coding-assistants.md)
-{% endcontent-ref %}
+* [Measuring the Impact of AI Coding Assistants](https://docs.oobeya.io/use-cases/measuring-the-impact-of-ai-coding-assistants)
 
 ***
 
-### 7. Troubleshooting
+#### 7. Troubleshooting
 
 * **Connection Fails?**
   * Ensure token scopes are correct.
@@ -139,7 +135,7 @@ Once configured, the AI Impact module provides analytics from the **Org level �
   * Ensure developers have Copilot enabled in their IDEs.
   * Provide enablement sessions to improve adoption.
 
-## **Next Steps** :dart:&#x20;
+### **Next Steps**
 
-* [Network Access Requirements ](../integrations/network-access-requirements.md)
-* [Create a new Gitwiser Analysis](../gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics.md)
+* [Network Access Requirements](https://docs.oobeya.io/integrations/network-access-requirements)
+* [Create a new Gitwiser Analysis](https://docs.oobeya.io/gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics)
