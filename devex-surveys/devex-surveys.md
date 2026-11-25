@@ -1,3 +1,7 @@
+---
+icon: square-poll-vertical
+---
+
 # DevEx Surveys
 
 **DevEx Surveys** (since Oobeya 2.1) measures how engineers experience their work. Start from a ready-to-use Oobeya survey or build your own, send it to teams, developers, or developer tags, and follow scores, participation, and benchmarks by team. Results sit next to the delivery and quality metrics of the same teams.

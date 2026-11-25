@@ -2,6 +2,7 @@
 description: >-
   Your personal Oobeya home page: what needs your attention, what is going well,
   and where to go next, shaped by your role and your teams.
+icon: house-blank
 ---
 
 # Home Page

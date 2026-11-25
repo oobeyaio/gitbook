@@ -2,6 +2,7 @@
 description: >-
   Create and revoke tokens that let other tools call the Oobeya API or send data
   to the Oobeya Collector.
+icon: gear-api
 ---
 
 # API Keys

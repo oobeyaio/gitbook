@@ -3,6 +3,7 @@ description: >-
   See how AI coding assistants relate to engineering outcomes: coding
   efficiency, delivery, code quality, and testing, compared with the previous
   period.
+icon: chart-line-up-down
 ---
 
 # AI Impact Overview

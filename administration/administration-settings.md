@@ -2,6 +2,7 @@
 description: >-
   Platform, organization, analytics, and reporting settings of your Oobeya
   installation, in one place.
+icon: gear
 ---
 
 # Administration Settings

@@ -6,9 +6,9 @@
 * [Oobeya Quick Onboarding Guide](getting-started/oobeya-quick-onboarding-guide.md)
 * [Metrics List](getting-started/metrics.md)
 * [Product Tour](getting-started/product-tour.md)
+* [Home Page](getting-started/home-page.md)
 * [Get Started with Oobeya](getting-started/get-started-with-oobeya.md)
 * [Playground: Live Demo](getting-started/playground-live-demo.md)
-* [Home Page](getting-started/home-page.md)
 
 ## INSTALLATION (ON-PREMISE) <a href="#installations" id="installations"></a>
 
@@ -31,6 +31,11 @@
 ## INTEGRATIONS
 
 * [Integration Catalog](integrations/all-integrations/README.md)
+  * [Project Management](integrations/all-integrations/project-management-addons/README.md)
+    * [Jira Cloud Integration](integrations/all-integrations/project-management-addons/jira-cloud-integration.md)
+    * [Jira Server Integration](integrations/all-integrations/project-management-addons/jira-server-integration.md)
+    * [Confluence Integration](integrations/all-integrations/project-management-addons/confluence-integration.md)
+    * [ServiceNow Integration](integrations/all-integrations/project-management-addons/servicenow-integration.md)
   * [SCM (Git) & CI/CD](integrations/all-integrations/scm-addons/README.md)
     * [GitHub Enterprise Integration](integrations/all-integrations/scm-addons/github-enterprise-integration.md)
     * [Azure DevOps Integration](integrations/all-integrations/scm-addons/azure-devops-integration.md)
@@ -45,6 +50,9 @@
     * [Gerrit Integration](integrations/all-integrations/scm-addons/gerrit-integration.md)
     * [Gitea Integration](integrations/all-integrations/scm-addons/gitea-integration.md)
     * [Argo CD Integration](integrations/all-integrations/scm-addons/argo-cd-integration.md)
+  * [AI Coding Assistants](integrations/all-integrations/ai-coding-assistants/README.md)
+    * [Codex Integration](integrations/all-integrations/ai-coding-assistants/codex-integration.md)
+    * [Cursor Integration](integrations/all-integrations/ai-coding-assistants/cursor-integration.md)
   * [Quality & Security](integrations/all-integrations/code-quality-addons/README.md)
     * [SonarQube Server Integration](integrations/all-integrations/code-quality-addons/sonarqube-integration.md)
     * [TestRail Integration](integrations/all-integrations/code-quality-addons/testrail-integration.md)
@@ -52,11 +60,9 @@
     * [Veracode Integration](integrations/all-integrations/code-quality-addons/veracode-integration.md)
     * [Xray Integration](integrations/all-integrations/code-quality-addons/xray-integration.md)
     * [Fortify Integration](integrations/all-integrations/code-quality-addons/fortify-integration.md)
-  * [Project Management](integrations/all-integrations/project-management-addons/README.md)
-    * [Jira Cloud Integration](integrations/all-integrations/project-management-addons/jira-cloud-integration.md)
-    * [Jira Server Integration](integrations/all-integrations/project-management-addons/jira-server-integration.md)
-    * [Confluence Integration](integrations/all-integrations/project-management-addons/confluence-integration.md)
-    * [ServiceNow Integration](integrations/all-integrations/project-management-addons/servicenow-integration.md)
+  * [Test](integrations/all-integrations/test-addons/README.md)
+    * [Zephyr Integration](integrations/all-integrations/test-addons/zephyr-integration.md)
+    * [Testinium Integration](integrations/all-integrations/test-addons/testinium-integration.md)
   * [APM / Monitoring](integrations/all-integrations/apm-monitoring-addons/README.md)
     * [AppDynamics Integration](integrations/all-integrations/apm-monitoring-addons/appdynamics-integration.md)
     * [Azure Application Insights Integration](integrations/all-integrations/apm-monitoring-addons/azure-application-insights-integration.md)
@@ -64,25 +70,38 @@
     * [Elastic APM Integration](integrations/all-integrations/apm-monitoring-addons/elastic-apm-integration.md)
     * [New Relic Integration](integrations/all-integrations/apm-monitoring-addons/new-relic-integration.md)
     * [Sentry Integration](integrations/all-integrations/apm-monitoring-addons/sentry-integration.md)
-  * [AI Coding Assistants](integrations/all-integrations/ai-coding-assistants/README.md)
-    * [Codex Integration](integrations/all-integrations/ai-coding-assistants/codex-integration.md)
-    * [Cursor Integration](integrations/all-integrations/ai-coding-assistants/cursor-integration.md)
-  * [Test](integrations/all-integrations/test-addons/README.md)
-    * [Zephyr Integration](integrations/all-integrations/test-addons/zephyr-integration.md)
-    * [Testinium Integration](integrations/all-integrations/test-addons/testinium-integration.md)
 * [Adding New Integration](integrations/adding-new-integration/README.md)
   * [Installing An Addon](integrations/adding-new-integration/installing-an-addon.md)
   * [Adding A New Data Source](integrations/adding-new-integration/adding-a-new-data-source.md)
   * [Updating and Deleting Data Sources](integrations/adding-new-integration/updating-and-deleting-data-sources.md)
 * [Network Access Requirements](integrations/network-access-requirements.md)
 
-## USE CASES
+## ADMINISTRATION
 
-* [Proactive Issue Detection (Engineering Insights)](use-cases/proactive-issue-detection.md)
-* [Optimizing Team and Resource Utilization](use-cases/optimizing-team-and-resource-utilization.md)
-* [Gamification for Engineering KPIs](use-cases/gamification-for-engineering-kpis.md)
-* [Measuring the Impact of AI Coding Assistants](use-cases/measuring-the-impact-of-ai-coding-assistants.md)
-* [Measuring and Improving Test Efficiency with Oobeya Test Analytics](use-cases/measuring-test-efficiency.md)
+* [User Management, Single Sign-On, Auth Settings](administration/user-management-single-sign-on-auth-settings/README.md)
+  * [Keycloak Integration](administration/user-management-single-sign-on-auth-settings/keycloak-integration.md)
+  * [Microsoft Entra (Azure AD) Integration](administration/user-management-single-sign-on-auth-settings/azure-ad-integration.md)
+  * [LDAP / Active Directory Integration](administration/user-management-single-sign-on-auth-settings/configuring-ldap-active-directory.md)
+  * [Importing a New User From LDAP / Active Directory](administration/user-management-single-sign-on-auth-settings/importing-a-new-user-from-ldap-ad.md)
+  * [Bulk User Import in Oobeya Using CSV](administration/user-management-single-sign-on-auth-settings/bulk-user-import-in-oobeya-using-csv.md)
+  * [Adding a New User](administration/user-management-single-sign-on-auth-settings/adding-a-new-user.md)
+  * [Deactivating a User](administration/user-management-single-sign-on-auth-settings/deactivating-a-user.md)
+  * [Understanding Roles in Oobeya](administration/user-management-single-sign-on-auth-settings/understanding-roles-in-oobeya.md)
+  * [Okta Integration](administration/user-management-single-sign-on-auth-settings/okta-integration.md)
+* [License Management](administration/license-management/README.md)
+  * [Updating The License Key](administration/license-management/updating-the-license-key.md)
+* [Automated Reanalysis for Analytics](administration/automated-reanalysis-for-analytics.md)
+* [Administration Settings](administration/administration-settings.md)
+* [API Keys](administration/api-keys.md)
+
+## AI Impact
+
+* [AI Impact Overview](ai-impact/ai-impact-overview.md)
+* [AI Usage](ai-impact/ai-usage.md)
+* [AI Cost & Credits](ai-impact/ai-cost-and-credits.md)
+* [GitHub Copilot - AI Impact](ai-impact/github-copilot-ai-impact.md)
+* [Claude Code - AI Impact](ai-impact/claude-code-ai-impact/README.md)
+  * [Oobeya Collector Installation (Docker)](ai-impact/claude-code-ai-impact/oobeya-collector-installation-docker.md)
 
 ## TEAM INSIGHTS & SYMPTOMS
 
@@ -104,28 +123,27 @@
   * [S16 - Unused Data Sources](team-insights-and-symptoms/symptoms-catalog/s16-unused-data-sources.md)
 * [Engineering Benchmarks](team-insights-and-symptoms/engineering-benchmarks.md)
 
-## AI Impact
+## USE CASES
 
-* [GitHub Copilot - AI Impact](ai-impact/github-copilot-ai-impact.md)
-* [Claude Code - AI Impact](ai-impact/claude-code-ai-impact/README.md)
-  * [Oobeya Collector Installation (Docker)](ai-impact/claude-code-ai-impact/oobeya-collector-installation-docker.md)
-* [AI Cost & Credits](ai-impact/ai-cost-and-credits.md)
-* [AI Impact Overview](ai-impact/ai-impact-overview.md)
-* [AI Usage](ai-impact/ai-usage.md)
+* [Proactive Issue Detection (Engineering Insights)](use-cases/proactive-issue-detection.md)
+* [Optimizing Team and Resource Utilization](use-cases/optimizing-team-and-resource-utilization.md)
+* [Gamification for Engineering KPIs](use-cases/gamification-for-engineering-kpis.md)
+* [Measuring the Impact of AI Coding Assistants](use-cases/measuring-the-impact-of-ai-coding-assistants.md)
+* [Measuring and Improving Test Efficiency with Oobeya Test Analytics](use-cases/measuring-test-efficiency.md)
 
 ## DevEx Surveys
 
 * [DevEx Surveys](devex-surveys/devex-surveys.md)
 
-## ALLOCATIONS
-
-* [Resource Allocation (Kaynak Tahsisi)](allocations/resource-allocation-tr.md)
-* [Resource Allocation](allocations/resource-allocation.md)
-
 ## GAMIFICATION
 
 * [Gamification (Oyunlaştırma)](gamification/gamification-tr.md)
 * [Gamification](gamification/gamification.md)
+
+## ALLOCATIONS
+
+* [Resource Allocation (Kaynak Tahsisi)](allocations/resource-allocation-tr.md)
+* [Resource Allocation](allocations/resource-allocation.md)
 
 ## Bug Report
 
@@ -160,24 +178,6 @@
   * [OOBEYA-1.4.6](product/release-notes/oobeya-1.4.6.md)
   * [QAD-1.0 - 1.4](product/release-notes/qad-1.0-1.4.md)
 * [Developer Experience Metrics](product/developer-experience-metrics.md)
-
-## ADMINISTRATION
-
-* [User Management, Single Sign-On, Auth Settings](administration/user-management-single-sign-on-auth-settings/README.md)
-  * [Keycloak Integration](administration/user-management-single-sign-on-auth-settings/keycloak-integration.md)
-  * [Microsoft Entra (Azure AD) Integration](administration/user-management-single-sign-on-auth-settings/azure-ad-integration.md)
-  * [LDAP / Active Directory Integration](administration/user-management-single-sign-on-auth-settings/configuring-ldap-active-directory.md)
-  * [Importing a New User From LDAP / Active Directory](administration/user-management-single-sign-on-auth-settings/importing-a-new-user-from-ldap-ad.md)
-  * [Bulk User Import in Oobeya Using CSV](administration/user-management-single-sign-on-auth-settings/bulk-user-import-in-oobeya-using-csv.md)
-  * [Adding a New User](administration/user-management-single-sign-on-auth-settings/adding-a-new-user.md)
-  * [Deactivating a User](administration/user-management-single-sign-on-auth-settings/deactivating-a-user.md)
-  * [Understanding Roles in Oobeya](administration/user-management-single-sign-on-auth-settings/understanding-roles-in-oobeya.md)
-  * [Okta Integration](administration/user-management-single-sign-on-auth-settings/okta-integration.md)
-* [License Management](administration/license-management/README.md)
-  * [Updating The License Key](administration/license-management/updating-the-license-key.md)
-* [Automated Reanalysis for Analytics](administration/automated-reanalysis-for-analytics.md)
-* [Administration Settings](administration/administration-settings.md)
-* [API Keys](administration/api-keys.md)
 
 ## DEVELOPMENT ANALYTICS - GITWISER <a href="#gitwiser-repo-analytics" id="gitwiser-repo-analytics"></a>
 

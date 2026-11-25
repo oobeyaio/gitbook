@@ -2,6 +2,7 @@
 description: >-
   See how much of your new code is AI-assisted, which AI tools and models
   produced it, and how it relates to commit and line activity.
+icon: coin-blank
 ---
 
 # AI Usage

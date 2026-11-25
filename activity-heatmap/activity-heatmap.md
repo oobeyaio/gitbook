@@ -2,6 +2,7 @@
 description: >-
   Helps visualize developer activities to detect workload imbalances and
   unhealthy work practices.
+icon: chart-tree-map
 ---
 
 # Activity Heatmap

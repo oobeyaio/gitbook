@@ -2,6 +2,7 @@
 description: >-
   Install the Oobeya Collector next to an Oobeya Docker installation to receive
   Claude Code OpenTelemetry data.
+icon: arrows-to-dot
 ---
 
 # Oobeya Collector Installation (Docker)

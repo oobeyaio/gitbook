@@ -16,11 +16,7 @@ Follow the steps below to add a new user.
 
 4\. Enter the user information.
 
-![](https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MGIlBSTjQtZxUoFwUx4%2F-MHAeLzXtz__6XhKbool%2F-MHAl2UMS-_-rrgKA6ZR%2Fimage.png?alt=media\&token=bd7f8c3c-8f64-40bf-9da3-de05f830b175)
-
 5\. Set the **application role** (_User, Admin_) and **company role** (_developer, team lead, product manager_...) of the user. Select _teams to lead_, if the user has a leading role such as _Team Lead, Manager,_ or _Director_...
-
-![](https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MGIlBSTjQtZxUoFwUx4%2F-MHAeLzXtz__6XhKbool%2F-MHAhCNdlrJgtx0ituee%2Fimage.png?alt=media\&token=7d4897e2-d194-4aab-bd48-d83e3e48fe17)
 
 {% hint style="info" %}
 **Role(s):** Pre-defined application roles to manage permissions of the users. (Default is 'Role User')
@@ -32,7 +28,5 @@ Follow the steps below to add a new user.
 {% endhint %}
 
 6\. Click **"Add"** to create the user account.
-
-![](https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MGIlBSTjQtZxUoFwUx4%2F-MHAeLzXtz__6XhKbool%2F-MHAh0WHN5dUGzVBqz18%2Fimage.png?alt=media\&token=83ce28c7-92ee-40b4-ab9c-e631f9625bd1)
 
 **Note:** The user will be created with a default password. After first login, the system forces the user to change the password.
