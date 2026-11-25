@@ -6,7 +6,7 @@ hidden: true
 # ⭐ Oobeya Release Notes
 
 {% hint style="info" %}
-We are committed to making [Oobeya](https://oobeya.io) a unique platform for its users. We are constantly adding new features and improvements based on user feedback.
+Oobeya release notes have moved to the [**Oobeya Changelog**](https://oobeya.io/changelog) on our website. The pages below cover releases up to 2024.
 {% endhint %}
 
 ## 2024 Release Notes

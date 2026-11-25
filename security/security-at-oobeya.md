@@ -1,9 +1,14 @@
 ---
 description: See below for information about the security policies and practices of Oobeya.
+hidden: true
 icon: badge-check
 ---
 
 # Security at Oobeya
+
+{% hint style="info" %}
+Security, compliance, and data privacy information is now on the [**Oobeya Trust Center**](https://oobeya.io/security).
+{% endhint %}
 
 In Oobeya security is **our highest priority**. See below for information about the security policies and practices of Oobeya. If you have any questions about security, please contact us at [https://oobeya.io/contact/](https://oobeya.io/contact/)&#x20;
 

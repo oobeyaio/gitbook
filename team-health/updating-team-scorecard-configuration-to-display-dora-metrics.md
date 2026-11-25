@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Updating Team Scorecard configuration to display DORA Metrics
 
 #### 1. Navigate to your Team Scorecard.

@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Adding A Related Account Information To Oobeya Profile
 
 #### 1. Navigate to the "Profiles & Teams" page.

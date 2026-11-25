@@ -4,28 +4,30 @@ description: Let's explore the Profile
 
 # Adding A Profile
 
-1. After logging into the [Oobeya](https://oobeya.io/), click "Teams" on the sidebar.
+A **developer profile** represents one person in Oobeya. It collects the person's accounts in your tools (Git authors, board users, and so on) so that their work is counted once in every module, and it places the person in teams. Profiles are grouped into teams to build [team scorecards](https://docs.oobeya.io/team-health/team-scorecards).
 
-![](https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FRQEBO0Z3ReEsdwicBAiG%2Fimage.png?alt=media\&token=f8fdea54-aebd-47b9-a6cd-9e744c2acfe6)
+### Add a profile
 
-2\. Click on the "Profile" tab, then click on the "New Profile" button to add a new Profile.
+1. Select **Team Health** in the left menu and open the **Profiles** tab.
+2. Click **+ Profile**.
+3. Fill in the **Add Developer** form and click **Add**.
 
-![](https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FFxFEzNf6KkHImPxAzDaS%2Fimage.png?alt=media\&token=2e20253c-226c-41ab-af7b-c9359f867463)
+| Field                               | Description                                                                                                                                                       |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Name**, **Surname**, **Username** | The person's name and Oobeya username.                                                                                                                            |
+| **Teams**                           | The teams the person belongs to.                                                                                                                                  |
+| **Company Role**                    | The person's role in your organization (for example Developer or Team Lead). Roles are managed in **Administration** > **Roles & Tags**.                          |
+| **Tags**                            | Developer tags, for example skills or locations.                                                                                                                  |
+| **Related Accounts**                | The version control usernames or emails of the person. Add every account the person uses so that all their commits and pull requests are matched to this profile. |
 
-3\. After clicking on the new profile, a pop-up window will appear on the Oobeya. Fill in the mandatory fields as mentioned below.
+### Update a profile or its accounts
 
-![](https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FxR3nLlOO2GY2HbaJHIa7%2Fimage.png?alt=media\&token=1e74072a-c0f1-48a3-a835-09f5976d3f19)
+On the **Profiles** tab, open the profile's actions and select **Update Profile** to change its fields or to add a related account (email, username, and so on). The same menu has **Deactivate** and **Delete Profile**. To tag several profiles at once, select them and click **Assign Tags**.
 
-_Teams:_ While creating a profile, the admin user can add him/her to an existing team.
+Tool accounts that are not yet matched to a profile are listed on the **Accounts** tab. See [Merging Contributor Accounts](https://docs.oobeya.io/gitwiser-repo-analytics/settings-for-git-analytics/merging-contributor-accounts).
 
-_Company Role:_ Roles in a company that is defined according to Organizational Structure. You can manage company roles in **Administration -> Roles & Tags**.
+### Related
 
-![](https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FIeCfW3U5pOGFmquZ2MA1%2Fimage.png?alt=media\&token=97ee5ef9-24ab-4222-8a72-627862333759)
-
-_Related Accounts:_ The e-mail addresses and account names that Oobeya matches with different tools.
-
-![](https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FxK86dQOz7BkqONqpUBF6%2Fimage.png?alt=media\&token=cd729e27-97ff-4c40-a266-a6893ffddf3f)
-
-4\. You can Update or Delete the profile if you want.
-
-![](https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2Fi1UxToFzcw9SrDxd9yZN%2Fimage.png?alt=media\&token=a167c76f-3dc8-497f-bc94-cd88552a68fe)
+* [Team Health](https://docs.oobeya.io/team-health/team-health-overview)
+* [Adding A Team](https://docs.oobeya.io/team-health/adding-a-team)
+* [Developer Scorecard](https://docs.oobeya.io/scorecards/individual-scorecards)

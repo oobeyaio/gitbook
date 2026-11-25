@@ -4,9 +4,28 @@
 
 * [Welcome to Oobeya!](README.md)
 * [Oobeya Quick Onboarding Guide](getting-started/oobeya-quick-onboarding-guide.md)
-* [Metrics List](getting-started/metrics.md)
+* [Metrics List](getting-started/metrics/README.md)
+  * [Development Analytics](getting-started/metrics/development-analytics.md)
+  * [Pull Request Analytics](getting-started/metrics/pull-request-analytics.md)
+  * [Delivery Analytics and DORA Metrics](getting-started/metrics/delivery-analytics-and-dora-metrics.md)
+  * [Project Analytics](getting-started/metrics/project-analytics.md)
+  * [Code Quality Analytics](getting-started/metrics/code-quality-analytics.md)
+  * [Application Performance Metrics](getting-started/metrics/application-performance-metrics.md)
+  * [Test Analytics](getting-started/metrics/test-analytics.md)
+  * [AI Coding Assistant Impact](getting-started/metrics/ai-coding-assistant-impact.md)
+  * [AI Cost and Credits](getting-started/metrics/ai-cost-and-credits.md)
+  * [Document Analytics for Confluence](getting-started/metrics/document-analytics-for-confluence.md)
+  * [Resource Allocation](getting-started/metrics/resource-allocation.md)
+  * [Bug Report](getting-started/metrics/bug-report.md)
+  * [Activity Heatmap](getting-started/metrics/activity-heatmap.md)
+  * [Gamification](getting-started/metrics/gamification.md)
+  * [Team Scorecards, Developer Profiles, and Dashboards](getting-started/metrics/team-scorecards-developer-profiles-and-dashboards.md)
+  * [Engineering Insights and Symptoms](getting-started/metrics/engineering-insights-and-symptoms.md)
+  * [Interpretation Guidelines](getting-started/metrics/interpretation-guidelines.md)
 * [Product Tour](getting-started/product-tour.md)
+* [Product Tour](https://oobeya.io/product-tour)
 * [Home Page](getting-started/home-page.md)
+* [Release Notes](https://oobeya.io/changelog)
 * [Get Started with Oobeya](getting-started/get-started-with-oobeya.md)
 * [Playground: Live Demo](getting-started/playground-live-demo.md)
 
@@ -245,12 +264,12 @@
 
 ## Team Health
 
+* [Team Health](team-health/team-health-overview.md)
 * [Adding A Team](team-health/adding-a-team.md)
 * [Team Scorecard](team-health/team-scorecards.md)
 * [Project Analytics (Scrum Teams) Widget](team-health/project-analytics-scrum-teams-widget.md)
 * [Developer Onboarding Metrics Widget](team-health/developer-onboarding-metrics-widget.md)
 * [Updating Team Scorecard configuration to display DORA Metrics](team-health/updating-team-scorecard-configuration-to-display-dora-metrics.md)
-* [Team Health](team-health/team-health-overview.md)
 
 ## Organization
 
@@ -283,10 +302,23 @@
 ## API REFERENCE
 
 * [Oobeya REST API](api-reference/oobeya-rest-api.md)
+* ```yaml
+  type: builtin:openapi
+  props:
+    models: true
+    downloadLink: true
+    grouping: by-tag
+  dependencies:
+    spec:
+      ref:
+        kind: openapi
+        spec: oobeya-rest-api
+  ```
 
 ## SECURITY
 
 * [Security at Oobeya](security/security-at-oobeya.md)
+* [Security at Oobeya](https://oobeya.io/security)
 * [Oobeya Managed SaaS](security/oobeya-managed-saas.md)
 
 ## SUPPORT

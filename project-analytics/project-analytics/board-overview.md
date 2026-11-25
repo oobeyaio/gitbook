@@ -1,5 +1,6 @@
 ---
 description: Let's learn about the structure of Board Overview page.
+hidden: true
 ---
 
 # Board Overview

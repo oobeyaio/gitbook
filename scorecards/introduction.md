@@ -1,5 +1,6 @@
 ---
 description: Let's start to learn about Scorecard.
+hidden: true
 ---
 
 # Introduction

@@ -1,5 +1,6 @@
 ---
 description: Let's see how to update the Agile Space analysis.
+hidden: true
 ---
 
 # Updating an Agile Board Analysis

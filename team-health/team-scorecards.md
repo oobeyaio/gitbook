@@ -4,71 +4,92 @@ description: Let's learn about the Team Scorecard
 
 # Team Scorecard
 
-## OVERVIEW
+The **Team Scorecard** shows how one team works across its whole delivery pipeline: planning, coding, code review, code quality, and delivery, together with the team's active symptoms. It reads the analyses selected in the team's scorecard configuration, for the period you choose.
 
-Teams are created on [Oobeya](https://oobeya.io/) by grouping profiles. In this way, it is possible to see the work that the teams are working on and to follow up on team metrics. For example, a team like the one below can be created to track the metrics of the Core Banking team.
+To open it, select **Team Health** in the left menu and click a team name on the **Teams** tab. Use the team selector at the top of the scorecard to switch to another team.
 
-These fields in Oobeya, which allow the teams to see the work they are working on and to monitor the team metrics (software development contribution, open code quality findings, open records, etc.), are called 'Scorecards'. Data can be filtered according to the selected time intervals. As seen in the example above, the information of the software developers in this project and their work has been gathered under a single platform by establishing a Team.
+<figure><img src="https://images.gitbook.com/__img/dpr=2,width=760,onerror=redirect,format=auto,signature=1165585774/https%3A%2F%2Ffiles.gitbook.com%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2F04urjvL9rnhjsRAw1BmY%2Fteam-scorecard.png%3Falt%3Dmedia%26token%3D95e7c399-6fad-4203-9b94-aacf4702a6ca" alt="Team Scorecard with team card, most critical active signal, and Key Metrics Overview"><figcaption><p>Team Health > team > Team Scorecard.</p></figcaption></figure>
 
-![](<../.gitbook/assets/image (279).png>)
+### Toolbar
 
-Different projects and therefore teams may exist in growing and developing companies. The 'Hierarchy of Teams' feature has been developed in Oobeya in order to facilitate the process of tracking metrics in general for a company consisting of many teams. In this way, units in a company will be able to connect in a meaningful way and a hierarchy will be established. For example, let's say the unit that the Platform Services team is affiliated with Core Banking. At the same time, the unit with which 'Core Banking' is associated should be 'C-Level', which is the highest unit. In this case, Oobeya will present you with a hierarchy like this:
+| Control           | What it does                                                                                                                                                                                               |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Team selector** | Opens another team's scorecard.                                                                                                                                                                            |
+| **Date range**    | Sets the period for every widget (for example **Last 90 Days**).                                                                                                                                           |
+| **Excel export**  | Exports **Team Coding Efficiency**, **Developer Coding Efficiency** (when the Individual Scorecard is licensed), **Development Excellence**, and, when Fortify is configured, the **Fortify Issue Board**. |
+| **Update**        | Opens the scorecard configuration. Shown to users who can update the team's scorecard.                                                                                                                     |
 
-![](<../.gitbook/assets/image (213).png>)
+### Team card and most critical signal
 
+The team card shows the **Team Lead**, the **Team Level** in your organizational chart, the **Members**, and the **Tools** the team's analyses come from.
 
+Below it, **Most critical active signal** shows the team's most severe active [symptom](https://docs.oobeya.io/team-insights-and-symptoms/symptoms-catalog) with its description and possible causes. **View symptoms** opens the full list.
 
-It should not be overlooked that there may be other projects/teams in a company. For example, let's have 'Digital Banking' and 'Retail Banking' projects besides Core Banking. The same process done in Oobeya is as follows.
+### Key Metrics Overview
 
-![](<../.gitbook/assets/image (292).png>)
+| Metric                          | What it shows                                                                                                                                                     |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Coding Efficiency**           | Percentage of analyzed code changes that are productive work rather than short-term rework (code churn), as a trend for the period and compared with the average. |
+| **Coding Impact per Developer** | Coding Impact Score per developer in the period (scope of the code changes), compared with the average.                                                           |
+| **% of PRs Merged Within Goal** | Percentage of merged pull requests completed within the configured target time.                                                                                   |
+| **Avg Time To Merge**           | Average time between the first commit of a pull request and its merge.                                                                                            |
+| **Lead Time for Changes**       | DORA lead time with its performance level (Elite, High, Medium, Low).                                                                                             |
+| **Change Failure Rate**         | DORA change failure rate with its performance level.                                                                                                              |
+| **Sprint Predictability**       | Percentage of originally planned sprint work that is completed.                                                                                                   |
+| **Critical Symptoms**           | Number of active critical symptoms.                                                                                                                               |
 
-## INITIALIZE A TEAM SCORECARD
+All metrics are defined in the [Metrics List](https://docs.oobeya.io/getting-started/metrics).
 
-1. Click on the team that you have created before. This window will be displayed on your screen.
+### Delivery Pipeline
 
-![](<../.gitbook/assets/image (210).png>)
+The **Delivery Pipeline** splits the team's work into four stages. Each stage card shows a headline figure; select a stage to open its details below.
 
-2\. After clicking on the "Start" button, the user can continue with the selection of Gitwiser analysis. The user can add multiple analyses.&#x20;
+| Stage                  | Card                               | Details                                                                                                                                                                                                                                                                                                                                                        |
+| ---------------------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Project Management** | Sprints, cycle time, and lead time | Project Analytics for **Scrum Teams** (Summary, Delivery Report, Backlog Health, Allocations, Value Area Report, Work Item Report, Resolution Time Report) and **Kanban Teams** (Summary, Delivery Report). See [Project Analytics (Scrum Teams) Widget](https://docs.oobeya.io/team-health/project-analytics-scrum-teams-widget).                             |
+| **Development**        | Commits and repositories           | Development Analytics: Work Type (by Members and by Teams), Code Changes (by Teams and by Members), Commit Distribution, and Pipeline Analytics. The member table lists revisions, coding efficiency, coding impact, impact ratio, new work, refactor, help others, and code churn.                                                                            |
+| **Code Quality**       | Open issues                        | Code quality from SonarQube: Code Quality & Technical Debt Trends, [Total Code Quality Index](https://docs.oobeya.io/quality-analytics/total-code-quality-index-tcqi), and TCQI Breakdown.                                                                                                                                                                     |
+| **Delivery**           | Deployment frequency               | [DORA metrics](https://docs.oobeya.io/deployment-analytics/dora-metrics-introduction) for production and development pipelines: Lead Time for Changes broken down into Development Time, Waiting For Deploy, and Deployment Time; Change Failure Rate; Deployment Frequency; Time to Restore Service; a deployment frequency chart; and DORA Metrics by Teams. |
 
-**Note:**   The "Analyses" field is mandatory. There must be at least one Gitwiser analysis to proceed with initializing the team scorecard.
+Teams that have Fortify, Veracode, Dynatrace, Azure Application Insights, or Test Analytics configured also see their security, monitoring, and test widgets.
 
-![](<../.gitbook/assets/image (247).png>)
+### Symptoms
 
-3\. After the user selects a Gitwiser analysis, the user can continue with the selection of the Sonarqube project. The field "Code Quality" is optional.
+The **Symptoms** panel lists the team's symptoms across all pipeline steps. Filter by **Active**, **Deactive**, or **All**; the levels are **Critical**, **Warning**, and **Info**. Select a symptom to see why it is a symptom, its possible causes, improvement areas, detection method, and the teams where it is detected. See the [Symptoms Catalog](https://docs.oobeya.io/team-insights-and-symptoms/symptoms-catalog).
+
+### Configure the Team Scorecard
+
+The scorecard configuration decides which analyses feed the scorecard. Open it with **Update** on the scorecard. A team without a configuration shows **New Setup**.
+
+<figure><img src="https://images.gitbook.com/__img/dpr=2,width=760,onerror=redirect,format=auto,signature=-744388013/https%3A%2F%2Ffiles.gitbook.com%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FnsPWY4OkvVPddT52WH5E%2Fteam-scorecard-config.png%3Falt%3Dmedia%26token%3D64a0ac56-681b-42aa-ae12-6b2a3e9c43b8" alt="Team Scorecard Configuration page with the Modules list and the Analyses selection"><figcaption><p>Team Scorecard Configuration &#x26; Addon Settings. Repository names are sample values.</p></figcaption></figure>
+
+1. Select a module in the **Modules** list.
+2. Move items from the **Source** list to the **Target** list to select them for the team, or back to remove them. Some lists are preselected from the team's recent activity.
+3. Click **Save**. **Reset Tab** discards the changes of the current module. The footer shows **Unsaved changes** until you save and **All modules synced** after.
+4. Click **View Team Scorecard** to go back to the scorecard.
+
+| Module                                          | What you select                                                                                                                                                                 |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Analyses**                                    | Git repositories (Development Analytics) of the team. Repositories the team's developers committed to in the last 6 months are preselected. Required for the Development stage. |
+| **Deployments**                                 | Deployment analyses (pipelines and environments) of the team. Required for DORA metrics in the Delivery stage.                                                                  |
+| **Agile Boards**                                | Board analyses of the team. Boards the team members worked on in the last 3 months are preselected.                                                                             |
+| **Testing** > **Test Projects**                 | Test Analytics project analyses.                                                                                                                                                |
+| **Testing** > **Automation Coverage**           | Automation coverage software modules.                                                                                                                                           |
+| **Code Quality** > **Unit Test Coverage**       | SonarQube data sources, projects, and branches used for the team's unit test coverage.                                                                                          |
+| **Code Quality** > **TCQI Projects**            | SonarQube data source, code quality projects, and unit test projects for the TCQI calculation.                                                                                  |
+| **Monitoring** > **Dynatrace**                  | Dynatrace applications or services.                                                                                                                                             |
+| **Monitoring** > **Azure Application Insights** | The Application Insights resource for Apdex Score, Error Rate, and Response Time.                                                                                               |
+| **Security** > **Fortify**                      | Fortify applications and versions.                                                                                                                                              |
+| **Working Branch**                              | Branches used for symptom detection and pull request size. If none is selected, all branches are analyzed.                                                                      |
+
+The modules you see depend on the integrations connected on the [Integrations](https://docs.oobeya.io/integrations/adding-new-integration) page. Data from a module appears only after its analysis has run at least once.
 
 {% hint style="info" %}
-To increase customer satisfaction and engagement, all product teams aim to deliver high-quality products to end users. Therefore, engineering teams strive to develop more reliable, secure, high-performance software and systems.
-
-[Oobeya](https://oobeya.io) and [Sonarqube](https://sonarqube.org) enable teams to build a comprehensive platform for continuous code quality inspection. Learn more about [Oobeya & Sonarqube integration here](https://oobeya.io/oobeya-sonarqube-code-quality-metrics/?utm_source=sonardocs).
+To show DORA metrics for a team, select the team's pipelines in the **Deployments** module and save. The deployment analyses must exist first: see [Setting Up Development Analytics And DORA Metrics](https://docs.oobeya.io/gitwiser-repo-analytics/settings-for-git-analytics/initialize-development-analytics).
 {% endhint %}
 
-![](<../.gitbook/assets/image (130).png>)
+### Related
 
-**Note:** The "Sonarqube" addon must be installed and connected to your project by providing credentials in Data Source (make sure that you have selected "Set as Default"). Otherwise, you can see this warning:
-
-![](<../.gitbook/assets/image (126).png>)
-
-4\. Click to "Next" button to continue with the selection of Jira Project. The field "Jira Issues" is optional.
-
-![](<../.gitbook/assets/image (122).png>)
-
-**Note:** The "Jira" addon must be installed and connected to your project by providing credentials in Data Source (make sure that you have selected "Set as Default"). Otherwise, you cannot see the "Jira Issues" tab, or you can see this warning:
-
-![](<../.gitbook/assets/image (271).png>)
-
-5\. Click to "Next" button to continue with the selection of Azure Boards. This field "Azure Boards" is optional.
-
-![](<../.gitbook/assets/image (321).png>)
-
-**Note:** The "Azure DevOps" addon must be installed and connected to your project by providing credentials in Data Source (make sure that you have selected "Set as Default"). Otherwise, you are unable to see the "Azure Boards" tab, or you can see this warning:
-
-![](<../.gitbook/assets/image (104).png>)
-
-6\. After adding Azure Boards, the user can click the "Next" button and select the Date range. According to the period the user can monitor the team scorecard. In the last step, click on the "Create" button to add the team scorecard.
-
-![](<../.gitbook/assets/image (145).png>)
-
-7\. The user is now able to see the team scorecard.
-
-![](<../.gitbook/assets/image (117).png>)
-
+* [Team Health](https://docs.oobeya.io/team-health/team-health-overview)
+* [Adding A Team](https://docs.oobeya.io/team-health/adding-a-team)
+* [Developer Onboarding Metrics Widget](https://docs.oobeya.io/team-health/developer-onboarding-metrics-widget)

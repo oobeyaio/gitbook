@@ -1,5 +1,6 @@
 ---
 description: Let's learn about the structure of Sprint Report page.
+hidden: true
 ---
 
 # Sprint Reports

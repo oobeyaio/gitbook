@@ -117,5 +117,5 @@ Always interpret benchmarks in context, considering:
 
 * [Gamification for Engineering KPIs](../use-cases/gamification-for-engineering-kpis.md)
 * AI Coach Insights
-* [Engineering Metrics List](../getting-started/metrics.md)
+* [Engineering Metrics List](../getting-started/metrics/)
 * [Delivery & DORA Metrics](../deployment-analytics/dora-metrics-introduction/)

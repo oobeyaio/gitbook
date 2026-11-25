@@ -5,32 +5,37 @@ icon: file-certificate
 
 # License Management
 
-Before using [Oobeya](https://oobeya.io/), make sure you have a valid or trial license key defined in the Oobeya Administration Panel.
+Oobeya needs a valid license key to run. The license is bound to your Oobeya installation through its **Server ID**, and it defines the license type, the expiry date, the features you can use, and, for limited licenses, how many teams, users, and analyses you can create.
 
-Select **Administration** in the left menu, then **License Management** in the **Platform** section, and enter your license key.
+To open the page, sign in with an **Administrator** account, select **Administration** in the left menu, then **License Management** in the **Platform** section.
 
-There are two types of License which are defined as:
+<figure><img src="https://images.gitbook.com/__img/dpr=2,width=760,onerror=redirect,format=auto,signature=360470707/https%3A%2F%2Ffiles.gitbook.com%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FVjZ4dLgzPRyNyJrOqhZt%2Fadmin-license.png%3Falt%3Dmedia%26token%3D60e0ba30-593f-4a2a-a694-f2e63dfce1a6" alt="Administration, License Management page with Server ID, license type, expiry date, license key field, and licensed features"><figcaption><p>Administration > License Management. Server ID and dates are sample values.</p></figcaption></figure>
 
-_**1- ) Without Limitations**_
+### What the page shows
 
-Oobeya with an unlimited license key allows you to use all features without any limitations.
+| Area                  | What it shows                                                                                                                                                                                                                                                                                                                                |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Server ID**         | The unique ID of your Oobeya installation. Share it with the Oobeya Sales Team to get a license for this server. Use the copy button next to it.                                                                                                                                                                                             |
+| **License Type**      | The type of the active license (for example **PAID**).                                                                                                                                                                                                                                                                                       |
+| **Expiry Date**       | The last day the license is valid.                                                                                                                                                                                                                                                                                                           |
+| **License Key**       | The field where you enter a new or renewed key. Click **Save** to apply it or **Reset** to clear your changes. See [Updating The License Key](https://docs.oobeya.io/administration/license-management/updating-the-license-key).                                                                                                            |
+| **License Limits**    | Shown for limited licenses: the maximum team, user, profile, league, dashboard, Git analysis, and board analysis counts, and the available add-ons. You cannot create more items than these limits allow.                                                                                                                                    |
+| **Licensed Features** | The modules your license covers, such as Dashboards, Organization, Developer Heatmap, Resource Allocation, Trend Reports, Test Analytics, Problem Analytics, Analysis Efficiency, AI Usage, DevEx Surveys, Document Analytics, and Individual Scorecard. A module that is not licensed shows **Not licensed** with a **Contact Sales** link. |
 
-![](https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FHED9Q0JHPFTrYXUNyFqp%2Fimage.png?alt=media\&token=0b089205-a1eb-4aac-a33f-aab74be7db6c)
+{% hint style="info" %}
+A licensed feature can still be turned off for your organization in **Administration** > **Feature Management**.
+{% endhint %}
 
-_**2- ) With Limitations**_
+### Expiry notices
 
-Oobeya with a limited license key allows you to use some specific features. In the beginning, some of the addons and limitations that Oobeya allows you to create teams, profiles, etc. are already defined. Hence, you can not exceed these limitations.
+Before the license expires, Oobeya shows a notice that the license will expire soon, with the expiry date and a **Contact Sales** link. After the expiry date, Oobeya shows that the license has expired and you can no longer use Oobeya until a renewed key is saved.
 
-If your license key is a type of limited license, you are going to see the limitations list on the same page as in the following.
+To renew, contact the [Oobeya Sales Team](https://oobeya.io/contact-sales/) with your Server ID, then [update the license key](https://docs.oobeya.io/administration/license-management/updating-the-license-key).
 
-![An example for limit list.](https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FjLs8CqlWIZz3kyVcrA3n%2Fimage.png?alt=media\&token=e16bf9c9-4e81-42ab-adca-1a87d74c4696)
+### Error messages
 
-If your license will expire soon, a pop-up will be displayed on your screen. You can click on the 'Contact Sales' link to renew your license.
-
-![](https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FyMSnC8o39fmclvJ0r7VM%2Fimage.png?alt=media\&token=68be366d-cc37-4d41-a99c-c0406fc813ee)
-
-If your license expires, the following message will be shown on your screen:
-
-![](https://3582076375-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2F2KhTFB1e8m33ty9FWnyb%2Fimage.png?alt=media\&token=f666d83a-e69a-4eef-80f1-42a13a4ca749)
-
-Once your license expires, you can no longer use Oobeya.
+| Message                                              | What to do                                                                                                                                   |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Invalid license key.**                             | Check that you pasted the whole key without extra spaces or line breaks.                                                                     |
+| **This license key does not belong to this server.** | The key was created for another Server ID. Send the Server ID shown on this page to the Oobeya Sales Team and ask for a key for this server. |
+| **The license key could not be saved.**              | Check the key and try again. If it keeps failing, contact Oobeya support.                                                                    |

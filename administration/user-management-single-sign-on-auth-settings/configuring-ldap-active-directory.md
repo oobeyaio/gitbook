@@ -1,5 +1,5 @@
 ---
-description: Learn about how to configure LDAP / Active Directory on QA Dashboard...
+description: Configure LDAP / Active Directory for sign-in and user import in Oobeya.
 icon: user-group
 ---
 

@@ -6,227 +6,183 @@ description: >-
 
 # Oobeya REST API
 
-Oobeya provides a secure REST API that allows you to programmatically access and manage data across your **Software Engineering Intelligence Platform**.\
-You can automate processes, synchronize integrations, trigger analyses, and extract metrics for custom dashboards or reporting.
-
-***
-
-### 1. Overview
-
-The **Oobeya REST API v1** exposes endpoints to manage organizations, users, teams, analyses, deployments, reports, and more.
-
-Each endpoint follows REST principles and returns data in **JSON** format.
+The Oobeya REST API gives scripts and other tools the same data and actions you use in the Oobeya UI. Use it to manage users, members, and teams, start analyses, send deployments, production failures, test results, problems, and custom metrics from any tool, and read team and member reports.
 
 {% hint style="info" %}
-All requests must be made over **HTTPS**.\
-Your API key or bearer token must be included in the header for every request.
+Every endpoint, with its parameters and request and response schemas, is listed in the **API reference** pages under this page. Each Oobeya instance also serves its own interactive Swagger UI at `https://<your-oobeya-host>/apis/docs/swagger-ui/index.html`.
 {% endhint %}
 
-**To access Swagger docs in Oobeya directly**, go to&#x20;
+### Base URL
+
+All endpoints live under `/apis/v1` on your Oobeya host:
 
 ```
-{OOBEYA_BASE_URL}/apis/docs/swagger-ui/index.html
+https://<your-oobeya-host>/apis/v1
 ```
 
-***
+For example `https://mycompany.oobeya.io/apis/v1` (SaaS) or `https://oobeya.mycompany.com/apis/v1` (on-premise). Requests and responses use JSON over HTTPS.
 
-### 2. Base URL
+### Authentication
 
-```
-{OOBEYA_BASE_URL}
-```
-
-Example:
-
-```
-https://mycompany.oobeya.io
-https://oobeya.mycompany.com
-```
-
-***
-
-### 3. Authentication
-
-Oobeya supports two authentication mechanisms:
-
-<table><thead><tr><th width="146.3560791015625">Method</th><th width="374.6915283203125">Header</th><th>Description</th></tr></thead><tbody><tr><td>API Key</td><td><code>Oobeya-API-Key: &#x3C;your_api_key></code></td><td>Used for integrations and service-to-service access</td></tr><tr><td>Bearer Token</td><td><code>Authorization: Bearer &#x3C;your_jwt_token></code></td><td>Used for authenticated user sessions</td></tr></tbody></table>
-
-**Example:**
+Send an API key in the `Oobeya-API-Key` header of every request.
 
 ```bash
-curl -X GET "{OOBEYA_BASE_URL}/apis/v1/users" \
+curl "https://<your-oobeya-host>/apis/v1/teams/all" \
   -H "Oobeya-API-Key: <your_api_key>"
 ```
 
-***
+1. Sign in with an **Administrator** account and select **Administration** > **API Keys**.
+2. Generate a token with the **Full API** scope. **Ingest (Collector)** tokens are not accepted by the REST API.
+3. Copy the token right away; it is shown only once. See [API Keys](https://docs.oobeya.io/administration/api-keys).
 
-### 4. Endpoint Groups
+The **API Keys** endpoints themselves (`/apis/v1/api-keys`) are the exception: they need the bearer token of a signed-in user in the `Authorization: Bearer <token>` header.
 
-#### 4.1. Organization Level
+{% hint style="warning" %}
+Treat an API key like a password: store it in a secret manager, never in source code, and revoke it in **Administration** > **API Keys** when it is no longer needed.
+{% endhint %}
 
-<table><thead><tr><th width="125.32440185546875">Method</th><th>Endpoint</th><th>Description</th></tr></thead><tbody><tr><td><code>GET</code></td><td><code>/apis/v1/organization-level</code></td><td>Retrieve organization levels</td></tr><tr><td><code>POST</code></td><td><code>/apis/v1/organization-level</code></td><td>Create a new organization level</td></tr><tr><td><code>PUT</code></td><td><code>/apis/v1/organization-level/{id}</code></td><td>Update an existing organization level</td></tr></tbody></table>
+### Pagination and sorting
 
-**Example:**
-
-```bash
-curl -X POST "{OOBEYA_BASE_URL}/apis/v1/organization-level" \
-  -H "Oobeya-API-Key: <your_api_key>" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "Division",
-    "level": 2,
-    "leadRoles": [
-      { "key": "ENG_LEAD", "label": "Engineering Lead" }
-    ]
-  }'
-```
-
-***
-
-#### 4.2. Users
-
-<table><thead><tr><th width="141.55303955078125">Method</th><th width="263.49072265625">Endpoint</th><th>Description</th></tr></thead><tbody><tr><td><code>GET</code></td><td><code>/apis/v1/users</code></td><td>List users with pagination</td></tr><tr><td><code>POST</code></td><td><code>/apis/v1/users</code></td><td>Create a new user</td></tr><tr><td><code>PUT</code></td><td><code>/apis/v1/users</code></td><td>Update user information</td></tr><tr><td><code>GET</code></td><td><code>/apis/v1/users/{id}</code></td><td>Retrieve a specific user</td></tr><tr><td><code>DELETE</code></td><td><code>/apis/v1/users/{id}</code></td><td>Delete a user</td></tr></tbody></table>
-
-**Example: Create a User**
+List endpoints take `page` (0-based), `size`, and, where supported, `sort` in the form `field:ASC` or `field:DESC`:
 
 ```bash
-curl -X POST "{OOBEYA_BASE_URL}/apis/v1/users" \
-  -H "Oobeya-API-Key: <your_api_key>" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "Josh",
-    "surname": "Long",
-    "username": "josh.long",
-    "email": "josh.long@oobeya.io",
-    "userType": "DB",
-    "companyRole": "DEVELOPER",
-    "hireDate": "2024-08-17T00:00:00+03:00"
-  }'
-```
-
-***
-
-#### 4.3. Teams
-
-<table><thead><tr><th width="149.76910400390625">Method</th><th>Endpoint</th><th>Description</th></tr></thead><tbody><tr><td><code>GET</code></td><td><code>/apis/v1/teams</code></td><td>List all teams with pagination</td></tr><tr><td><code>POST</code></td><td><code>/apis/v1/teams</code></td><td>Create a new team</td></tr><tr><td><code>PUT</code></td><td><code>/apis/v1/teams</code></td><td>Update an existing team</td></tr><tr><td><code>PATCH</code></td><td><code>/apis/v1/teams/{team-id-or-name}</code></td><td>Partially update a team</td></tr><tr><td><code>GET</code></td><td><code>/apis/v1/teams/all</code></td><td>Retrieve all teams</td></tr><tr><td><code>POST</code></td><td><code>/apis/v1/teams/trigger-analysis</code></td><td>Trigger Git &#x26; DORA analysis for selected teams</td></tr></tbody></table>
-
-**Example: Trigger Analysis**
-
-```bash
-curl -X POST "{OOBEYA_BASE_URL}/apis/v1/teams/trigger-analysis" \
-  -H "Oobeya-API-Key: <your_api_key>" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "teamIds": ["team-123"],
-    "trigger": { "git": true, "pullRequest": true, "deployment": true }
-  }'
-```
-
-***
-
-#### 4.4. Git Analysis
-
-Track repository data, pull requests, and DORA metrics.
-
-<table><thead><tr><th width="147.41937255859375">Method</th><th>Endpoint</th><th>Description</th></tr></thead><tbody><tr><td><code>GET</code></td><td><code>/apis/v1/analysis</code></td><td>List Git analyses</td></tr><tr><td><code>POST</code></td><td><code>/apis/v1/analysis</code></td><td>Create a new analysis</td></tr><tr><td><code>DELETE</code></td><td><code>/apis/v1/analysis/{analysisId}</code></td><td>Delete an analysis</td></tr><tr><td><code>POST</code></td><td><code>/apis/v1/analysis/trigger-all-dora-analyses</code></td><td>Trigger bulk DORA analyses</td></tr><tr><td><code>GET</code></td><td><code>/apis/v1/analysis/dora-summary-metrics</code></td><td>Retrieve aggregated DORA metrics summary</td></tr></tbody></table>
-
-**Example: Get DORA Summary**
-
-```bash
-curl -X GET "{OOBEYA_BASE_URL}/apis/v1/analysis/dora-summary-metrics?widgets=DORA_METRICS_SUMMARY&teamId=team-123" \
+curl "https://<your-oobeya-host>/apis/v1/teams?page=0&size=50&sort=unitName:ASC" \
   -H "Oobeya-API-Key: <your_api_key>"
 ```
 
-**Sample Response**
+Paged responses return the items with `page`, `size`, `totalElements`, `totalPages`, and `isLast`. Some endpoints keep `size` between 1 and 100. Dates and times use ISO 8601, for example `2026-06-15T10:00:00.000Z`.
 
-```json
-{
-  "leadTimeForChanges": { "formattedValue": "2.3 days" },
-  "deploymentFrequency": { "formattedValue": "3 per week" },
-  "changeFailureRate": { "formattedValue": "5%" },
-  "timeToRestore": { "formattedValue": "4h 30m" }
-}
-```
+### What you can do
 
-***
+| Area                           | Endpoints                                                                                                                  |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
+| **Organization**               | Organization levels, users, members (developer profiles), teams and their hierarchy, company roles, team scorecards        |
+| **Analyses**                   | Git analyses, DORA analyses, code quality (SonarQube) analyses, board analyses, bulk imports, onboarding                   |
+| **Send data from other tools** | Deployments, production failures (defect detection), test executions, coverage, defects and bugs, problems, custom metrics |
+| **Reports**                    | Team and member commits, pull requests, quality, DORA, and onboarding metrics                                              |
+| **Administration**             | API keys, system logs, clean-up of old Git analysis data                                                                   |
 
-#### 4.5. Deployments
+### Common tasks
 
-<table><thead><tr><th width="152.432861328125">Method</th><th>Endpoint</th><th>Description</th></tr></thead><tbody><tr><td><code>GET</code></td><td><code>/apis/v1/deployments</code></td><td>Retrieve deployments with pagination</td></tr><tr><td><code>POST</code></td><td><code>/apis/v1/deployments</code></td><td>Create new deployment record</td></tr><tr><td><code>DELETE</code></td><td><code>/apis/v1/deployments/{id}</code></td><td>Delete deployment</td></tr></tbody></table>
+#### Send a deployment from any CI/CD tool
 
-***
-
-#### 4.6. Reports
-
-<table><thead><tr><th width="107.50872802734375">Method</th><th width="381.5850830078125">Endpoint</th><th>Description</th></tr></thead><tbody><tr><td><code>GET</code></td><td><code>/apis/v1/reports/team/{teamId}/commits</code></td><td>Get team-based commit metrics</td></tr><tr><td><code>GET</code></td><td><code>/apis/v1/reports/team/{teamId}/pull-requests</code></td><td>Get team-based PR metrics</td></tr><tr><td><code>GET</code></td><td><code>/apis/v1/reports/team/{teamId}/qualities</code></td><td>Get team-based quality metrics</td></tr><tr><td><code>GET</code></td><td><code>/apis/v1/reports/member/{memberId}/commits</code></td><td>Get member-based commit metrics</td></tr><tr><td><code>GET</code></td><td><code>/apis/v1/reports/member/{memberId}/pull-requests</code></td><td>Get member-based PR metrics</td></tr></tbody></table>
-
-**Example: Get Team Pull Request Metrics**
+Deployments sent through the API count in the DORA metrics of the analysis they belong to.
 
 ```bash
-curl -X GET "{OOBEYA_BASE_URL}/apis/v1/reports/team/team-123/pull-requests?startDate=2025-01-01&endDate=2025-01-31" \
+curl -X POST "https://<your-oobeya-host>/apis/v1/deployments" \
+  -H "Oobeya-API-Key: <your_api_key>" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "analysisId": "<git-analysis-id>",
+    "cloneUrl": "https://git.example.com/payments/payment-api.git",
+    "name": "payment-api",
+    "title": "Release 2.4.0",
+    "targetBranch": "main",
+    "lastCommitSha": "9f2c1e7",
+    "deploymentType": "RELEASE",
+    "analysisType": "PULL_REQUEST",
+    "pipelineStartAt": "2026-06-15T09:40:00.000Z",
+    "deployedAt": "2026-06-15T10:00:00.000Z"
+  }'
+```
+
+`deploymentType` is `RELEASE` or `HOTFIX`; `analysisType` is `PULL_REQUEST` or `TRUNK_BASED`. List Git analyses with `GET /apis/v1/analysis` to find the `analysisId`.
+
+#### Report a production failure and its fix
+
+Defect detections feed Change Failure Rate and Time to Restore Service. Send the record when the failure is detected and again with `fixedDate` when it is fixed; records are matched by `id` or by your own `externalKey`.
+
+```bash
+curl -X POST "https://<your-oobeya-host>/apis/v1/defect-detections" \
+  -H "Oobeya-API-Key: <your_api_key>" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "externalKey": "INC-4711",
+    "repoName": "payment-api",
+    "environment": "production",
+    "description": "Payments fail after release 2.4.0",
+    "detectedDate": "2026-06-15T10:30:00.000Z",
+    "detectedDeploymentTitle": "Release 2.4.0"
+  }'
+```
+
+#### Read a team's DORA metrics
+
+```bash
+curl "https://<your-oobeya-host>/apis/v1/reports/team/<team-id>/dora?startDate=2026-06-01&endDate=2026-06-30" \
   -H "Oobeya-API-Key: <your_api_key>"
 ```
 
-***
+The response holds `leadTimeForChanges`, `deploymentFrequency`, `changeFailureRate`, and `timeToRestore`, each with a `value` and a `formattedValue`. Add `includeRepositoryDetail=true` for a per-repository breakdown. The same pattern works for `/commits`, `/pull-requests`, and `/qualities`, and for a single member under `/reports/team/<team-id>/member/<member-id>/qualities` or `/reports/member/<member-id>/...`.
 
-#### 4.7. Qwiser (SonarQube Integration)
-
-<table><thead><tr><th width="118.23583984375">Method</th><th width="388.5977783203125">Endpoint</th><th>Description</th></tr></thead><tbody><tr><td><code>POST</code></td><td><code>/apis/v1/qwiser/analysis</code></td><td>Start a new Qwiser analysis</td></tr><tr><td><code>POST</code></td><td><code>/apis/v1/qwiser/analysis/list</code></td><td>List existing analyses</td></tr><tr><td><code>PUT</code></td><td><code>/apis/v1/qwiser/analysis/{analysisId}/teams</code></td><td>Update associated teams</td></tr></tbody></table>
-
-***
-
-#### 4.8. External Test Metrics
-
-<table><thead><tr><th width="123.58233642578125">Method</th><th width="371.5352783203125">Endpoint</th><th>Description</th></tr></thead><tbody><tr><td><code>POST</code></td><td><code>/apis/v1/test/external/execution</code></td><td>Create execution record</td></tr><tr><td><code>POST</code></td><td><code>/apis/v1/test/external/defect</code></td><td>Create defect record</td></tr><tr><td><code>POST</code></td><td><code>/apis/v1/test/external/coverage</code></td><td>Create coverage record</td></tr><tr><td><code>POST</code></td><td><code>/apis/v1/test/external/bug</code></td><td>Create bug record</td></tr></tbody></table>
-
-**Example: Create Test Execution**
+#### Trigger the analyses of a team
 
 ```bash
-curl -X POST "{OOBEYA_BASE_URL}/apis/v1/test/external/execution" \
+curl -X POST "https://<your-oobeya-host>/apis/v1/teams/trigger-analysis" \
+  -H "Oobeya-API-Key: <your_api_key>" \
+  -H "Content-Type: application/json" \
+  -d '{ "teamIds": ["<team-id>"], "trigger": { "git": true, "pullRequest": true, "deployment": true } }'
+```
+
+#### Send a custom metric
+
+Custom metrics appear on custom dashboards and team views as cards, charts, or tables.
+
+```bash
+curl -X POST "https://<your-oobeya-host>/apis/v1/custom-metrics/card" \
+  -H "Oobeya-API-Key: <your_api_key>" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "team": "Payments Team",
+    "metricCategory": "Portfolio Management",
+    "metricKey": "initial_planned_delivery",
+    "metricDisplayName": "Initial Planned Delivery",
+    "metricStartDate": "2026-06-01",
+    "metricEndDate": "2026-06-30",
+    "metricValue": 42,
+    "unit": "COUNT",
+    "aggregationType": "SUM",
+    "decreaseIsGood": false
+  }'
+```
+
+`unit` is `COUNT`, `AVERAGE`, `PERCENT`, `STRING`, or `TEXT`; `aggregationType` is `SUM`, `AVERAGE`, or `LAST`. Use `/custom-metrics/chart` for a time series and `/custom-metrics/table` for rows of columns.
+
+#### Send a test execution
+
+```bash
+curl -X POST "https://<your-oobeya-host>/apis/v1/test/external/execution" \
   -H "Oobeya-API-Key: <your_api_key>" \
   -H "Content-Type: application/json" \
   -d '{
     "executionId": "exec-12345",
     "status": "PASS",
     "executionTime": 120000,
-    "executionStartDate": "2025-09-11T08:47:40.740Z",
-    "executionEndDate": "2025-09-11T08:49:40.740Z",
+    "executionStartDate": "2026-06-15T08:47:40.740Z",
+    "executionEndDate": "2026-06-15T08:49:40.740Z",
+    "actionDate": "2026-06-15T08:49:40.740Z",
     "applicationId": "app-98765",
     "scenarioId": "scn-4567",
     "scenarioName": "Login Test",
     "environment": "staging",
-    "team": "QA-Team"
+    "team": "QA Team"
   }'
 ```
 
-***
+`status` is `TODO`, `EXECUTING`, `FAIL`, `PASS`, or `ABORTED`. See [Test Otomasyon Metrikleri ve API Dokümanı](https://docs.oobeya.io/test-analytics/test-otomasyon-metrikleri-ve-api-dokumani) for test metrics.
 
-#### 4.9. Bulk Operations
+#### Send a problem
 
-<table><thead><tr><th width="128.30743408203125">Method</th><th width="332.44873046875">Endpoint</th><th>Description</th></tr></thead><tbody><tr><td><code>POST</code></td><td><code>/apis/v1/bulk/analyses</code></td><td>Prepare bulk Git analyses</td></tr><tr><td><code>PUT</code></td><td><code>/apis/v1/bulk/analyses/sync</code></td><td>Synchronize analyses</td></tr><tr><td><code>POST</code></td><td><code>/apis/v1/bulk/analyses/analysis</code></td><td>Import new Git analysis file</td></tr></tbody></table>
+Problems sent with `POST /apis/v1/problem` appear in [Problem Analytics](https://docs.oobeya.io/problem-analytics/problem-analytics). The required fields are `externalId`, `applicationId`, `applicationName`, `status`, and `updatedAt`; send the same `externalId` again to update a problem.
 
-***
+### Good practice
 
-#### 4.10. API Keys
+* Use one API key per integration so that you can revoke it without breaking the others.
+* Retry network errors with exponential backoff, and keep bulk imports for large data sets.
+* Read only the period you need; report endpoints take a date range.
+* Rotate API keys regularly.
 
-<table><thead><tr><th width="136.7984619140625">Method</th><th>Endpoint</th><th>Description</th></tr></thead><tbody><tr><td><code>GET</code></td><td><code>/apis/v1/api-keys</code></td><td>List all API keys</td></tr><tr><td><code>POST</code></td><td><code>/apis/v1/api-keys</code></td><td>Create a new API key</td></tr><tr><td><code>DELETE</code></td><td><code>/apis/v1/api-keys/{id}</code></td><td>Delete an API key</td></tr></tbody></table>
+### Related
 
-***
-
-#### 4.11. System
-
-<table><thead><tr><th width="133.6175537109375">Method</th><th>Endpoint</th><th>Description</th></tr></thead><tbody><tr><td><code>GET</code></td><td><code>/apis/v1/systems/logs</code></td><td>Retrieve system logs</td></tr><tr><td><code>DELETE</code></td><td><code>/apis/v1/systems/clear-git-analyses</code></td><td>Clear analyses older than 2 years</td></tr></tbody></table>
-
-***
-
-### 5. Best Practices
-
-* Use **API keys** for automation, and **JWT tokens** for user-based integrations.
-* Implement **retry logic** with exponential backoff for network errors.
-* Cache frequent GET responses to optimize performance.
-* Regularly **rotate API keys** for security.
-* Use **bulk operations** when importing or syncing large datasets.
-
-***
-
-**Support Contact:** support@oobeya.io
+* [API Keys](https://docs.oobeya.io/administration/api-keys)
+* [Oobeya MCP](https://docs.oobeya.io/mcp/oobeya-mcp): ask about the same data from your AI tool.

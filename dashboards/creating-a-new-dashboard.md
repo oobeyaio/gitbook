@@ -4,9 +4,9 @@ description: Learn about Dashboards and how to create a new Dashboard...
 
 # Adding A New Dashboard
 
-## **OVERVIEW**
+### **OVERVIEW**
 
-Dashboards are a set of [Widgets ](adding-a-new-widget.md)with a customizable view.&#x20;
+Dashboards are a set of [Widgets ](https://docs.oobeya.io/dashboards/adding-a-new-widget)with a customizable view.
 
 You can create:
 
@@ -18,24 +18,24 @@ You can create:
 
 ![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FADEot2Prxc8bKQSOVu2D%2Ffile.png?alt=media)
 
-## **ADDING A NEW DASHBOARD**&#x20;
+### **ADDING A NEW DASHBOARD**
 
 1\. Open the Oobeya home page.
 
-2\. Click the **"New Dashboard"** button.&#x20;
+2\. Click the **"New Dashboard"** button.
 
 ![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FriJWj6Ds2RS76Pc9c41v%2Ffile.png?alt=media)
 
-3\. Select **"Create Custom Dashboard"** and fill in the form.&#x20;
+3\. Select **"Create Custom Dashboard"** and fill in the form.
 
 ![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FFTbIUQd6qqdpQeGExj7w%2Ffile.png?alt=media)
 
-4\. You can set the **privacy of Dashboards** as _Public_ or _Private_.&#x20;
+4\. You can set the **privacy of Dashboards** as _Public_ or _Private_.
 
 ![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MGIlBSTjQtZxUoFwUx4%2Fuploads%2FpnE9UZXJmhWFP3LeUyWr%2Ffile.png?alt=media)
 
 5\. Click **"Add"** button, then your Dashboard is ready to use.
 
-## **WHAT'S NEXT?**:dart:&#x20;
+### **WHAT'S NEXT?**
 
-* [Adding a new Widget to your Dashboard](https://qa-dashboard.user.com/knowledge-base/articles/20/update/20/%7B%%20kb_article_url%2019%20%%7D)
+* [Adding a new Widget to your Dashboard](https://docs.oobeya.io/dashboards/adding-a-new-widget)
