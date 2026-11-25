@@ -140,7 +140,17 @@ To access Oobeya from the browser, you need to add the domain name or machine IP
 vi (pwd)/values.yaml
 ```
 
-* Please edit this:
+1. Set a strong MongoDB password:\
+   When the internal MongoDB is used (oobeyaExternalMongo.isExternal: false, the default), you must set the MongoDB password with oobeyaMongo.auth.password. It is empty by default and the chart will not install or upgrade without it.
+
+```
+oobeyaMongo:
+    auth:
+      username: "oobeya"
+      password: "Your-Strong-Password"
+```
+
+Enter the URL used to access Oobeya from the interface here.
 
 1. values.yaml.oobeyaDashboard
 
@@ -148,7 +158,7 @@ vi (pwd)/values.yaml
  - corsAllowedOrigin: "http://your-IP-or-Domain"
 ```
 
-2. values.yaml.oobeyaGateway
+3. values.yaml.oobeyaGateway
 
 ```
  - corsAllowedOrigin: "http://your-IP-or-Domain"

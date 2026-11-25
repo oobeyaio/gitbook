@@ -1,5 +1,6 @@
 ---
 description: Install Oobeya On-Premise Edition Using Kubernetes.
+hidden: true
 icon: dharmachakra
 ---
 
