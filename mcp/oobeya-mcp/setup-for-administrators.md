@@ -150,48 +150,56 @@ Add the four paths to the ingress of the platform service. With ingress-nginx th
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: qa-dashboard-platform
+  name: oobeya-dashboard-platform
   annotations:
-    kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/proxy-read-timeout: "300"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "300"
     nginx.ingress.kubernetes.io/proxy-buffering: "off"
 spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - oobeya.company.com 
+    secretName: dashboard-tls
   rules:
-  - http:
+  - host: oobeya.company.com 
+    http:
       paths:
       - path: /api
         pathType: Prefix
         backend:
           service:
-            name: qa-dashboard-platform
+            name: oobeya-dashboard
             port:
               number: 8080
+
+      # MCP Configuration
       - path: /mcp
         pathType: Exact
         backend:
           service:
-            name: qa-dashboard-platform
+            name: oobeya-dashboard
             port:
               number: 8080
       - path: /.well-known/oauth-protected-resource
         pathType: Prefix
         backend:
           service:
-            name: qa-dashboard-platform
+            name: oobeya-dashboard
             port:
               number: 8080
       - path: /.well-known/oauth-authorization-server
         pathType: Prefix
         backend:
           service:
-            name: qa-dashboard-platform
+            name: oobeya-dashboard
             port:
               number: 8080
       - path: /oauth2
         pathType: Prefix
         backend:
           service:
-            name: qa-dashboard-platform
+            name: oobeya-dashboard
             port:
               number: 8080
 ```
